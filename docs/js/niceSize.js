@@ -4,8 +4,8 @@
 github.com/niceSize/niceSize
 ============================
 */
-window.onresize = function() {niceSize();};
 window.onload = function() {initializeNiceSize();niceSize();};
+window.onresize = function() {niceSize();};
 
 function initializeNiceSize() {
 	document.querySelector('body').appendChild(document.createElement('span')).setAttribute('id', 'niceSize');
