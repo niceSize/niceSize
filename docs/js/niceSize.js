@@ -11,19 +11,19 @@ function initializeNiceSize() {
 	document.querySelector('body').appendChild(document.createElement("span"));
 	document.createElement("span").setAttribute("id", "niceSize");
   document.getElementById('niceSize').style.setProperty('positon', 'absolute');
-  if(Number.isNaN(parseFloat(window.getComputedStyle(document.getElementById('niceSize')).getPropertyValue('--refSizeMaxWidth'))){
+  if(Number.isNaN(parseFloat(window.getComputedStyle(document.getElementById('niceSize')).getPropertyValue('--refSizeMaxWidth')))){
     document.getElementById('niceSize').style.setProperty('--refSizeMaxWidth', '1%');
   }
-  if(Number.isNaN(parseFloat(window.getComputedStyle(document.getElementById('niceSize')).getPropertyValue('--maxSizeMaxWidth'))){
+  if(Number.isNaN(parseFloat(window.getComputedStyle(document.getElementById('niceSize')).getPropertyValue('--maxSizeMaxWidth')))){
     document.getElementById('niceSize').style.setProperty('--maxSizeMaxWidth', '1rem');
   }
-  if(Number.isNaN(parseFloat(window.getComputedStyle(document.getElementById('niceSize')).getPropertyValue('--refSizeHeight'))){
+  if(Number.isNaN(parseFloat(window.getComputedStyle(document.getElementById('niceSize')).getPropertyValue('--refSizeHeight')))){
     document.getElementById('niceSize').style.setProperty('--refSizeHeight', '100vh');
   }
-  if(Number.isNaN(parseInt(window.getComputedStyle(document.getElementById('niceSize')).getPropertyValue('--maxWidthMobileSite'))){
+  if(Number.isNaN(parseInt(window.getComputedStyle(document.getElementById('niceSize')).getPropertyValue('--maxWidthMobileSite')))){
     document.getElementById('niceSize').style.setProperty('--maxWidthMobileSite', '637px');
   }
-  if(Number.isNaN(parseFloat(window.getComputedStyle(document.getElementById('niceSize')).getPropertyValue('--mobileSiteScalingRatio'))){
+  if(Number.isNaN(parseFloat(window.getComputedStyle(document.getElementById('niceSize')).getPropertyValue('--mobileSiteScalingRatio')))){
     document.getElementById('niceSize').style.setProperty('--mobileSiteScalingRatio', '2');
   }
 }
