@@ -8,13 +8,32 @@ body {
 }
 
 header {
+  position: fixed;
   display: flex;
   align-items: center;
-  width: 100vw;
+  box-shadow: 0 0 calc(var(--nSMaxWidth) * 1) 0 rgba(0,0,0,0.1);
+  width: calc(var(--nSWidth) * 100);
   height: calc(var(--nSMaxWidth) * 5);
   background-color: blue;
 }
 
-#logo1 {
+header a{
+  cursor: default;
+  text-decoration: none;
+  color: #037add;
+  font-size: calc(var(--nSMaxWidth) * 3);
+}
+
+#logo{
+  float: left;
+  height: calc(var(--nSMaxWidth) * 5);
+}
+
+nav{
+  float: right;
+  height: calc(var(--nSMaxWidth) * 5);
+}
+
+#logo img {
   height: 90%;
 }
