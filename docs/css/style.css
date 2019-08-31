@@ -28,14 +28,13 @@ header a{
   float: left;
   height: calc(var(--nSMaxWidth) * 5);
   display: flex;
-  align-items: center;
+}
+
+#logo img {
+  height: 100%;
 }
 
 nav{
   float: right;
   height: calc(var(--nSMaxWidth) * 5);
-}
-
-#logo img {
-  height: 90%;
 }
