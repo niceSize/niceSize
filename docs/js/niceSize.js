@@ -31,19 +31,18 @@ function initializeNiceSize() {
 
 function niceSize(){
 	document.getElementById('niceSize').style.setProperty('display', 'flex');
-	if(parseFloat(window.getComputedStyle(document.getElementById('niceSize')).getPropertyValue('width')) > parseFloat(getComputedStyle(document.documentElement).fontSize) * parseFloat(window.getComputedStyle(document.getElementById('niceSize')).getPropertyValue('--remMultiplier'))){
+	if(parseFloat(window.getComputedStyle(document.getElementById('niceSize')).getPropertyValue('width')) * 0.01 > parseFloat(getComputedStyle(document.documentElement).fontSize) * parseFloat(window.getComputedStyle(document.getElementById('niceSize')).getPropertyValue('--remMultiplier'))){
 		document.querySelector('body').style.setProperty('--nSMaxWidth', parseFloat(getComputedStyle(document.documentElement).fontSize) * parseFloat(window.getComputedStyle(document.getElementById('niceSize')).getPropertyValue('--remMultiplier')) + 'px');
 	} else {
-		document.querySelector('body').style.setProperty('--nSMaxWidth', parseFloat(window.getComputedStyle(document.getElementById('niceSize')).getPropertyValue('width')) + 'px');
+		document.querySelector('body').style.setProperty('--nSMaxWidth', parseFloat(window.getComputedStyle(document.getElementById('niceSize')).getPropertyValue('width')) * 0.01 + 'px');
 	}
-	document.querySelector('body').style.setProperty('--nSMaxWidth', parseFloat(window.getComputedStyle(document.getElementById('niceSize')).getPropertyValue('width')) + 'px');
 	if(window.innerWidth <= parseInt(window.getComputedStyle(document.getElementById('niceSize')).getPropertyValue('--maxWidthMobileSite')) && window.innerWidth <= window.innerHeight){
-		document.querySelector('body').style.setProperty('--nSMaxWidth', parseFloat(window.getComputedStyle(document.getElementById('niceSize')).getPropertyValue('width')) * parseFloat(window.getComputedStyle(document.getElementById('niceSize')).getPropertyValue('--mobileSiteScalingRatio')) + 'px');
+		document.querySelector('body').style.setProperty('--nSMaxWidth', parseFloat(window.getComputedStyle(document.getElementById('niceSize')).getPropertyValue('width')) * 0.01 * parseFloat(window.getComputedStyle(document.getElementById('niceSize')).getPropertyValue('--mobileSiteScalingRatio')) + 'px');
 	}
 	if(window.innerWidth <= parseInt(window.getComputedStyle(document.getElementById('niceSize')).getPropertyValue('--maxWidthMobileSite')) && window.innerWidth > window.innerHeight){
-		document.querySelector('body').style.setProperty('--nSMaxWidth', 'calc(var(--nSHeight) *' + parseFloat(window.getComputedStyle(document.getElementById('niceSize')).getPropertyValue('--mobileSiteScalingRatio')) + ')');
+		document.querySelector('body').style.setProperty('--nSMaxWidth', 'calc(var(--nSHeight) * ' + parseFloat(window.getComputedStyle(document.getElementById('niceSize')).getPropertyValue('--mobileSiteScalingRatio')) + ')');
 	}
-	document.querySelector('body').style.setProperty('--nSWidth', parseFloat(window.getComputedStyle(document.getElementById('niceSize')).getPropertyValue('width')) + 'px');
+	document.querySelector('body').style.setProperty('--nSWidth', parseFloat(window.getComputedStyle(document.getElementById('niceSize')).getPropertyValue('width')) * 0.01 + 'px');
 	if(parseFloat(window.getComputedStyle(document.getElementById('niceSize')).getPropertyValue('height')) > window.innerHeight){
 		document.querySelector('body').style.setProperty('--nSHeight', window.innerHeight * 0.01 + 'px');
 	}
