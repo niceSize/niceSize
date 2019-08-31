@@ -21,7 +21,7 @@ It is very easy: Download all the niceSize files and include them into your webs
 <body>
 <!-- Here is your content -->
 
-<script src="[Here comes the path of the niceSize.js file]></script>
+<script src="[Here comes the path of the niceSize.js file]"></script>
 </body>
 </html>
 ```
