@@ -27,6 +27,8 @@ header a{
 #logo{
   float: left;
   height: calc(var(--nSMaxWidth) * 5);
+  display: flex;
+  align-items: center;
 }
 
 nav{
