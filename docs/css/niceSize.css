@@ -1,0 +1,14 @@
+/*
+============================
+          niceSize
+github.com/niceSize/niceSize
+============================
+*/
+
+#niceSize{
+	--refSizeMaxWidth: 1%;
+	--maxSizeMaxWidth: 1rem;
+	--refSizeHeight: 100vh;
+	--maxWidthMobileSite: 637px;
+	--mobileSiteScalingRatio: 2;
+}
