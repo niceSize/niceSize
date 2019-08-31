@@ -1,8 +1,8 @@
 /*
-	 ============================
-	        	niceSize
-   github.com/niceSize/niceSize
-	 ============================
+============================
+          niceSize
+github.com/niceSize/niceSize
+============================
 */
 
 
