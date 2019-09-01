@@ -6,8 +6,8 @@ github.com/niceSize/niceSize
 */
 
 #niceSize{
-	width: 1%;
-	max-width: 1rem;
+	--vwMultiplier: 2;
+	--remMultiplier: 1;
 	height: 100vh;
 	--maxWidthMobileSite: 637px;
 	--mobileSiteScalingRatio: 2;
