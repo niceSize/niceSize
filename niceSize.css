@@ -6,7 +6,7 @@ github.com/niceSize/niceSize
 */
 
 #niceSize{
-	--vwMultiplier: 2;
+	--vwMultiplier: 1;
 	--remMultiplier: 1;
 	height: 100vh;
 	--maxWidthMobileSite: 637px;
