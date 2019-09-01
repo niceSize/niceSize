@@ -11,7 +11,7 @@ body {
 
 header {
   position: fixed;
-  box-shadow: 0 0 calc(var(--nSMaxWidth) * 1) 0 rgba(0,0,0,0.1);
+  box-shadow: 0 0 calc(var(--nSMaxWidth) * 1) 0 rgba(0,0,0,.25);
   width: 100%;
   height: calc(var(--nSMaxWidth) * 5);
   background-color: blue;
@@ -37,6 +37,7 @@ header a{
 
 #logo img {
   height: 100%;
+  margin: auto calc(var(--nSMaxWidth) * .5);
 }
 
 #logo a{
