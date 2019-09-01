@@ -1,10 +1,11 @@
 html, body {
+  scroll-behavior: smooth;
   padding: 0;
   margin: 0;
 }
 
 body {
-  font-family: Roboto, sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 header {
@@ -12,7 +13,7 @@ header {
   display: flex;
   align-items: center;
   box-shadow: 0 0 calc(var(--nSMaxWidth) * 1) 0 rgba(0,0,0,0.1);
-  width: calc(var(--nSWidth) * 100);
+  width: 100%;
   height: calc(var(--nSMaxWidth) * 5);
   background-color: blue;
 }
@@ -28,6 +29,7 @@ header a{
   float: left;
   height: calc(var(--nSMaxWidth) * 5);
   display: flex;
+  text-align: center;
 }
 
 #logo img {
