@@ -35,12 +35,9 @@ header a{
 #logo{
   float: left;
   height: calc(var(--nSMaxWidth) * 5);
-<<<<<<< HEAD
   display: flex;
   text-align: center;
-=======
   background-color: green;
->>>>>>> c64d749f97788b17ff3dca0ac528ff50437a6f63
 }
 
 #logo img {
