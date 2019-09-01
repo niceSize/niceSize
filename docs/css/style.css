@@ -2,6 +2,8 @@ html, body {
   scroll-behavior: smooth;
   padding: 0;
   margin: 0;
+  overflow-x:hidden;
+  background-color: rgba(255,255,255,1);
 }
 
 body {
@@ -12,28 +14,42 @@ header {
   position: fixed;
   display: flex;
   align-items: center;
-  box-shadow: 0 0 calc(var(--nSMaxWidth) * 1) 0 rgba(0,0,0,0.1);
+  box-shadow: 0 0 calc(var(--nSMaxWidth) * 1) 0 rgba(0,0,0,.25);
   width: 100%;
   height: calc(var(--nSMaxWidth) * 5);
   background-color: blue;
+  z-index: 5;
 }
 
 header a{
+  height: 100%;
+	display: flex;
+	align-items: center;
   cursor: default;
   text-decoration: none;
   color: #037add;
-  font-size: calc(var(--nSMaxWidth) * 3);
+  font-size: calc(var(--nSMaxWidth) * 2);
+  padding: 0 calc(var(--size) * .5);
 }
 
 #logo{
   float: left;
   height: calc(var(--nSMaxWidth) * 5);
+<<<<<<< HEAD
   display: flex;
   text-align: center;
+=======
+  background-color: green;
+>>>>>>> c64d749f97788b17ff3dca0ac528ff50437a6f63
 }
 
 #logo img {
   height: 100%;
+  margin: auto calc(var(--nSMaxWidth) * .5);
+}
+
+#logo a{
+  font-size: calc(var(--nSMaxWidth) * 3);
 }
 
 nav{
