@@ -1,4 +1,5 @@
 html, body {
+  scroll-behavior: smooth;
   padding: 0;
   margin: 0;
   overflow-x:hidden;
@@ -6,7 +7,7 @@ html, body {
 }
 
 body {
-  font-family: Roboto, sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 #loadingScreen{
@@ -58,6 +59,8 @@ noscript {
 
 header {
   position: fixed;
+  display: flex;
+  align-items: center;
   box-shadow: 0 0 calc(var(--nSMaxWidth) * 1) 0 rgba(0,0,0,.25);
   width: 100%;
   height: calc(var(--nSMaxWidth) * 5);
@@ -79,6 +82,8 @@ header a{
 #logo{
   float: left;
   height: calc(var(--nSMaxWidth) * 5);
+  display: flex;
+  text-align: center;
   background-color: green;
 }
 
