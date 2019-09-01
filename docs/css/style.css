@@ -9,6 +9,53 @@ body {
   font-family: Roboto, sans-serif;
 }
 
+#loadingScreen{
+	position: fixed;
+	display: flex;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: white;
+	z-index: 3;
+	align-items: center;
+}
+
+#loadingScreen.hide{
+	visibility: hidden;
+	opacity: 0;
+	transition: .25s;
+}
+
+#loader {
+	display: flex;
+	position: fixed;
+	border: calc(var(--nSMaxWidth) * .25) solid #f3f3f3;
+	border-top: calc(var(--nSMaxWidth) * .25) solid #3498db;
+	border-radius: 50%;
+	width: calc(var(--nSMaxWidth) * 2.5);
+	height: calc(var(--nSMaxWidth) * 2.5);
+	left: calc(calc(100% - calc(var(--nSMaxWidth) * 2.5)) / 2);
+	animation: spin 1.5s linear infinite;
+}
+
+/* Loading screen */
+
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+
+noscript {
+	position: relative;
+	display: block;
+	width: 100%;
+	top: calc(var(--nSMaxWidth) * 3);
+	color: #037add;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: calc(var(--nSMaxWidth) * 1.45);
+	text-align: center;
+}
+
 header {
   position: fixed;
   box-shadow: 0 0 calc(var(--nSMaxWidth) * 1) 0 rgba(0,0,0,.25);
@@ -26,7 +73,7 @@ header a{
   text-decoration: none;
   color: #037add;
   font-size: calc(var(--nSMaxWidth) * 2);
-  padding: 0 calc(var(--size) * .5);
+  margin: 0 calc(var(--nSMaxWidth) * .5);
 }
 
 #logo{
@@ -37,11 +84,12 @@ header a{
 
 #logo img {
   height: 100%;
-  margin: auto calc(var(--nSMaxWidth) * .5);
+  margin: 0 calc(var(--nSMaxWidth) * .5);
 }
 
 #logo a{
   font-size: calc(var(--nSMaxWidth) * 3);
+  margin: 0;
 }
 
 nav{

@@ -4,7 +4,7 @@
 github.com/niceSize/niceSize
 ============================
 */
-window.onload = function() {initializeNiceSize();niceSize();};
+window.onload = function() {initializeNiceSize();niceSize();setTimeout(function(){document.getElementById('loadingScreen').classList.add('hide');}, 525);};
 window.onresize = function() {niceSize();};
 
 function initializeNiceSize() {
