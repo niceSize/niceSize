@@ -129,14 +129,14 @@ nav{
   text-align: center;
   line-height: calc(var(--nSMaxWidth) * 5);
   background-color: red;
-  border-radius: .5vw;
+  border-radius: calc(var(--nSMaxWidth) * .5);
   width: 0vw;
   margin: 0;
   visibility: hidden;;
 }
 
 #navDownload.show{
-  width: 9vw;
+  width: calc(var(--nSMaxWidth) * 9);
   visibility: visible;
 }
 
