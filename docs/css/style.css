@@ -11,7 +11,7 @@ body {
 
 #loadingScreen{
 	position: fixed;
-	display: flex;
+	display: none;
 	top: 0;
 	left: 0;
 	height: 100%;
@@ -81,9 +81,8 @@ noscript a{
 
 header {
   position: fixed;
-  display: flex;
   box-shadow: 0 0 calc(var(--nSMaxWidth) * 1) 0 rgba(0,0,0,.25);
-  width: calc(var(--nSWidth) * 100);
+  width: 100%;
   height: calc(var(--nSMaxWidth) * 5);
   background-color: blue;
   z-index: 1;
@@ -93,7 +92,6 @@ header a{
   height: 100%;
 	display: flex;
 	align-items: center;
-  cursor: default;
   text-decoration: none;
   color: #037add;
   font-size: calc(var(--nSMaxWidth) * 2);
@@ -101,9 +99,12 @@ header a{
 }
 
 #logo{
+  display: flex;
+  position: relative;
   float: left;
-  height: calc(var(--nSMaxWidth) * 5);
+  height: 100%;
   background-color: green;
+  margin: 0;
 }
 
 #logo img {
@@ -117,6 +118,32 @@ header a{
 }
 
 nav{
+  display: flex;
   float: right;
-  height: calc(var(--nSMaxWidth) * 5);
+  height: 100%;
+  background-color: yellow;
+}
+
+#navDownload{
+  display: block;
+  text-align: center;
+  line-height: calc(var(--nSMaxWidth) * 5);
+  background-color: red;
+  border-radius: .5vw;
+  width: 0vw;
+  margin: 0;
+  visibility: hidden;;
+}
+
+#navDownload.show{
+  width: 9vw;
+  visibility: visible;
+}
+
+#navDownload.animate{
+  transition: width .5s, visibility .5s;
+}
+
+main{
+  height: 200vh
 }
