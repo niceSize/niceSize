@@ -1,17 +1,18 @@
-window.onscroll = function() {scrollFunction();};
+window.addEventListener('load', function(){setTimeout(function(){document.getElementById('loadingScreen').classList.add('hide');}, 525);});
+window.addEventListener('scroll', scrollFunction);
 
 function scrollFunction(){
-  if(document.body.scrollTop > 50 || document.documentElement.scrollTop > 50){
-    if(!document.getElementById('navDownload').classList.contains('show')){
-    document.getElementById('navDownload').classList.add('animate');
-    document.getElementById('navDownload').classList.add('show');
-    setTimeout(function(){document.getElementById('navDownload').classList.remove('animate');}, 500);
-  }
+  if(document.body.scrollTop > window.innerHeight || document.documentElement.scrollTop > window.innerHeight){
+    if(!document.querySelector('#headerDownload a').classList.contains('show')){
+    document.querySelector('#headerDownload a').classList.add('animate');
+    document.querySelector('#headerDownload a').classList.add('show');
+    setTimeout(function(){document.querySelector('#headerDownload a').classList.remove('animate');}, 500);
+      }
     }else{
-      if(document.getElementById('navDownload').classList.contains('show')){
-			document.getElementById('navDownload').classList.add('animate');
-			document.getElementById('navDownload').classList.remove('show');
-			setTimeout(function(){document.getElementById('navDownload').classList.remove('animate');}, 500);
-		}
+      if(document.querySelector('#headerDownload a').classList.contains('show')){
+			document.querySelector('#headerDownload a').classList.add('animate');
+			document.querySelector('#headerDownload a').classList.remove('show');
+			setTimeout(function(){document.querySelector('#headerDownload a').classList.remove('animate');}, 500);
+		    }
     }
 }
