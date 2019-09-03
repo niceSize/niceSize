@@ -4,8 +4,9 @@
 github.com/niceSize/niceSize
 ============================
 */
-window.onload = function() {initializeNiceSize();niceSize();};
-window.onresize = function() {niceSize();};
+window.addEventListener('load', initializeNiceSize);
+window.addEventListener('load', niceSize);
+window.addEventListener('resize', niceSize);
 
 function initializeNiceSize() {
 	document.querySelector('body').appendChild(document.createElement('span')).setAttribute('id', 'niceSize');
