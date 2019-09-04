@@ -2,7 +2,7 @@ window.addEventListener('load', function(){setTimeout(function(){document.getEle
 window.addEventListener('scroll', scrollFunction);
 
 function scrollFunction(){
-  if(document.body.scrollTop > window.innerHeight || document.documentElement.scrollTop > window.innerHeight){
+  if(document.body.scrollTop > window.innerHeight * 0.75 || document.documentElement.scrollTop > window.innerHeight * 0.75){
     if(!document.querySelector('#headerDownload a').classList.contains('show')){
     document.querySelector('#headerDownload a').classList.add('animate');
     document.querySelector('#headerDownload a').classList.add('show');

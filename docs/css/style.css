@@ -170,9 +170,42 @@ nav a{
 }
 
 #headerDownload a.animate{
-  transition: right .5s, visibility .5s;
+  transition: right .5s, bottom .5s, visibility .5s;
+}
+
+@media screen and (max-width: 637px) {
+  #headerDownload{
+    width: 0;
+  }
+  #headerDownload a{
+    position: fixed;
+    bottom: calc(var(--nSMaxWidth) * -4);
+    left: 0;
+    width: 100%;
+    border-radius: 0;
+    font-size: calc(var(--nSMaxWidth) * 2);
+  }
+  #headerDownload a.show{
+    bottom: calc(var(--nSMaxWidth) * 0);
+    visibility: visible;
+  }
 }
 
 main{
-  height: 300vh;
+  position: absolute;
+	top: calc(var(--nSMaxWidth) * 5);
+	width: 100%;
+	height: 500vh;
+}
+
+#landingPage{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: calc(calc(var(--nSHeight) * 100) - calc(var(--nSMaxWidth) * 5));
+  background-image: url("../img/.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }

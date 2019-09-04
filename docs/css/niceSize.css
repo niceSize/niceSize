@@ -10,5 +10,5 @@ github.com/niceSize/niceSize
 	--remMultiplier: 1;
 	height: 100vh;
 	--maxWidthMobileSite: 637px;
-	--mobileSiteScalingRatio: 2;
+	--mobileSiteScalingRatio: 2.5;
 }
