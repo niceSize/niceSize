@@ -15,13 +15,13 @@ It is very easy: Download all the niceSize files and include them into your webs
 
 <html>
 <head>
-<!-- Here is the rest of the head elements -->
-<link rel="stylesheet" href="[Here comes the path of the niceSize.css file]">
+<!-- The rest of all <head> elements -->
+<link rel="stylesheet" href="niceSize.css">
 </head>
 <body>
-<!-- Here is your content -->
+<!-- Content -->
 
-<script src="[Here comes the path of the niceSize.js file]"></script>
+<script src="niceSize.js"></script>
 </body>
 </html>
 ```
