@@ -2,7 +2,7 @@ html, body {
   scroll-behavior: smooth;
   padding: 0;
   margin: 0;
-  background-color: #ffffff;
+  background-color: #fff;
 }
 
 body {
@@ -16,7 +16,7 @@ body {
 	width: 100%;
   z-index: 2;
 	align-items: center;
-  background-color: #ffffff;
+  background-color: #fff;
 }
 
 #loadingScreen.hide{
@@ -55,7 +55,7 @@ noscript a{
   border-radius: calc(var(--nSMaxWidth) * .25);
   cursor: default;
   text-decoration: none;
-  color: #ffffff;
+  color: #fff;
   background-color: #037add;
   font-size: calc(var(--nSMaxWidth) * 2);
   padding: calc(var(--nSMaxWidth) * 1);
@@ -81,7 +81,7 @@ header {
   box-shadow: 0 0 calc(var(--nSMaxWidth) * 1) 0 rgba(0,0,0,.1);
   width: 100%;
   height: calc(var(--nSMaxWidth) * 5);
-  background-color: #ffffff;
+  background-color: #fff;
   z-index: 1;
 }
 
@@ -114,10 +114,11 @@ nav{
   align-items: center;
   float: left;
   height: 100%;
+  margin-left: calc(var(--nSMaxWidth) * .5);
 }
 
 nav a{
-  padding-left: calc(var(--nSMaxWidth) * 1);
+  padding: 0 calc(var(--nSMaxWidth) * .5);
 }
 
 #languageChooser{
@@ -129,7 +130,7 @@ nav a{
 
 #languageChooser a{
   padding: 0 calc(var(--nSMaxWidth) * .5);
-  background-color: #ffffff;
+  background-color: #fff;
   z-index: 1;
 }
 
@@ -155,7 +156,7 @@ nav a{
   position: relative;
   justify-content: center;
   background-color: #037add;
-  color: #ffffff;
+  color: #fff;
   border-radius: calc(var(--nSMaxWidth) * .25);
   width: calc(var(--nSMaxWidth) * 13);
   height: calc(var(--nSMaxWidth) * 4);
@@ -179,10 +180,13 @@ nav a{
   }
   #headerDownload a{
     position: fixed;
-    bottom: calc(var(--nSMaxWidth) * -4);
+    bottom: calc(var(--nSMaxWidth) * -5);
     left: 0;
     width: 100%;
     border-radius: 0;
+    border-top-left-radius: calc(var(--nSMaxWidth) * .25);
+    border-top-right-radius: calc(var(--nSMaxWidth) * .25);
+    height: calc(var(--nSMaxWidth) * 5);
     font-size: calc(var(--nSMaxWidth) * 2);
   }
   #headerDownload a.show{
@@ -204,8 +208,82 @@ main{
   justify-content: center;
   width: 100%;
   height: calc(calc(var(--nSHeight) * 100) - calc(var(--nSMaxWidth) * 5));
-  background-image: url("../img/.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: green;
+}
+
+@media screen and (min-width: 638px) {
+  #landingPage{
+    min-height: calc(var(--nSMaxWidth) * 40);
+  }
+}
+
+#landingPageScroll{
+  position: absolute;
+  width: calc(var(--nSMaxWidth) * 5);
+  height: calc(var(--nSMaxWidth) * 5);
+  left: calc(calc(calc(var(--nSWidth) * 100) - calc(var(--nSMaxWidth) * 5)) / 2);
+  top: calc(calc(calc(calc(var(--nSHeight) * 100) - calc(var(--nSMaxWidth) * 5)) / 2) + calc(var(--nSMaxWidth) * 25));
+  background-color: cyan;
+}
+
+#landingPageScroll::before{
+  position: absolute;
+  width: calc(var(--nSMaxWidth) * 7.5);
+  height: calc(var(--nSMaxWidth) * 7.5);
+  background-color: blue;
+  border-style: solid;
+  border-width: calc(var(--nSMaxWidth) * .5) calc(var(--nSMaxWidth) * .5) 0 0;
+  content: '';
+  left: calc(var(--nSMaxWidth) * 0.75);
+  top: calc(var(--nSMaxWidth) * 0.75);
+  height: calc(var(--nSMaxWidth) * 3);
+  transform: rotate(135deg);
+  width: calc(var(--nSMaxWidth) * 3);
+}
+
+#landingPageContent{
+  display: block;
+  width: calc(var(--nSMaxWidth) * 40);
+  height: calc(var(--nSMaxWidth) * 40);
+  text-align: center;
+  background-color: blue;
+  overflow: hidden;
+}
+
+#landingPageContent img{
+  margin-left: calc(var(--nSMaxWidth) * 15);
+  margin-right: calc(var(--nSMaxWidth) * 15);
+  width: calc(var(--nSMaxWidth) * 10);
+  height: calc(var(--nSMaxWidth) * 10);
+  background-color: red;
+}
+
+#landingPageContentTitle{
+  font-size: calc(var(--nSMaxWidth) * 5);
+  line-height: calc(var(--nSMaxWidth) * 5);
+}
+
+#landingPageContentText{
+  position: relative;
+  display: inline-flex;
+  font-size: calc(var(--nSMaxWidth) * 2);
+  background-color: yellow;
+  width: calc(var(--nSMaxWidth) * 30);
+  height: calc(var(--nSMaxWidth) * 15);
+}
+
+#landingPageContent a{
+  position: relative;
+  display: inline-flex;
+  border-radius: calc(var(--nSMaxWidth) * .25);
+  cursor: default;
+  text-decoration: none;
+  color: #fff;
+  background-color: #037add;
+  justify-content: center;
+  align-items: center;
+  font-size: calc(var(--nSMaxWidth) * 2);
+  width: calc(var(--nSMaxWidth) * 20);
+  height: calc(var(--nSMaxWidth) * 5);
+  top: calc(var(--nSMaxWidth) * 2.5);
 }
