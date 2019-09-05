@@ -4,8 +4,7 @@
 github.com/niceSize/niceSize
 ============================
 */
-window.addEventListener('load', initializeNiceSize);
-window.addEventListener('load', niceSize);
+window.addEventListener('load',() => {initializeNiceSize();niceSize();});
 window.addEventListener('resize', niceSize);
 
 function initializeNiceSize() {
