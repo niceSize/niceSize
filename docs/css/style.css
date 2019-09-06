@@ -209,15 +209,12 @@ main{
   width: 100%;
   height: calc(calc(var(--nSHeight) * 100) - calc(var(--nSMaxWidth) * 5));
   background-color: green;
+  overflow: hidden;
 }
 
-#landingPage.animate{
-    transition: height .1s;
-}
-
-@media screen and (min-width: 638px) {
+@media screen and (min-width: 638px){
   #landingPage{
-    min-height: calc(var(--nSMaxWidth) * 40);
+      min-height: calc(var(--nSMaxWidth) * 40);
   }
 }
 
@@ -245,6 +242,24 @@ main{
   width: calc(var(--nSMaxWidth) * 3);
 }
 
+@media screen and (max-width: 637px) and (min-aspect-ratio: 200/325){
+  #landingPageScroll{
+    display: none;
+  }
+  #landingPageScroll::before{
+    display: none;
+  }
+}
+
+@media screen and (min-width: 637px) and (max-height: 65vw) and (max-height: 65rem){
+  #landingPageScroll{
+    display: none;
+  }
+  #landingPageScroll::before{
+    display: none;
+  }
+}
+
 #landingPageContent{
   display: block;
   width: calc(var(--nSMaxWidth) * 40);
@@ -254,9 +269,15 @@ main{
   overflow: hidden;
 }
 
+@media screen and (max-width: 637px){
+  #landingPageContent{
+    height: calc(var(--nSMaxWidth) * 35);
+  }
+}
+
 #landingPageContent img{
-  margin-left: calc(var(--nSMaxWidth) * 15);
-  margin-right: calc(var(--nSMaxWidth) * 15);
+  margin-left: 37.5%;
+  margin-right: 37.5%;
   width: calc(var(--nSMaxWidth) * 10);
   height: calc(var(--nSMaxWidth) * 10);
   background-color: red;
@@ -271,10 +292,19 @@ main{
   position: relative;
   display: inline-flex;
   font-size: calc(var(--nSMaxWidth) * 2);
+  word-break: break-all;
   background-color: yellow;
   width: calc(var(--nSMaxWidth) * 30);
   height: calc(var(--nSMaxWidth) * 15);
 }
+
+@media screen and (max-width: 637px){
+  #landingPageContentText{
+    font-size: calc(var(--nSMaxWidth) * 1.75);
+    height: calc(var(--nSMaxWidth) * ‭13.125‬);
+  }
+}
+
 
 #landingPageContent a{
   position: relative;
