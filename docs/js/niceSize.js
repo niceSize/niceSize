@@ -27,15 +27,10 @@ function initializeNiceSize() {
   }
 	if(parseFloat(window.getComputedStyle(document.getElementById('niceSize')).getPropertyValue('height')) > window.innerHeight){
 		document.querySelector('body').style.setProperty('--nSHeight', window.innerHeight * 0.01 + 'px');
-		mobile = 1;
-		alert('if');
 	}else{
 		document.querySelector('body').style.setProperty('--nSHeight', '1vh');
-		mobile = 0;
-		alert('else');
 	}
 	document.getElementById('niceSize').style.setProperty('display', 'none');
-	alert(mobile);
 }
 
 function niceSize(){
