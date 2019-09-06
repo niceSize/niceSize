@@ -211,6 +211,10 @@ main{
   background-color: green;
 }
 
+#landingPage.animate{
+    transition: height .1s;
+}
+
 @media screen and (min-width: 638px) {
   #landingPage{
     min-height: calc(var(--nSMaxWidth) * 40);
