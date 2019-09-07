@@ -49,10 +49,10 @@ noscript{
 	top: calc(var(--nSMaxWidth) * 6);
 	color: #037add;
 	font-size: calc(var(--nSMaxWidth) * 1.45);
+  background-color: yellow;
 }
 
 noscript a{
-  display: inline-flex;
   border-radius: calc(var(--nSMaxWidth) * .25);
   cursor: pointer;
   text-decoration: none;
@@ -291,7 +291,6 @@ main{
 }
 
 #landingPageContentText{
-  position: relative;
   display: inline-flex;
   font-size: calc(var(--nSMaxWidth) * 2);
   word-break: break-all;
