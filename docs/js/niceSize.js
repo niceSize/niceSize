@@ -6,7 +6,6 @@ github.com/niceSize/niceSize
 */
 window.addEventListener('load',() => {initializeNiceSize();niceSize();});
 window.addEventListener('resize', niceSize);
-window.onresize = function(){alert('resize triggered');};
 
 function initializeNiceSize() {
 	document.querySelector('body').appendChild(document.createElement('span')).setAttribute('id', 'niceSize');
@@ -30,13 +29,10 @@ function initializeNiceSize() {
 	if(parseFloat(window.getComputedStyle(document.getElementById('niceSize')).getPropertyValue('height')) > window.innerHeight){
 		document.querySelector('body').style.setProperty('--nSHeight', window.innerHeight * 0.01 + 'px');
 		mobile = 1;
-		alert('if');
 	}else{
 		document.querySelector('body').style.setProperty('--nSHeight', '1vh');
 		mobile = 0;
-		alert('else');
 	}
-	alert(mobile);
 }
 
 function niceSize(){
@@ -53,7 +49,6 @@ function niceSize(){
 	}
 	document.querySelector('body').style.setProperty('--nSWidth', document.documentElement.clientWidth * 0.01 * parseFloat(window.getComputedStyle(document.getElementById('niceSize')).getPropertyValue('--vwMultiplier')) + 'px');
 	document.getElementById('niceSize').style.setProperty('display', 'flex');
-	alert(mobile);
 	if(mobile == 0){
 		if(parseFloat(window.getComputedStyle(document.getElementById('niceSize')).getPropertyValue('height')) > window.innerHeight){
 			document.querySelector('body').style.setProperty('--nSHeight', window.innerHeight * 0.01 + 'px');
