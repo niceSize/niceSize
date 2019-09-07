@@ -276,9 +276,7 @@ main{
 }
 
 #landingPageContent img{
-  margin-left: 37.5%;
-  margin-right: 37.5%;
-  width: calc(var(--nSMaxWidth) * 10);
+  width: 100%;
   height: calc(var(--nSMaxWidth) * 10);
   background-color: red;
 }
