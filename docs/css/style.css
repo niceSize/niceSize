@@ -53,7 +53,7 @@ noscript{
 noscript a{
   display: inline-flex;
   border-radius: calc(var(--nSMaxWidth) * .25);
-  cursor: default;
+  cursor: pointer;
   text-decoration: none;
   color: #fff;
   background-color: #037add;
