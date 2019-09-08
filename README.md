@@ -31,5 +31,8 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 Please make sure to update tests as appropriate.
 
+## Programming Language
+- [JavaScript](https://www.w3schools.com/js/DEFAULT.asp)
+
 ## License
 [ISC](https://opensource.org/licenses/ISC)
