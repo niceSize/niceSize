@@ -28,10 +28,10 @@ function initializeNiceSize() {
 	if(parseFloat(window.getComputedStyle(document.getElementById('niceSize')).getPropertyValue('height')) > window.innerHeight){
 		document.querySelector('body').style.setProperty('--nSHeight', window.innerHeight * 0.01 + 'px');
 		widthOld = window.innerWidth;
-		heightLoad = window.innerHeight * 0.01;
-		alert(heightLoad);
 	}else{
 		document.querySelector('body').style.setProperty('--nSHeight', '1vh');
+		heightLoad = window.innerHeight * 0.01;
+		alert(heightLoad);
 	}
 	document.getElementById('niceSize').style.setProperty('display', 'none');
 }
