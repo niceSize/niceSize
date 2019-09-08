@@ -30,6 +30,7 @@ function initializeNiceSize() {
 		widthOld = window.innerWidth;
 	}else{
 		document.querySelector('body').style.setProperty('--nSHeight', '1vh');
+		widthOld = window.innerWidth;
 		heightLoad = window.innerHeight;
 	}
 	document.getElementById('niceSize').style.setProperty('display', 'none');
