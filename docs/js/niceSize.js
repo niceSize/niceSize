@@ -55,6 +55,7 @@ function niceSize(){
 	document.getElementById('niceSize').style.setProperty('display', 'flex');
 	if(window.innerWidth != widthOld){
 		heightOld = window.innerHeight;
+		document.querySelector('body').style.setProperty('--nSHeight', heightOld * 0.01 + 'px');
 		alert('if1');
 	}
 	if(parseFloat(window.getComputedStyle(document.getElementById('niceSize')).getPropertyValue('height')) > window.innerHeight && window.innerWidth != widthOld){
