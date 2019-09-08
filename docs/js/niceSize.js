@@ -52,12 +52,6 @@ function niceSize(){
 	}
 	document.querySelector('body').style.setProperty('--nSWidth', document.documentElement.clientWidth * 0.01 * parseFloat(window.getComputedStyle(document.getElementById('niceSize')).getPropertyValue('--vwMultiplier')) + 'px');
 	document.getElementById('niceSize').style.setProperty('display', 'flex');
-	if(window.innerWidth != widthOld){
-		widthOld = window.innerWidth;
-		heightOld = window.innerHeight;
-		document.querySelector('body').style.setProperty('--nSHeight', heightOld * 0.01 + 'px');
-		if(widthOld == widthLoad){heightOld = heightLoad;}
-	}
 	if(parseFloat(window.getComputedStyle(document.getElementById('niceSize')).getPropertyValue('height')) > window.innerHeight && window.innerWidth != widthOld){
 		document.querySelector('body').style.setProperty('--nSHeight', window.innerHeight * 0.01 + 'px');
 		widthOld = window.innerWidth;
@@ -69,5 +63,11 @@ function niceSize(){
 window.addEventListener('scroll', () => {window.addEventListener('resize', niceSizetest);});
 
 function niceSizetest(){
+	if(window.innerWidth != widthOld){
+		widthOld = window.innerWidth;
+		heightOld = window.innerHeight;
+		document.querySelector('body').style.setProperty('--nSHeight', heightOld * 0.01 + 'px');
+		if(widthOld == widthLoad){heightOld = heightLoad;}
+	}
 	document.querySelector('body').style.setProperty('--nSHeight', heightOld * 0.01 + 'px');
 }
