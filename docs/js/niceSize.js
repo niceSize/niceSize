@@ -30,8 +30,7 @@ function initializeNiceSize() {
 		widthOld = window.innerWidth;
 	}else{
 		document.querySelector('body').style.setProperty('--nSHeight', '1vh');
-		heightLoad = window.innerHeight * 0.01;
-		alert(heightLoad);
+		heightLoad = window.innerHeight;
 	}
 	document.getElementById('niceSize').style.setProperty('display', 'none');
 }
@@ -62,6 +61,5 @@ function niceSize(){
 window.addEventListener('scroll', () => {window.addEventListener('resize', niceSizetest);});
 
 function niceSizetest(){
-	alert('test');
-	document.querySelector('body').style.setProperty('--nSHeight', heightLoad + 'px');
+	document.querySelector('body').style.setProperty('--nSHeight', heightLoad * 0.01 + 'px');
 }
