@@ -61,5 +61,7 @@ window.addEventListener('scroll', () => {window.addEventListener('resize', niceS
 
 function niceSizetest(){
 	alert('test');
-	document.querySelector('body').style.setProperty('--nSHeight', heightLoad * 0.01 + 'px');
+	if(window.innerWidth != widthOld){
+		document.querySelector('body').style.setProperty('--nSHeight', heightLoad * 0.01 + 'px');
+	}
 }
