@@ -28,7 +28,8 @@ function initializeNiceSize() {
 	if(parseFloat(window.getComputedStyle(document.getElementById('niceSize')).getPropertyValue('height')) > window.innerHeight){
 		document.querySelector('body').style.setProperty('--nSHeight', window.innerHeight * 0.01 + 'px');
 		widthOld = window.innerWidth;
-		heightLoad = window.innerHeight;
+		heightLoad = window.innerHeight * 0.01;
+		alert(heightLoad);
 	}else{
 		document.querySelector('body').style.setProperty('--nSHeight', '1vh');
 	}
@@ -50,6 +51,7 @@ function niceSize(){
 	document.querySelector('body').style.setProperty('--nSWidth', document.documentElement.clientWidth * 0.01 * parseFloat(window.getComputedStyle(document.getElementById('niceSize')).getPropertyValue('--vwMultiplier')) + 'px');
 	document.getElementById('niceSize').style.setProperty('display', 'flex');
 	if(parseFloat(window.getComputedStyle(document.getElementById('niceSize')).getPropertyValue('height')) > window.innerHeight && window.innerWidth != widthOld){
+		alert('if');
 		document.querySelector('body').style.setProperty('--nSHeight', window.innerHeight * 0.01 + 'px');
 		widthOld = window.innerWidth;
 	}
@@ -61,5 +63,5 @@ window.addEventListener('scroll', () => {window.addEventListener('resize', niceS
 
 function niceSizetest(){
 	alert('test');
-	document.querySelector('body').style.setProperty('--nSHeight', heightLoad * 0.01 + 'px');
+	document.querySelector('body').style.setProperty('--nSHeight', heightLoad + 'px');
 }
