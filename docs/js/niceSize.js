@@ -6,6 +6,7 @@ github.com/niceSize/niceSize
 */
 window.addEventListener('load',() => {initializeNiceSize();niceSize();});
 window.addEventListener('resize', niceSize);
+window.addEventListener('scroll', () => {window.addEventListener('resize', firefoxMobileFix);});
 
 function initializeNiceSize() {
 	document.querySelector('body').appendChild(document.createElement('span')).setAttribute('id', 'niceSize');
@@ -27,13 +28,19 @@ function initializeNiceSize() {
   }
 	if(parseFloat(window.getComputedStyle(document.getElementById('niceSize')).getPropertyValue('height')) > window.innerHeight){
 		document.querySelector('body').style.setProperty('--nSHeight', window.innerHeight * 0.01 + 'px');
-		widthOld = window.innerWidth;
+		widthRef = window.innerWidth;
 	}else{
 		document.querySelector('body').style.setProperty('--nSHeight', '1vh');
-		widthLoad = window.innerWidth;
-		widthOld = widthLoad;
-		heightLoad = window.innerHeight;
-		heightOld = heightLoad;
+		if(document.documentElement.clientWidth == window.innerWidth){
+			widthLoad = window.innerWidth;
+			widthRef = widthLoad;
+			heightLoad = window.innerHeight;
+			heightRef = heightLoad;
+			document.body.scrollTop = 1;
+			document.documentElement.scrollTop = 1;
+			document.body.scrollTop = 0;
+			document.documentElement.scrollTop = 0;
+		}
 	}
 	document.getElementById('niceSize').style.setProperty('display', 'none');
 }
@@ -53,25 +60,22 @@ function niceSize(){
 	document.querySelector('body').style.setProperty('--nSWidth', document.documentElement.clientWidth * 0.01 * parseFloat(window.getComputedStyle(document.getElementById('niceSize')).getPropertyValue('--vwMultiplier')) + 'px');
 	document.getElementById('niceSize').style.setProperty('display', 'flex');
 	if(document.documentElement.clientWidth == window.innerWidth){
-		if(window.innerWidth != widthOld){
-			widthOld = window.innerWidth;
-			heightOld = window.innerHeight;
-			document.querySelector('body').style.setProperty('--nSHeight', heightOld * 0.01 + 'px');
-			if(widthOld == widthLoad){heightOld = heightLoad;}
+		if(window.innerWidth != widthRef){
+			widthRef = window.innerWidth;
+			heightRef = window.innerHeight;
+			document.querySelector('body').style.setProperty('--nSHeight', heightRef * 0.01 + 'px');
+			if(widthRef == widthLoad){heightRef = heightLoad;}
 		}
 	}else{
 		document.querySelector('body').style.setProperty('--nSHeight', '1vh');
 	}
-	if(parseFloat(window.getComputedStyle(document.getElementById('niceSize')).getPropertyValue('height')) > window.innerHeight && window.innerWidth != widthOld){
+	if(parseFloat(window.getComputedStyle(document.getElementById('niceSize')).getPropertyValue('height')) > window.innerHeight && window.innerWidth != widthRef){
 		document.querySelector('body').style.setProperty('--nSHeight', window.innerHeight * 0.01 + 'px');
-		widthOld = window.innerWidth;
+		widthRef = window.innerWidth;
 	}
 	document.getElementById('niceSize').style.setProperty('display', 'none');
 }
 
-
-window.addEventListener('scroll', () => {window.addEventListener('resize', niceSizetest);});
-
-function niceSizetest(){
-	document.querySelector('body').style.setProperty('--nSHeight', heightOld * 0.01 + 'px');
+function firefoxMobileFix(){
+	document.querySelector('body').style.setProperty('--nSHeight', heightRef * 0.01 + 'px');
 }
