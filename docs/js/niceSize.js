@@ -30,6 +30,7 @@ function initializeNiceSize() {
 		widthOld = window.innerWidth;
 		alert('if');
 		alert(widthOld);
+		document.querySelector('#landingPage').classList.add('animate');
 	}else{
 		document.querySelector('body').style.setProperty('--nSHeight', '1vh');
 		alert('else');

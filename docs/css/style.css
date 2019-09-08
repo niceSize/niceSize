@@ -208,7 +208,7 @@ main{
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: calc(100vh - calc(var(--nSMaxWidth) * 5));
+  height: calc(calc(var(--nSHeight) * 100) - calc(var(--nSMaxWidth) * 5));
   background-color: green;
   overflow: hidden;
 }
@@ -217,6 +217,10 @@ main{
   #landingPage{
       min-height: calc(var(--nSMaxWidth) * 40);
   }
+}
+
+#landingPage.animate{
+  transition: height .1s;
 }
 
 #landingPageScroll{
