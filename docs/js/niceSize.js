@@ -36,10 +36,6 @@ function initializeNiceSize() {
 			widthRef = widthLoad;
 			heightLoad = window.innerHeight;
 			heightRef = heightLoad;
-			document.body.scrollTop = 1;
-			document.documentElement.scrollTop = 1;
-			document.body.scrollTop = 0;
-			document.documentElement.scrollTop = 0;
 		}
 	}
 	document.getElementById('niceSize').style.setProperty('display', 'none');
