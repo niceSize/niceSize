@@ -31,7 +31,7 @@ function initializeNiceSize() {
 	}else{
 		document.querySelector('body').style.setProperty('--nSHeight', '1vh');
 		widthOld = window.innerWidth;
-		heightLoad = window.innerHeight;
+		heightOld = window.innerHeight;
 	}
 	document.getElementById('niceSize').style.setProperty('display', 'none');
 }
@@ -50,12 +50,12 @@ function niceSize(){
 	}
 	document.querySelector('body').style.setProperty('--nSWidth', document.documentElement.clientWidth * 0.01 * parseFloat(window.getComputedStyle(document.getElementById('niceSize')).getPropertyValue('--vwMultiplier')) + 'px');
 	document.getElementById('niceSize').style.setProperty('display', 'flex');
+	if(window.innerWidth != widthOld){
+		heightOld = window.innerHeight;
+	}
 	if(parseFloat(window.getComputedStyle(document.getElementById('niceSize')).getPropertyValue('height')) > window.innerHeight && window.innerWidth != widthOld){
 		document.querySelector('body').style.setProperty('--nSHeight', window.innerHeight * 0.01 + 'px');
 		widthOld = window.innerWidth;
-	}
-	if(window.innerWidth != widthOld){
-		heightLoad = window.innerHeight;
 	}
 	document.getElementById('niceSize').style.setProperty('display', 'none');
 }
@@ -64,5 +64,5 @@ function niceSize(){
 window.addEventListener('scroll', () => {window.addEventListener('resize', niceSizetest);});
 
 function niceSizetest(){
-	document.querySelector('body').style.setProperty('--nSHeight', heightLoad * 0.01 + 'px');
+	document.querySelector('body').style.setProperty('--nSHeight', heightOld * 0.01 + 'px');
 }
