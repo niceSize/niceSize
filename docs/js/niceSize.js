@@ -28,7 +28,6 @@ function initializeNiceSize() {
 	if(parseFloat(window.getComputedStyle(document.getElementById('niceSize')).getPropertyValue('height')) > window.innerHeight){
 		document.querySelector('body').style.setProperty('--nSHeight', window.innerHeight * 0.01 + 'px');
 		widthOld = window.innerWidth;
-		widthLoad = window.innerWidth;
 		heightLoad = window.innerHeight;
 	}else{
 		document.querySelector('body').style.setProperty('--nSHeight', '1vh');
@@ -62,5 +61,5 @@ window.addEventListener('scroll', () => {window.addEventListener('resize', niceS
 
 function niceSizetest(){
 	alert('test');
-		document.querySelector('body').style.setProperty('--nSHeight', heightLoad * 0.01 + 'px');
+	document.querySelector('body').style.setProperty('--nSHeight', heightLoad * 0.01 + 'px');
 }
