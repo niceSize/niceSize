@@ -1,5 +1,4 @@
-Font license info
-
+# Font license info of `ns.css` font
 
 ## Font Awesome
 
@@ -17,5 +16,3 @@ Font license info
    Author:    Stephen Hutchings
    License:   SIL (http://scripts.sil.org/OFL)
    Homepage:  http://typicons.com/
-
-
