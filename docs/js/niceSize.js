@@ -54,6 +54,9 @@ function niceSize(){
 		document.querySelector('body').style.setProperty('--nSHeight', window.innerHeight * 0.01 + 'px');
 		widthOld = window.innerWidth;
 	}
+	if(window.innerWidth != widthOld){
+		heightLoad = window.innerHeight;
+	}
 	document.getElementById('niceSize').style.setProperty('display', 'none');
 }
 
