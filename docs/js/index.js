@@ -2,7 +2,7 @@ window.addEventListener('load', function(){setTimeout(function(){document.getEle
 window.addEventListener('scroll', scrollFunction);
 
 function scrollFunction(){
-  if(document.body.scrollTop > window.innerHeight * 0.75 || document.documentElement.scrollTop > window.innerHeight * 0.75){
+  if(document.body.scrollTop > window.innerHeight * 0.7|| document.documentElement.scrollTop > window.innerHeight * 0.7){
     if(!document.querySelector('#headerDownload a').classList.contains('show')){
     document.querySelector('#headerDownload a').classList.add('animate');
     document.querySelector('#headerDownload a').classList.add('show');
@@ -15,4 +15,9 @@ function scrollFunction(){
 			setTimeout(function(){document.querySelector('#headerDownload a').classList.remove('animate');}, 500);
 		    }
     }
+}
+
+function landingPageScroll(){
+  document.body.scrollTop = window.innerHeight - parseFloat(window.getComputedStyle(document.querySelector('body')).getPropertyValue('--nSMaxWidth')) * 5;
+  document.documentElement.scrollTop = window.innerHeight - parseFloat(window.getComputedStyle(document.querySelector('body')).getPropertyValue('--nSMaxWidth')) * 5;
 }

@@ -137,8 +137,8 @@ nav a{
   height: calc(var(--nSMaxWidth) * 2);
   width: calc(var(--nSMaxWidth) * .15);
   background-color: #037add;
-  border-top: calc(var(--nSMaxWidth) * 1.5) solid #ffffff;
-  border-bottom: calc(var(--nSMaxWidth) * 1.5) solid #ffffff;
+  border-top: calc(var(--nSMaxWidth) * 1.5) solid #fff;
+  border-bottom: calc(var(--nSMaxWidth) * 1.5) solid #fff;
   z-index: 1;
 }
 
