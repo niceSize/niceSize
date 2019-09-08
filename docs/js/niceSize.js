@@ -28,13 +28,17 @@ function initializeNiceSize() {
 	if(parseFloat(window.getComputedStyle(document.getElementById('niceSize')).getPropertyValue('height')) > window.innerHeight){
 		document.querySelector('body').style.setProperty('--nSHeight', window.innerHeight * 0.01 + 'px');
 		widthOld = window.innerWidth;
+		alert('if');
+		alert(widthOld);
 	}else{
 		document.querySelector('body').style.setProperty('--nSHeight', '1vh');
+		alert('else');
 	}
 	document.getElementById('niceSize').style.setProperty('display', 'none');
 }
 
 function niceSize(){
+	alert('resize');
 	if(document.documentElement.clientWidth * 0.01 * parseFloat(window.getComputedStyle(document.getElementById('niceSize')).getPropertyValue('--vwMultiplier')) > parseFloat(getComputedStyle(document.documentElement).fontSize) * parseFloat(window.getComputedStyle(document.getElementById('niceSize')).getPropertyValue('--remMultiplier'))){
 		document.querySelector('body').style.setProperty('--nSMaxWidth', parseFloat(getComputedStyle(document.documentElement).fontSize) * parseFloat(window.getComputedStyle(document.getElementById('niceSize')).getPropertyValue('--remMultiplier')) + 'px');
 	}else{
@@ -50,7 +54,10 @@ function niceSize(){
 	document.getElementById('niceSize').style.setProperty('display', 'flex');
 	if(parseFloat(window.getComputedStyle(document.getElementById('niceSize')).getPropertyValue('height')) > window.innerHeight && window.innerWidth != widthOld){
 		document.querySelector('body').style.setProperty('--nSHeight', window.innerHeight * 0.01 + 'px');
+		alert('resize if');
+		alert(widthOld);
 		widthOld = window.innerWidth;
+		alert(widthOld);
 	}
 	document.getElementById('niceSize').style.setProperty('display', 'none');
 }
