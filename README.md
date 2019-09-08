@@ -16,12 +16,12 @@ It is very easy: Download all the niceSize files and include them into your webs
 <html>
 <head>
 <!-- The rest of all <head> elements -->
-<link rel="stylesheet" href="niceSize.css">
+<link rel="stylesheet" href="[Path of niceSize.css]">
 </head>
 <body>
 <!-- Content -->
 
-<script src="niceSize.js"></script>
+<script src="[Path of niceSize.js]"></script>
 </body>
 </html>
 ```
