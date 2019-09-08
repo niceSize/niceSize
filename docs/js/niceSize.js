@@ -28,12 +28,11 @@ function initializeNiceSize() {
 	if(parseFloat(window.getComputedStyle(document.getElementById('niceSize')).getPropertyValue('height')) > window.innerHeight){
 		document.querySelector('body').style.setProperty('--nSHeight', window.innerHeight * 0.01 + 'px');
 		widthOld = window.innerWidth;
+		heightLoad = window.innerHeight;
 		//alert('if');
 		//alert(widthOld);
-		mobile=1;
 	}else{
-		document.querySelector('body').style.setProperty('--nSHeight', window.innerHeight * 0.01 + 'px');
-		mobile=0;
+		document.querySelector('body').style.setProperty('--nSHeight', '1vh');
 		//alert('else');
 	}
 	document.getElementById('niceSize').style.setProperty('display', 'none');
@@ -54,15 +53,12 @@ function niceSize(){
 	}
 	document.querySelector('body').style.setProperty('--nSWidth', document.documentElement.clientWidth * 0.01 * parseFloat(window.getComputedStyle(document.getElementById('niceSize')).getPropertyValue('--vwMultiplier')) + 'px');
 	document.getElementById('niceSize').style.setProperty('display', 'flex');
-	if(mobile==1 && window.innerWidth != widthOld){
+	if(parseFloat(window.getComputedStyle(document.getElementById('niceSize')).getPropertyValue('height')) > window.innerHeight && window.innerWidth != widthOld){
 		document.querySelector('body').style.setProperty('--nSHeight', window.innerHeight * 0.01 + 'px');
 		//alert('resize if');
 		//alert(widthOld);
 		widthOld = window.innerWidth;
 		//alert(widthOld);
-	}
-	if(mobile==0){
-		document.querySelector('body').style.setProperty('--nSHeight', '1vh');
 	}
 	document.getElementById('niceSize').style.setProperty('display', 'none');
 }
@@ -71,5 +67,5 @@ function niceSize(){
 window.addEventListener('scroll', () => {window.addEventListener('resize', niceSizetest);});
 
 function niceSizetest(){
-	alert('');
+	document.querySelector('body').style.setProperty('--nSHeight', heightLoad * 0.01 + 'px');
 }
