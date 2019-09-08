@@ -8,6 +8,7 @@ window.addEventListener('load',() => {initializeNiceSize();niceSize();});
 window.addEventListener('resize', niceSize);
 
 function initializeNiceSize() {
+	alert('loaded');
 	document.querySelector('body').appendChild(document.createElement('span')).setAttribute('id', 'niceSize');
   document.getElementById('niceSize').style.setProperty('position', 'absolute');
   if(Number.isNaN(parseFloat(window.getComputedStyle(document.getElementById('niceSize')).getPropertyValue('--vwMultiplier')))){
