@@ -16,9 +16,8 @@ function scrollFunction(){
 		    }
     }
 }
-/*
+
 function landingPageScroll(){
   document.body.scrollTop = window.innerHeight - parseFloat(window.getComputedStyle(document.querySelector('body')).getPropertyValue('--nSMaxWidth')) * 5;
   document.documentElement.scrollTop = window.innerHeight - parseFloat(window.getComputedStyle(document.querySelector('body')).getPropertyValue('--nSMaxWidth')) * 5;
 }
-*/

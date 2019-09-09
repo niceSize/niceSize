@@ -80,7 +80,7 @@ header {
   box-shadow: 0 0 calc(var(--nSMaxWidth) * 1) 0 rgba(0,0,0,.1);
   width: 100%;
   height: calc(var(--nSMaxWidth) * 5);
-  /*background-color: #fff;*/
+  background-color: #fff;
   z-index: 1;
 }
 
@@ -207,7 +207,6 @@ main{
   justify-content: center;
   width: 100%;
   height: calc(calc(var(--nSHeight) * 100) - calc(var(--nSMaxWidth) * 5));
-  background-color: green;
   overflow: hidden;
 }
 
@@ -227,22 +226,21 @@ main{
   height: calc(var(--nSMaxWidth) * 5);
   left: calc(calc(calc(var(--nSWidth) * 100) - calc(var(--nSMaxWidth) * 5)) / 2);
   top: calc(calc(calc(calc(var(--nSHeight) * 100) - calc(var(--nSMaxWidth) * 5)) / 2) + calc(var(--nSMaxWidth) * 25));
-  background-color: cyan;
 }
 
 #landingPageScroll::before{
   position: absolute;
   width: calc(var(--nSMaxWidth) * 7.5);
   height: calc(var(--nSMaxWidth) * 7.5);
-  background-color: blue;
   border-style: solid;
-  border-width: calc(var(--nSMaxWidth) * .5) calc(var(--nSMaxWidth) * .5) 0 0;
+  border-color: #037add;
+  border-width: calc(var(--nSMaxWidth) * .25) calc(var(--nSMaxWidth) * .25) 0 0;
   content: '';
-  left: calc(var(--nSMaxWidth) * 0.75);
-  top: calc(var(--nSMaxWidth) * 0.75);
-  height: calc(var(--nSMaxWidth) * 3);
+  left: calc(var(--nSMaxWidth) * 1.375);
+  top: calc(var(--nSMaxWidth) * 1.375);
+  height: calc(var(--nSMaxWidth) * 2);
   transform: rotate(135deg);
-  width: calc(var(--nSMaxWidth) * 3);
+  width: calc(var(--nSMaxWidth) * 2);
 }
 
 @media screen and (max-width: 637px) and (min-aspect-ratio: 200/325){
@@ -269,8 +267,8 @@ main{
   height: calc(var(--nSMaxWidth) * 40);
   flex-direction: column;
   align-items: center;
-  background-color: blue;
   overflow: hidden;
+  color: #037add;
 }
 
 @media screen and (max-width: 637px){
@@ -282,32 +280,28 @@ main{
 #landingPageContent img{
   width: calc(var(--nSMaxWidth) * 10);
   height: calc(var(--nSMaxWidth) * 10);
-  background-color: red;
 }
 
 #landingPageContentTitle{
   font-size: calc(var(--nSMaxWidth) * 5);
   line-height: calc(var(--nSMaxWidth) * 5);
-  top: 20vw;
-  background-color: cyan;
 }
 
 #landingPageContentText{
-  display: inline-flex;
+  display: flex;
+  text-align: center;
+  margin-top: calc(var(--nSMaxWidth) * .5);
   font-size: calc(var(--nSMaxWidth) * 2);
-  word-break: break-all;
-  background-color: yellow;
-  width: calc(var(--nSMaxWidth) * 30);
-  height: calc(var(--nSMaxWidth) * 15);
+  width: calc(var(--nSMaxWidth) * 32.5);
+  height: calc(var(--nSMaxWidth) * 12.5);
 }
 
 @media screen and (max-width: 637px){
   #landingPageContentText{
     font-size: calc(var(--nSMaxWidth) * 1.75);
-    height: calc(var(--nSMaxWidth) * ‭13.125‬);
+    height: calc(var(--nSMaxWidth) * 8.25);
   }
 }
-
 
 #landingPageContent a{
   position: relative;
@@ -319,14 +313,51 @@ main{
   background-color: #037add;
   justify-content: center;
   align-items: center;
-  font-size: calc(var(--nSMaxWidth) * 2);
-  width: calc(var(--nSMaxWidth) * 20);
+  font-size: calc(var(--nSMaxWidth) * 1.75);
+  width: calc(var(--nSMaxWidth) * 17.5);
   height: calc(var(--nSMaxWidth) * 5);
-  top: calc(var(--nSMaxWidth) * 2.5);
+  top: calc(var(--nSMaxWidth) * 3.25);
+}
+
+@media screen and (max-width: 637px){
+  #landingPageContent a{
+    top: calc(var(--nSMaxWidth) * 2.625);
+  }
 }
 
 #test{
-  height: calc(100vh - calc(var(--nSMaxWidth) * 5));
+  display: flex;
+  justify-content: center;
+  max-height: 200vh;
   width: 100%;
   background-color: yellow;
+}
+
+@media screen and (max-width: 637px){
+  #test{
+    display: block;
+  }
+}
+
+#testleft{
+  height: calc(100vh - calc(var(--nSMaxWidth) * 5));
+  width: calc(var(--nSMaxWidth) * 50);
+  background-color: red;
+}
+
+#testright{
+  height: calc(100vh - calc(var(--nSMaxWidth) * 5));
+  width: calc(var(--nSMaxWidth) * 50);
+  background-color: blue;
+}
+
+@media screen and (max-width: 637px){
+  #testleft{
+    width: calc(var(--nSMaxWidth) * 40);
+    height: calc(calc(100vh - calc(var(--nSMaxWidth) * 5)) / 2);
+  }
+  #testright{
+    width: calc(var(--nSMaxWidth) * 40);
+    height: calc(calc(100vh - calc(var(--nSMaxWidth) * 5)) / 2);
+  }
 }
