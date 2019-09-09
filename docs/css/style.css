@@ -80,7 +80,7 @@ header {
   box-shadow: 0 0 calc(var(--nSMaxWidth) * 1) 0 rgba(0,0,0,.1);
   width: 100%;
   height: calc(var(--nSMaxWidth) * 5);
-  background-color: #fff;
+  /*background-color: #fff;*/
   z-index: 1;
 }
 
