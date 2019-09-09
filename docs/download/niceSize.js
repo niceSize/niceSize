@@ -6,11 +6,11 @@ github.com/niceSize/niceSize
 */
 window.addEventListener('load',() => {initializeNiceSize();niceSize();});
 window.addEventListener('resize', niceSize);
+window.addEventListener('scroll', () => {window.addEventListener('resize', firefoxMobileFix);});
 
 function initializeNiceSize() {
 	document.querySelector('body').appendChild(document.createElement('span')).setAttribute('id', 'niceSize');
   document.getElementById('niceSize').style.setProperty('position', 'absolute');
-	document.getElementById('niceSize').style.setProperty('display', 'none');
   if(Number.isNaN(parseFloat(window.getComputedStyle(document.getElementById('niceSize')).getPropertyValue('--vwMultiplier')))){
     document.getElementById('niceSize').style.setProperty('--vwMultiplier', '1%');
   }
@@ -28,11 +28,17 @@ function initializeNiceSize() {
   }
 	if(parseFloat(window.getComputedStyle(document.getElementById('niceSize')).getPropertyValue('height')) > window.innerHeight){
 		document.querySelector('body').style.setProperty('--nSHeight', window.innerHeight * 0.01 + 'px');
-		mobile = 1;
+		widthRef = window.innerWidth;
 	}else{
 		document.querySelector('body').style.setProperty('--nSHeight', '1vh');
-		mobile = 0;
+		if(document.documentElement.clientWidth == window.innerWidth){
+			widthLoad = window.innerWidth;
+			widthRef = widthLoad;
+			heightLoad = window.innerHeight;
+			heightRef = heightLoad;
+		}
 	}
+	document.getElementById('niceSize').style.setProperty('display', 'none');
 }
 
 function niceSize(){
@@ -49,12 +55,23 @@ function niceSize(){
 	}
 	document.querySelector('body').style.setProperty('--nSWidth', document.documentElement.clientWidth * 0.01 * parseFloat(window.getComputedStyle(document.getElementById('niceSize')).getPropertyValue('--vwMultiplier')) + 'px');
 	document.getElementById('niceSize').style.setProperty('display', 'flex');
-	if(mobile == 0){
-		if(parseFloat(window.getComputedStyle(document.getElementById('niceSize')).getPropertyValue('height')) > window.innerHeight){
-			document.querySelector('body').style.setProperty('--nSHeight', window.innerHeight * 0.01 + 'px');
-		}else{
-			document.querySelector('body').style.setProperty('--nSHeight', '1vh');
+	if(document.documentElement.clientWidth == window.innerWidth){
+		if(window.innerWidth != widthRef){
+			widthRef = window.innerWidth;
+			heightRef = window.innerHeight;
+			document.querySelector('body').style.setProperty('--nSHeight', heightRef * 0.01 + 'px');
+			if(widthRef == widthLoad){heightRef = heightLoad;}
 		}
+	}else{
+		document.querySelector('body').style.setProperty('--nSHeight', '1vh');
+	}
+	if(parseFloat(window.getComputedStyle(document.getElementById('niceSize')).getPropertyValue('height')) > window.innerHeight && window.innerWidth != widthRef){
+		document.querySelector('body').style.setProperty('--nSHeight', window.innerHeight * 0.01 + 'px');
+		widthRef = window.innerWidth;
 	}
 	document.getElementById('niceSize').style.setProperty('display', 'none');
+}
+
+function firefoxMobileFix(){
+	document.querySelector('body').style.setProperty('--nSHeight', heightRef * 0.01 + 'px');
 }
