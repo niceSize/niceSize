@@ -332,6 +332,7 @@ main{
 .test{
   display: flex;
   justify-content: space-around;
+  align-items: center;
   width: 100%;
   background-color: yellow;
 }
@@ -342,10 +343,11 @@ main{
   }
 }
 
-.testLeft{
+.testContent{
   display: flex;
-  height: calc(calc(100vh - calc(var(--nSMaxWidth) * 5)) / 2);
   width: 50%;
+  height: calc(calc(100vh - calc(var(--nSMaxWidth) * 5)) / 2);
+    min-height: calc(var(--nSMaxWidth) * 28);
   background-color: red;
   flex-direction: column;
   justify-content: center;
@@ -354,22 +356,22 @@ main{
 }
 
 @media screen and (max-width: 637px){
-  .testLeft{
-    width: calc(var(--nSMaxWidth) * 40);
+  .testContent{
+    width: 100%;
   }
 }
 
-.testLeft img{
+.testContent img{
   width: calc(var(--nSMaxWidth) * 10);
   height: calc(var(--nSMaxWidth) * 10);
 }
 
-.testLeftTitle{
+.testContentTitle{
   font-size: calc(var(--nSMaxWidth) * 5);
   line-height: calc(var(--nSMaxWidth) * 5);
 }
 
-.testLeftText{
+.testContentText{
   display: flex;
   text-align: center;
   margin-top: calc(var(--nSMaxWidth) * .5);
@@ -378,35 +380,48 @@ main{
   height: calc(var(--nSMaxWidth) * 12.5);
 }
 
-.testRight{
+.testImg{
   display: flex;
   justify-content: center;
   height: calc(calc(100vh - calc(var(--nSMaxWidth) * 5)) / 2);
+  min-height: calc(var(--nSMaxWidth) * 28);
   width: 50%;
   background-color: blue;
 }
 
 @media screen and (max-width: 637px){
-  .testRight{
-    width: calc(var(--nSMaxWidth) * 40);
+  .testImg{
+    width: 100%;
   }
 }
 
-.testRight img{
+.testImg img{
   height: 100%;
   width: 100%;
 }
 
+@media screen and (max-width: 637px){
+  #test1{
+    flex-direction: column-reverse;
+  }
+}
+
 footer{
   position: relative;
-  top: calc(calc(calc(calc(100vh - calc(var(--nSMaxWidth) * 5)) / 2) * 4) + calc(calc(var(--nSHeight) * 100) - calc(var(--nSMaxWidth) * 5)));
+  top: calc(calc(calc(calc(100vh - calc(var(--nSMaxWidth) * 5)) / 2) * 2) + calc(var(--nSHeight) * 100));
   width: 100%;
   height: 20vw;
-  background-color: blue;
+  background-color: rgba(0,255,255,.5);
+}
+
+@media screen and (max-width: 637px){
+  footer{
+    top: calc(calc(calc(calc(100vh - calc(var(--nSMaxWidth) * 5)) / 2) * 8) + calc(calc(var(--nSHeight) * 100) - calc(var(--nSMaxWidth) * 5)));
+  }
 }
 
 #footerDownload{
   height: 10vw;
   width: 100%;
-  background-color: red;
+  background-color: rgba(255,255,255,.5);
 }
