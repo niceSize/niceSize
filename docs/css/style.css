@@ -7,6 +7,9 @@ html, body {
 
 body {
   font-family: "Roboto", sans-serif;
+  position: absolute;
+	top: calc(var(--nSMaxWidth) * 5);
+  width: 100%;
 }
 
 #loadingScreen{
@@ -77,6 +80,7 @@ noscript a{
 
 header {
   position: fixed;
+  top: 0;
   box-shadow: 0 0 calc(var(--nSMaxWidth) * 1) 0 rgba(0,0,0,.1);
   width: 100%;
   height: calc(var(--nSMaxWidth) * 5);
@@ -194,10 +198,8 @@ nav a{
   }
 }
 
-main{
-  position: absolute;
-	top: calc(var(--nSMaxWidth) * 5);
-	width: 100%;
+#headerDownload a:hover{
+  background-color: #036dc5;
 }
 
 #landingPage{
@@ -225,6 +227,12 @@ main{
   width: calc(calc(100% - calc(var(--nSMaxWidth) * 40)) / 2);
 }
 
+@media screen and (max-width: 637px){
+  #landingPage img{
+      visibility: hidden;
+  }
+}
+
 #landingPageContent{
   display: flex;
   width: calc(var(--nSMaxWidth) * 40);
@@ -243,6 +251,7 @@ main{
 #landingPageContent img{
   width: calc(var(--nSMaxWidth) * 10);
   height: calc(var(--nSMaxWidth) * 10);
+  visibility: visible;
 }
 
 #landingPageContentTitle{
@@ -268,7 +277,7 @@ main{
 
 #landingPageContent a{
   position: relative;
-  display: inline-flex;
+  display: flex;
   border-radius: calc(var(--nSMaxWidth) * .25);
   cursor: pointer;
   text-decoration: none;
@@ -286,6 +295,10 @@ main{
   #landingPageContent a{
     top: calc(var(--nSMaxWidth) * 2.625);
   }
+}
+
+#landingPageContent a:hover{
+  background-color: #036dc5;
 }
 
 #landingPageScroll{
@@ -407,21 +420,73 @@ main{
 }
 
 footer{
-  position: relative;
-  top: calc(calc(calc(calc(100vh - calc(var(--nSMaxWidth) * 5)) / 2) * 2) + calc(var(--nSHeight) * 100));
   width: 100%;
-  height: 20vw;
-  background-color: rgba(0,255,255,.5);
+  height: calc(var(--nSMaxWidth) * 17.5);
+  background-color: yellow;
 }
 
 @media screen and (max-width: 637px){
   footer{
-    top: calc(calc(calc(calc(100vh - calc(var(--nSMaxWidth) * 5)) / 2) * 8) + calc(calc(var(--nSHeight) * 100) - calc(var(--nSMaxWidth) * 5)));
+    height: calc(var(--nSMaxWidth) * 10);
   }
 }
 
 #footerDownload{
-  height: 10vw;
+  display: flex;
+  height: calc(var(--nSMaxWidth) * 12.5);
   width: 100%;
-  background-color: rgba(255,255,255,.5);
+  background-color: green;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #037add;
+}
+
+@media screen and (max-width: 637px){
+  #footerDownload{
+    display: none;
+  }
+}
+
+#footerDownloadTitle{
+  font-size: calc(var(--nSMaxWidth) * 2.5);
+  color: #fff;
+}
+
+#footerDownload a{
+    display: flex;
+    border-radius: calc(var(--nSMaxWidth) * .25);
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+    background-color: #037add;
+    justify-content: center;
+    align-items: center;
+    font-size: calc(var(--nSMaxWidth) * 1.75);
+    width: calc(var(--nSMaxWidth) * 17);
+    height: calc(var(--nSMaxWidth) * 4.5);
+    margin-top: calc(var(--nSMaxWidth) * 1);
+    border: calc(var(--nSMaxWidth) * .25) solid #fff;
+}
+
+#footerDownload a:hover{
+  background-color: #fff;
+  color: #037add;
+}
+
+#footerContent{
+  display: flex;
+  height: calc(var(--nSMaxWidth) * 5);
+  width: 100%;
+  background-color: #fff;
+  align-items: center;
+  justify-content: center;
+}
+
+#footerContent a{
+  cursor: pointer;
+  text-decoration: none;
+  color: #037add;
+  font-size: calc(var(--nSMaxWidth) * 1.75);
+  margin: calc(var(--nSMaxWidth) * .5);
 }
