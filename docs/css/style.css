@@ -128,7 +128,11 @@ nav{
 
 nav a{
   padding: 0 calc(var(--nSMaxWidth) * .5);
-  font-size: calc(var(--nSMaxWidth) * 1.5);
+}
+
+nav a i {
+  font-size: calc(var(--nSMaxWidth) * 2.6);
+  padding-left: calc(var(--nSMaxWidth) * .5);
 }
 
 #languageChooser{
