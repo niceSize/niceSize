@@ -352,7 +352,6 @@ nav a{
   justify-content: center;
   align-items: center;
   width: 100%;
-  background-color: yellow;
 }
 
 @media screen and (max-width: 637px){
@@ -366,7 +365,6 @@ nav a{
   width: calc(var(--nSMaxWidth) * 50);
   height: calc(calc(100vh - calc(var(--nSMaxWidth) * 5)) / 2);
   min-height: calc(var(--nSMaxWidth) * 30);
-  background-color: red;
   flex-direction: column;
   justify-content: center;
   color: #037add;
@@ -406,7 +404,6 @@ nav a{
   height: calc(calc(100vh - calc(var(--nSMaxWidth) * 5)) / 2);
   min-height: calc(var(--nSMaxWidth) * 30);
   width: calc(var(--nSMaxWidth) * 50);
-  background-color: blue;
 }
 
 @media screen and (max-width: 637px){
