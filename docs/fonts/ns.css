@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'niceSize';
-  src:  url('niceSize.eot?duyasm');
-  src:  url('niceSize.eot?duyasm#iefix') format('embedded-opentype'),
-    url('niceSize.ttf?duyasm') format('truetype'),
-    url('niceSize.woff?duyasm') format('woff'),
-    url('niceSize.svg?duyasm#niceSize') format('svg');
+  src:  url('niceSize/niceSize.eot?pc7bnz');
+  src:  url('niceSize/niceSize.eot?pc7bnz#iefix') format('embedded-opentype'),
+    url('niceSize/niceSize.ttf?pc7bnz') format('truetype'),
+    url('niceSize/niceSize.woff?pc7bnz') format('woff'),
+    url('niceSize/niceSize.svg?pc7bnz#niceSize') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -35,8 +35,14 @@ i {
 .ns-download:before {
   content: "\e902";
 }
-.ns-file-text-o:before {
+.ns-document:before {
   content: "\e903";
+}
+.ns-phone:before {
+  content: "\e942";
+}
+.ns-cog:before {
+  content: "\e994";
 }
 .ns-cross:before {
   content: "\ea0f";
