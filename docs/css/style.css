@@ -56,17 +56,6 @@ noscript{
 	font-size: calc(var(--nSMaxWidth) * 1.45);
 }
 
-noscript a{
-  border-radius: calc(var(--nSMaxWidth) * .25);
-  cursor: pointer;
-  text-decoration: none;
-  color: #fff;
-  background-color: #037add;
-  font-size: calc(var(--nSMaxWidth) * 2);
-  padding: calc(var(--nSMaxWidth) * 1);
-  margin-top: calc(var(--nSMaxWidth) * 1);
-}
-
 @media screen and (max-width: 100rem) and (min-width: 638px){
   #loader, noscript{--nSMaxWidth: 1vw;}
 }
@@ -78,6 +67,21 @@ noscript a{
 }
 @media screen and (max-width: 637px) and (min-aspect-ratio: 1/1){
   #loader, noscript{--nSMaxWidth: 2.5vh;}
+}
+
+noscript a{
+  border-radius: calc(var(--nSMaxWidth) * .25);
+  cursor: pointer;
+  text-decoration: none;
+  color: #fff;
+  background-color: #037add;
+  font-size: calc(var(--nSMaxWidth) * 2);
+  padding: calc(var(--nSMaxWidth) * 1);
+  margin-top: calc(var(--nSMaxWidth) * 1);
+}
+
+noscript a:hover{
+    background-color: #036dc5;
 }
 
 header {
@@ -224,7 +228,6 @@ nav a{
 }
 
 #landingPage img{
-  background-color: yellow;
   height: 100%;
   width: calc(calc(100% - calc(var(--nSMaxWidth) * 40)) / 2);
 }
@@ -346,7 +349,7 @@ nav a{
 
 .test{
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   width: 100%;
   background-color: yellow;
@@ -360,13 +363,12 @@ nav a{
 
 .testContent{
   display: flex;
-  width: 50%;
+  width: calc(var(--nSMaxWidth) * 50);
   height: calc(calc(100vh - calc(var(--nSMaxWidth) * 5)) / 2);
-    min-height: calc(var(--nSMaxWidth) * 28);
+  min-height: calc(var(--nSMaxWidth) * 30);
   background-color: red;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   color: #037add;
 }
 
@@ -379,28 +381,31 @@ nav a{
 .testContent img{
   width: calc(var(--nSMaxWidth) * 10);
   height: calc(var(--nSMaxWidth) * 10);
+  margin-left: calc(calc(100% - calc(var(--nSMaxWidth) * 32.5)) / 2);
 }
 
 .testContentTitle{
   font-size: calc(var(--nSMaxWidth) * 5);
   line-height: calc(var(--nSMaxWidth) * 5);
+  margin-left: calc(calc(100% - calc(var(--nSMaxWidth) * 32.5)) / 2);
 }
+
 
 .testContentText{
   display: flex;
-  text-align: center;
   margin-top: calc(var(--nSMaxWidth) * .5);
   font-size: calc(var(--nSMaxWidth) * 2);
   width: calc(var(--nSMaxWidth) * 32.5);
   height: calc(var(--nSMaxWidth) * 12.5);
+  margin-left: calc(calc(100% - calc(var(--nSMaxWidth) * 32.5)) / 2);
 }
 
 .testImg{
   display: flex;
   justify-content: center;
   height: calc(calc(100vh - calc(var(--nSMaxWidth) * 5)) / 2);
-  min-height: calc(var(--nSMaxWidth) * 28);
-  width: 50%;
+  min-height: calc(var(--nSMaxWidth) * 30);
+  width: calc(var(--nSMaxWidth) * 50);
   background-color: blue;
 }
 
@@ -424,7 +429,7 @@ nav a{
 footer{
   width: 100%;
   height: calc(var(--nSMaxWidth) * 17.5);
-  background-color: yellow;
+  background-color: #fff;
 }
 
 @media screen and (max-width: 637px){
@@ -437,11 +442,14 @@ footer{
   display: flex;
   height: calc(var(--nSMaxWidth) * 12.5);
   width: 100%;
-  background-color: green;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: #037add;
+  background-image: url("../img/footerDownload.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 @media screen and (max-width: 637px){
@@ -468,7 +476,7 @@ footer{
     width: calc(var(--nSMaxWidth) * 17);
     height: calc(var(--nSMaxWidth) * 4.5);
     margin-top: calc(var(--nSMaxWidth) * 1);
-    border: calc(var(--nSMaxWidth) * .25) solid #fff;
+    border: calc(var(--nSMaxWidth) * .175) solid #fff;
 }
 
 #footerDownload a:hover{
