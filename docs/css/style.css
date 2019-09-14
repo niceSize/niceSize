@@ -378,8 +378,8 @@ nav a{
 }
 
 .pageContentTextHeading{
-  font-size: calc(var(--nSMaxWidth) * 5);
-  line-height: calc(var(--nSMaxWidth) * 5);
+  font-size: calc(var(--nSMaxWidth) * 4);
+  line-height: calc(var(--nSMaxWidth) * 4);
   margin-left: calc(calc(100% - calc(var(--nSMaxWidth) * 32.5)) / 2);
 }
 
