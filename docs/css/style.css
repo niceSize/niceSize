@@ -377,12 +377,6 @@ nav a{
   }
 }
 
-.pageContentText img{
-  width: calc(var(--nSMaxWidth) * 10);
-  height: calc(var(--nSMaxWidth) * 10);
-  margin-left: calc(calc(100% - calc(var(--nSMaxWidth) * 32.5)) / 2);
-}
-
 .pageContentTextHeading{
   font-size: calc(var(--nSMaxWidth) * 5);
   line-height: calc(var(--nSMaxWidth) * 5);
@@ -437,6 +431,7 @@ footer{
 }
 
 #footerDownload{
+
   display: flex;
   height: calc(var(--nSMaxWidth) * 12.5);
   width: 100%;
