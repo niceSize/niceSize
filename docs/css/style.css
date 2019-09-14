@@ -436,6 +436,10 @@ footer{
   }
 }
 
+.ns-discord {
+  color: #037add;
+}
+
 #footerDownload{
   display: flex;
   height: calc(var(--nSMaxWidth) * 12.5);
