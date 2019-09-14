@@ -222,6 +222,7 @@ footer{
   left: 0;
   width: 100%;
   height: calc(var(--nSMaxWidth) * 21.5);
+  background-color: #fff;
 }
 
 #footerDownload{
