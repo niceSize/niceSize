@@ -56,19 +56,6 @@ noscript{
 	font-size: calc(var(--nSMaxWidth) * 1.45);
 }
 
-@media screen and (max-width: 100rem) and (min-width: 638px){
-  #loader, noscript{--nSMaxWidth: 1vw;}
-}
-@media screen and (min-width: 100rem) and (min-width: 638px){
-  #loader, noscript{--nSMaxWidth: 1rem;}
-}
-@media screen and (max-width: 637px) and (max-aspect-ratio: 1/1){
-  #loader, noscript{--nSMaxWidth: 2.5vw;}
-}
-@media screen and (max-width: 637px) and (min-aspect-ratio: 1/1){
-  #loader, noscript{--nSMaxWidth: 2.5vh;}
-}
-
 noscript a{
   border-radius: calc(var(--nSMaxWidth) * .25);
   cursor: pointer;
@@ -183,27 +170,6 @@ nav a{
   transition: right .5s, bottom .5s, visibility .5s;
 }
 
-@media screen and (max-width: 637px) {
-  #headerDownload{
-    width: 0;
-  }
-  #headerDownload a{
-    position: fixed;
-    bottom: calc(var(--nSMaxWidth) * -5);
-    left: 0;
-    width: 100%;
-    border-radius: 0;
-    border-top-left-radius: calc(var(--nSMaxWidth) * .25);
-    border-top-right-radius: calc(var(--nSMaxWidth) * .25);
-    height: calc(var(--nSMaxWidth) * 5);
-    font-size: calc(var(--nSMaxWidth) * 2);
-  }
-  #headerDownload a.show{
-    bottom: calc(var(--nSMaxWidth) * 0);
-    visibility: visible;
-  }
-}
-
 #headerDownload a:hover{
   background-color: #036dc5;
 }
@@ -217,12 +183,6 @@ nav a{
   overflow: hidden;
 }
 
-@media screen and (min-width: 638px){
-  #landingPage{
-      min-height: calc(var(--nSMaxWidth) * 40);
-  }
-}
-
 #landingPage.animate{
   transition: height .1s;
 }
@@ -230,12 +190,6 @@ nav a{
 #landingPage img{
   height: 90%;
   width: calc(100% - calc(var(--nSMaxWidth) * 40)) / 2);
-}
-
-@media screen and (max-width: 637px){
-  #landingPage img{
-      visibility: hidden;
-  }
 }
 
 #landingPageContent{
@@ -248,11 +202,6 @@ nav a{
   background-color: #fff;
 }
 
-@media screen and (max-width: 637px){
-  #landingPageContent{
-    height: calc(var(--nSMaxWidth) * 35);
-  }
-}
 
 #landingPageContent img{
   width: calc(var(--nSMaxWidth) * 10);
@@ -274,13 +223,6 @@ nav a{
   height: calc(var(--nSMaxWidth) * 12.5);
 }
 
-@media screen and (max-width: 637px){
-  #landingPageContentMain{
-    font-size: calc(var(--nSMaxWidth) * 1.75);
-    height: calc(var(--nSMaxWidth) * 8.25);
-  }
-}
-
 #landingPageContent a{
   position: relative;
   display: flex;
@@ -295,12 +237,6 @@ nav a{
   width: calc(var(--nSMaxWidth) * 17.5);
   height: calc(var(--nSMaxWidth) * 5);
   top: calc(var(--nSMaxWidth) * 3.25);
-}
-
-@media screen and (max-width: 637px){
-  #landingPageContent a{
-    top: calc(var(--nSMaxWidth) * 2.625);
-  }
 }
 
 #landingPageContent a:hover{
@@ -330,35 +266,11 @@ nav a{
   width: calc(var(--nSMaxWidth) * 2);
 }
 
-@media screen and (max-width: 637px) and (min-aspect-ratio: 200/325){
-  #landingPageScroll{
-    display: none;
-  }
-  #landingPageScroll::before{
-    display: none;
-  }
-}
-
-@media screen and (min-width: 638px) and (max-height: 64.5vw) and (max-height: 65rem){
-  #landingPageScroll{
-    display: none;
-  }
-  #landingPageScroll::before{
-    display: none;
-  }
-}
-
 .pageContent{
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-}
-
-@media screen and (max-width: 637px){
-  .pageContent{
-    flex-direction: column;
-  }
 }
 
 .pageContentText{
@@ -371,15 +283,9 @@ nav a{
   color: #037add;
 }
 
-@media screen and (max-width: 637px){
-  .pageContentText{
-    width: 100%;
-  }
-}
-
 .pageContentTextHeading{
-  font-size: calc(var(--nSMaxWidth) * 4);
-  line-height: calc(var(--nSMaxWidth) * 4);
+  font-size: calc(var(--nSMaxWidth) * 4.5);
+  line-height: calc(var(--nSMaxWidth) * 4.5);
   margin-left: calc(calc(100% - calc(var(--nSMaxWidth) * 32.5)) / 2);
 }
 
@@ -401,21 +307,9 @@ nav a{
   width: calc(var(--nSMaxWidth) * 50);
 }
 
-@media screen and (max-width: 637px){
-  .pageContentImg{
-    width: 100%;
-  }
-}
-
 .pageContentImg img{
   height: 100%;
   width: 100%;
-}
-
-@media screen and (max-width: 637px){
-  .pageContent.reverse{
-    flex-direction: column-reverse;
-  }
 }
 
 footer{
@@ -423,12 +317,6 @@ footer{
   width: 100%;
   height: calc(var(--nSMaxWidth) * 17.5);
   background-color: #fff;
-}
-
-@media screen and (max-width: 637px){
-  footer{
-    height: calc(var(--nSMaxWidth) * 10);
-  }
 }
 
 #footerDownload{
@@ -444,12 +332,6 @@ footer{
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-}
-
-@media screen and (max-width: 637px){
-  #footerDownload{
-    display: none;
-  }
 }
 
 #footerDownloadHeading{
@@ -493,4 +375,96 @@ footer{
   color: #037add;
   font-size: calc(var(--nSMaxWidth) * 1.75);
   margin: calc(var(--nSMaxWidth) * .5);
+}
+
+@media screen and (max-width: 100rem) and (min-width: 638px){
+  #loader, noscript{--nSMaxWidth: 1vw;}
+}
+
+@media screen and (min-width: 100rem) and (min-width: 638px){
+  #loader, noscript{--nSMaxWidth: 1rem;}
+}
+
+@media screen and (max-width: 637px) and (max-aspect-ratio: 1/1){
+  #loader, noscript{--nSMaxWidth: 2.5vw;}
+}
+
+@media screen and (max-width: 637px) and (min-aspect-ratio: 1/1){
+  #loader, noscript{--nSMaxWidth: 2.5vh;}
+}
+
+@media screen and (min-width: 638px){
+  #landingPage{
+      min-height: calc(var(--nSMaxWidth) * 40);
+  }
+}
+
+@media screen and (max-width: 637px) and (min-aspect-ratio: 200/325){
+  #landingPageScroll{
+    display: none;
+  }
+  #landingPageScroll::before{
+    display: none;
+  }
+}
+
+@media screen and (min-width: 638px) and (max-height: 64.5vw) and (max-height: 65rem){
+  #landingPageScroll{
+    display: none;
+  }
+  #landingPageScroll::before{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 637px) {
+  #headerDownload{
+    width: 0;
+  }
+  #headerDownload a{
+    position: fixed;
+    bottom: calc(var(--nSMaxWidth) * -5);
+    left: 0;
+    width: 100%;
+    border-radius: 0;
+    border-top-left-radius: calc(var(--nSMaxWidth) * .25);
+    border-top-right-radius: calc(var(--nSMaxWidth) * .25);
+    height: calc(var(--nSMaxWidth) * 5);
+    font-size: calc(var(--nSMaxWidth) * 2);
+  }
+  #headerDownload a.show{
+    bottom: calc(var(--nSMaxWidth) * 0);
+    visibility: visible;
+  }
+  #landingPage img{
+      visibility: hidden;
+  }
+  #landingPageContent{
+    height: calc(var(--nSMaxWidth) * 35);
+  }
+  #landingPageContentMain{
+    font-size: calc(var(--nSMaxWidth) * 1.75);
+    height: calc(var(--nSMaxWidth) * 8.25);
+  }
+  #landingPageContent a{
+    top: calc(var(--nSMaxWidth) * 2.625);
+  }
+  .pageContent{
+    flex-direction: column;
+  }
+  .pageContent.reverse{
+    flex-direction: column-reverse;
+  }
+  .pageContentText{
+    width: 100%;
+  }
+  .pageContentImg{
+    width: 100%;
+  }
+  footer{
+    height: calc(var(--nSMaxWidth) * 10);
+  }
+  #footerDownload{
+    display: none;
+  }
 }
