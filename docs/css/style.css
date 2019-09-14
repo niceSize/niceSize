@@ -431,7 +431,7 @@ footer{
 }
 
 #footerDownload{
-  margin-top: calc(var(--nSMaxHeight) * 1.2);
+  margin-top: calc(var(--nSMaxHeight) * 1.8);
   display: flex;
   height: calc(var(--nSMaxWidth) * 12.5);
   width: 100%;
