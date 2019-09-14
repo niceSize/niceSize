@@ -206,7 +206,6 @@ nav a{
 #landingPageContent img{
   width: calc(var(--nSMaxWidth) * 10);
   height: calc(var(--nSMaxWidth) * 10);
-  visibility: visible;
 }
 
 #landingPageContentHeading{
@@ -287,6 +286,7 @@ nav a{
   font-size: calc(var(--nSMaxWidth) * 4.5);
   line-height: calc(var(--nSMaxWidth) * 4.5);
   margin-left: calc(calc(100% - calc(var(--nSMaxWidth) * 32.5)) / 2);
+  width: calc(var(--nSMaxWidth) * 35);
 }
 
 
@@ -315,7 +315,7 @@ nav a{
 footer{
   margin-top: calc(var(--nSMaxWidth) * 4);
   width: 100%;
-  height: calc(var(--nSMaxWidth) * 17.5);
+  height: calc(var(--nSMaxWidth) * 21);
   background-color: #fff;
 }
 
@@ -435,9 +435,6 @@ footer{
   #headerDownload a.show{
     bottom: calc(var(--nSMaxWidth) * 0);
     visibility: visible;
-  }
-  #landingPage img{
-      visibility: hidden;
   }
   #landingPageContent{
     height: calc(var(--nSMaxWidth) * 35);

@@ -1,0 +1,14 @@
+@media screen and (min-width: 638px){
+  #headerDownload a{
+    width: calc(var(--nSMaxWidth) * 15);
+    right: calc(var(--nSMaxWidth) * -15.5);
+  }
+}
+
+#landingPageContent a{
+  width: calc(var(--nSMaxWidth) * 20);
+}
+
+#footerDownload a{
+    width: calc(var(--nSMaxWidth) * 20);
+}
