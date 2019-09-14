@@ -419,6 +419,7 @@ nav a{
 }
 
 footer{
+  margin-top: calc(var(--nSMaxWidth) * 4);
   width: 100%;
   height: calc(var(--nSMaxWidth) * 17.5);
   background-color: #fff;
@@ -431,7 +432,7 @@ footer{
 }
 
 #footerDownload{
-  margin-top: calc(var(--nSMaxHeight) * 1.8);
+  margin-bottom: calc(var(--nSMaxWidth) * 4);
   display: flex;
   height: calc(var(--nSMaxWidth) * 12.5);
   width: 100%;
