@@ -6,7 +6,6 @@ github.com/niceSize/niceSize
 */
 window.addEventListener('load',() => {initializeNiceSize();niceSize();});
 window.addEventListener('resize', niceSize);
-window.addEventListener('scroll', () => {window.addEventListener('resize', firefoxMobileFix);});
 
 function initializeNiceSize() {
 	document.querySelector('body').appendChild(document.createElement('span')).setAttribute('id', 'niceSize');
@@ -26,16 +25,17 @@ function initializeNiceSize() {
   if(Number.isNaN(parseFloat(window.getComputedStyle(document.getElementById('niceSize')).getPropertyValue('--mobileSiteScalingRatio')))){
     document.getElementById('niceSize').style.setProperty('--mobileSiteScalingRatio', '2');
   }
-	if(parseFloat(window.getComputedStyle(document.getElementById('niceSize')).getPropertyValue('height')) > window.innerHeight){
+	if(parseFloat(window.getComputedStyle(document.getElementById('niceSize')).getPropertyValue('height')) > window.innerHeight && typeof window.orientation !== "undefined" && document.documentElement.clientWidth == window.innerWidth){
 		document.querySelector('body').style.setProperty('--nSHeight', window.innerHeight * 0.01 + 'px');
 		widthRef = window.innerWidth;
 	}else{
 		document.querySelector('body').style.setProperty('--nSHeight', '1vh');
-		if(document.documentElement.clientWidth == window.innerWidth){
-			widthLoad = window.innerWidth;
-			widthRef = widthLoad;
-			heightLoad = window.innerHeight;
-			heightRef = heightLoad;
+		document.querySelector('body').style.setProperty('--nSHeightMFF', '1vh');
+		if(document.documentElement.clientWidth == window.innerWidth && typeof window.orientation !== "undefined"){
+			document.querySelector('body').style.setProperty('--nSHeight', window.innerHeight * 0.01 + 'px');
+			document.querySelector('body').style.setProperty('--nSHeightMFF', window.innerHeight * 0.01 + 'px');
+			widthRef = window.innerWidth;
+			heightRef = window.innerHeight;
 		}
 	}
 	document.getElementById('niceSize').style.setProperty('display', 'none');
@@ -55,23 +55,19 @@ function niceSize(){
 	}
 	document.querySelector('body').style.setProperty('--nSWidth', document.documentElement.clientWidth * 0.01 * parseFloat(window.getComputedStyle(document.getElementById('niceSize')).getPropertyValue('--vwMultiplier')) + 'px');
 	document.getElementById('niceSize').style.setProperty('display', 'flex');
-	if(document.documentElement.clientWidth == window.innerWidth){
-		if(window.innerWidth != widthRef){
-			widthRef = window.innerWidth;
-			heightRef = window.innerHeight;
-			document.querySelector('body').style.setProperty('--nSHeight', heightRef * 0.01 + 'px');
-			if(widthRef == widthLoad){heightRef = heightLoad;}
-		}
-	}else{
-		document.querySelector('body').style.setProperty('--nSHeight', '1vh');
-	}
-	if(parseFloat(window.getComputedStyle(document.getElementById('niceSize')).getPropertyValue('height')) > window.innerHeight && window.innerWidth != widthRef){
+
+	if(parseFloat(window.getComputedStyle(document.getElementById('niceSize')).getPropertyValue('height')) > window.innerHeight && typeof window.orientation !== "undefined" && document.documentElement.clientWidth == window.innerWidth && window.innerWidth != widthRef){
 		document.querySelector('body').style.setProperty('--nSHeight', window.innerHeight * 0.01 + 'px');
 		widthRef = window.innerWidth;
 	}
+	if(parseFloat(window.getComputedStyle(document.getElementById('niceSize')).getPropertyValue('height')) <= window.innerHeight && typeof window.orientation !== "undefined" && document.documentElement.clientWidth == window.innerWidth && window.innerWidth != widthRef){
+		document.querySelector('body').style.setProperty('--nSHeight', window.innerHeight * 0.01 + 'px');
+		document.querySelector('body').style.setProperty('--nSHeightMFF', window.innerHeight * 0.01 + 'px');
+		widthRef = window.innerWidth;
+		heightRef = window.innerHeight;
+	}
+	if(document.documentElement.clientWidth == window.innerWidth && typeof window.orientation !== "undefined" && window.innerHeight > heightRef){
+		document.querySelector('body').style.setProperty('--nSHeightMFF', window.innerHeight * 0.01 + 'px');
+	}
 	document.getElementById('niceSize').style.setProperty('display', 'none');
-}
-
-function firefoxMobileFix(){
-	document.querySelector('body').style.setProperty('--nSHeight', heightRef * 0.01 + 'px');
 }
