@@ -174,11 +174,12 @@ nav a{
 #pageContentText{
   display: flex;
   width: 50%;
-  height: calc(calc(var(--nSHeight) * 100) - calc(var(--nSMaxWidth) * 26.5));
+  height: calc(calc(var(--nSHeight) * 100) - calc(var(--nSMaxWidth) * 22.5));
   min-height: calc(var(--nSMaxWidth) * 25);
   flex-direction: column;
   justify-content: center;
   color: #037add;
+  background-color: red;
 }
 
 #pageContentTextHeading{
@@ -206,7 +207,7 @@ nav a{
 #pageContentImg{
   display: flex;
   justify-content: center;
-  height: calc(calc(var(--nSHeight) * 100) - calc(var(--nSMaxWidth) * 26.5));
+  height: calc(calc(var(--nSHeight) * 100) - calc(var(--nSMaxWidth) * 22.5));
   min-height: calc(var(--nSMaxWidth) * 25);
   width: 50%;
 }
@@ -221,12 +222,11 @@ footer{
   bottom: 0;
   left: 0;
   width: 100%;
-  height: calc(var(--nSMaxWidth) * 21.5);
+  height: calc(var(--nSMaxWidth) * 17.5);
   background-color: #fff;
 }
 
 #footerDownload{
-  margin-bottom: calc(var(--nSMaxWidth) * 4);
   display: flex;
   height: calc(var(--nSMaxWidth) * 12.5);
   width: 100%;
@@ -284,19 +284,19 @@ footer{
 }
 
 @media screen and (max-width: 100rem) and (min-width: 638px){
-  body{--nSMaxWidth: 1vw;}
+  #loader, noscript{--nSMaxWidth: 1vw;}
 }
 
 @media screen and (min-width: 100rem) and (min-width: 638px){
-  body{--nSMaxWidth: 1rem;}
+  #loader, noscript{--nSMaxWidth: 1rem;}
 }
 
 @media screen and (max-width: 637px) and (max-aspect-ratio: 1/1){
-  body{--nSMaxWidth: 2.5vw;}
+  #loader, noscript{--nSMaxWidth: 2.5vw;}
 }
 
 @media screen and (max-width: 637px) and (min-aspect-ratio: 1/1){
-  body{--nSMaxWidth: 2.5vh;}
+  #loader, noscript{--nSMaxWidth: 2.5vh;}
 }
 
 @media screen and (max-width: 637px) {
