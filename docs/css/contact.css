@@ -174,7 +174,7 @@ nav a{
 #pageContentText{
   display: flex;
   width: 50%;
-  height: calc(100% - calc(var(--nSMaxWidth) * 26.5));
+  height: calc(calc(var(--nSHeight) * 100) - calc(var(--nSMaxWidth) * 26.5));
   min-height: calc(var(--nSMaxWidth) * 25);
   flex-direction: column;
   justify-content: center;
@@ -206,7 +206,7 @@ nav a{
 #pageContentImg{
   display: flex;
   justify-content: center;
-  height: calc(100% - calc(var(--nSMaxWidth) * 26.5));
+  height: calc(calc(var(--nSHeight) * 100) - calc(var(--nSMaxWidth) * 26.5));
   min-height: calc(var(--nSMaxWidth) * 25);
   width: 50%;
 }
@@ -318,11 +318,11 @@ footer{
     flex-direction: column;
   }
   #pageContentText{
-    height: calc(calc(100% - calc(var(--nSMaxWidth) * 15)) / 2);
+    height: calc(calc(calc(var(--nSHeight) * 100) - calc(var(--nSMaxWidth) * 15)) / 2);
     width: 100%;
   }
   #pageContentImg{
-    height: calc(calc(100% - calc(var(--nSMaxWidth) * 15)) / 2);
+    height: calc(calc(calc(var(--nSHeight) * 100) - calc(var(--nSMaxWidth) * 15)) / 2);
     width: 100%;
   }
   footer{

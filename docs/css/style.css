@@ -275,7 +275,7 @@ nav a{
 .pageContentText{
   display: flex;
   width: calc(var(--nSMaxWidth) * 50);
-  height: calc(calc(100vh - calc(var(--nSMaxWidth) * 5)) / 2);
+  height: calc(calc(calc(var(--nSHeightMFF) * 100) - calc(var(--nSMaxWidth) * 5)) / 2);
   min-height: calc(var(--nSMaxWidth) * 30);
   flex-direction: column;
   justify-content: center;
@@ -302,7 +302,7 @@ nav a{
 .pageContentImg{
   display: flex;
   justify-content: center;
-  height: calc(calc(100vh - calc(var(--nSMaxWidth) * 5)) / 2);
+  height: calc(calc(calc(var(--nSHeightMFF) * 100) - calc(var(--nSMaxWidth) * 5)) / 2);
   min-height: calc(var(--nSMaxWidth) * 30);
   width: calc(var(--nSMaxWidth) * 50);
 }
