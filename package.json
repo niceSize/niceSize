@@ -1,0 +1,26 @@
+{
+  "_comment": "This is the package.json file of the niceSize project.",
+  "name": "nicesize",
+  "version": "0.1.0",
+  "description": "niceSize is a lightweight JavaScript library that allows for simple responsive webdesign.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/niceSize/niceSize.git"
+  },
+  "keywords": [
+    "nicesize",
+    "responsive",
+    "webdesign",
+    "html",
+    "css",
+    "crossplatform",
+    "browser",
+    "mobile"
+  ],
+  "author": "Locxter and QuickWrite",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/niceSize/niceSize/issues"
+  },
+  "homepage": "niceSize.github.io/niceSize"
+}
