@@ -1,48 +1,48 @@
-html, body {
+html, body{
   scroll-behavior: smooth;
   padding: 0;
   margin: 0;
   background-color: #fff;
 }
 
-body {
+body{
   font-family: "Roboto", sans-serif;
   position: absolute;
-	top: calc(var(--nSMaxWidth) * 5);
+  top: calc(var(--nSMaxWidth) * 5);
   width: 100%;
 }
 
 #loadingScreen{
-	position: fixed;
+  position: fixed;
   top: 0;
   left: 0;
-	display: flex;
+  display: flex;
   justify-content: center;
-	height: 100%;
-	width: 100%;
+  align-items: center;
+  height: 100%;
+  width: 100%;
   z-index: 2;
-	align-items: center;
   background-color: #fff;
 }
 
 #loadingScreen.hide{
-	visibility: hidden;
-	opacity: 0;
-	transition: .25s;
+  visibility: hidden;
+  opacity: 0;
+  transition: .25s;
 }
 
 #loader{
-	position: fixed;
-	border: calc(var(--nSMaxWidth) * .25) solid #f3f3f3;
-	border-top: calc(var(--nSMaxWidth) * .25) solid #037add;
-	border-radius: 50%;
-	width: calc(var(--nSMaxWidth) * 2.5);
+  position: fixed;
+  border: calc(var(--nSMaxWidth) * .25) solid #f3f3f3;
+  border-top: calc(var(--nSMaxWidth) * .25) solid #037add;
+  border-radius: 50%;
+  width: calc(var(--nSMaxWidth) * 2.5);
 	height: calc(var(--nSMaxWidth) * 2.5);
 	left: calc(calc(100% - calc(var(--nSMaxWidth) * 2.5)) / 2);
 	animation: spin 1.5s linear infinite;
 }
 
-@keyframes spin {
+@keyframes spin{
   100% { transform: rotate(360deg); }
 }
 
@@ -71,7 +71,7 @@ noscript a:hover{
     background-color: #036dc5;
 }
 
-header {
+header{
   position: fixed;
   top: 0;
   box-shadow: 0 0 calc(var(--nSMaxWidth) * 1) 0 rgba(0,0,0,.1);
@@ -96,7 +96,7 @@ header a{
   height: 100%;
 }
 
-#logo img {
+#logo img{
   height: 100%;
   margin: 0 calc(var(--nSMaxWidth) * .5);
 }
@@ -183,18 +183,12 @@ nav a{
   overflow: hidden;
 }
 
-#landingPage.animate{
-  transition: height .1s;
-}
-
 #landingPage img{
   height: 90%;
-  width: calc(100% - calc(var(--nSMaxWidth) * 40)) / 2);
 }
 
 #landingPageContent{
   display: flex;
-  width: calc(var(--nSMaxWidth) * 40);
   height: calc(var(--nSMaxWidth) * 40);
   flex-direction: column;
   align-items: center;
@@ -235,7 +229,7 @@ nav a{
   font-size: calc(var(--nSMaxWidth) * 1.75);
   width: calc(var(--nSMaxWidth) * 17.5);
   height: calc(var(--nSMaxWidth) * 5);
-  top: calc(var(--nSMaxWidth) * 3.25);
+  top: calc(var(--nSMaxWidth) * 3.5);
 }
 
 #landingPageContent a:hover{
