@@ -18,6 +18,11 @@ function scrollFunction(){
 }
 
 function landingPageScroll(){
-  document.body.scrollTop = window.innerHeight - parseFloat(window.getComputedStyle(document.querySelector('body')).getPropertyValue('--nSMaxWidth')) * 5;
-  document.documentElement.scrollTop = window.innerHeight - parseFloat(window.getComputedStyle(document.querySelector('body')).getPropertyValue('--nSMaxWidth')) * 5;
+	if(window.innerWidth <= parseInt(window.getComputedStyle(document.getElementById('niceSize')).getPropertyValue('--maxWidthMobileSite'))){
+		document.body.scrollTop = window.innerHeight;
+		document.documentElement.scrollTop = window.innerHeight;
+	}else{
+		document.body.scrollTop = window.innerHeight - parseFloat(window.getComputedStyle(document.querySelector('body')).getPropertyValue('--nSMaxWidth')) * 5;
+		document.documentElement.scrollTop = window.innerHeight - parseFloat(window.getComputedStyle(document.querySelector('body')).getPropertyValue('--nSMaxWidth')) * 5;
+	}
 }
