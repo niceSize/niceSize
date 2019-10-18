@@ -8,6 +8,7 @@ In order to use niceSize you don't have to do any heavy Installation. Just downl
 
 ## Usage
 
+Include this in your html:
 ```html
 <!doctype HTML>
 <html>
@@ -22,6 +23,34 @@ In order to use niceSize you don't have to do any heavy Installation. Just downl
 <script src="jsdelivr link"></script>
 </body>
 </html>
+```
+Make your configuration in the niceSize.css file:
+```css
+/*
+============================
+          niceSize
+github.com/niceSize/niceSize
+============================
+*/
+
+#niceSize{
+	--vwMultiplier: 1;
+	--remMultiplier: 1;
+	height: 100vh;
+	--maxWidthMobileSite: 637px;
+	--mobileSiteScalingRatio: 2.5;
+}
+
+```
+
+Finally use niceSize in your css to build a website like shown here:
+```css
+#example{
+width: calc(var(--nSWidth) * 100);
+height: calc(var(--nSHeight) * 100);
+font-size: calc(var(--nSMaxWidth) * 2);
+box-shadow: 0 0 calc(var(--nSHeightMFF) * 2) #000;
+}
 ```
 
 ## Contributing
