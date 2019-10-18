@@ -44,7 +44,6 @@ github.com/niceSize/niceSize
 }
 
 ```
-
 Finally use niceSize in your css to build a website like shown here:
 ```css
 #example{
@@ -57,8 +56,8 @@ box-shadow: 0 0 calc(var(--nSHeightMFF) * 2) #000;
 To understand what each feature does please visit the wiki tab.
 
 ## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 Please make sure to update tests as appropriate.
 
 ## Programming Language
