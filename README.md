@@ -52,7 +52,7 @@ font-size: calc(var(--nSMaxWidth) * 2);
 box-shadow: 0 0 calc(var(--nSHeightMFF) * 2) #000;
 }
 ```
-To understand what each feutures does please visit the wiki tab.
+To understand what each feuture does please visit the wiki tab.
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
