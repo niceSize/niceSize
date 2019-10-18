@@ -4,7 +4,7 @@ niceSize is a lightweight JavaScript library that allows you to easily build stu
 
 ## Installation
 
-In order to use niceSize you don't have to do any heavy Installation. Just download niceSize.js, niceSize.css and for best perfomance niceSize.min.js and you're ready to go. If you want to test niceSize or rely on external sources you also can include it with jsDelivr. An example niceSize.css configuration file is also provided.
+In order to use niceSize you don't have to do any heavy Installation. Just download niceSize.js, niceSize.css and for best perfomance niceSize.min.js, include them in your website and you're ready to go. If you want to test niceSize or rely on external sources you also can include it with jsDelivr. An example niceSize.css configuration file is also provided.
 
 ## Usage
 
@@ -52,6 +52,7 @@ font-size: calc(var(--nSMaxWidth) * 2);
 box-shadow: 0 0 calc(var(--nSHeightMFF) * 2) #000;
 }
 ```
+To understand what each feutures does please visit the wiki tab.
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
