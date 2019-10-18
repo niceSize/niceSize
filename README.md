@@ -13,14 +13,16 @@ Include this in your html:
 <!doctype HTML>
 <html>
 <head>
-<!-- The rest of all <head> elements -->
+<!-- the rest of all <head> elements -->
 <link rel="stylesheet" href="[local path of niceSize.css]">
-<link rel="stylesheet" href="jsdelivr link">
+<!-- or -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/nicesize/nicesize/niceSize.css">
 </head>
 <body>
-<!-- Content -->
+<!-- <body> content -->
 <script src="[local path of niceSize.js]"></script>
-<script src="jsdelivr link"></script>
+<!-- or -->
+<script src="https://cdn.jsdelivr.net/gh/nicesize/nicesize/niceSize.min.js"></script>
 </body>
 </html>
 ```
