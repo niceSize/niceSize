@@ -13,16 +13,16 @@ Include this in your html:
 <!doctype HTML>
 <html>
 <head>
-<!-- the rest of all <head> elements -->
-<link rel="stylesheet" href="[local path of niceSize.css]">
-<!-- or -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/nicesize/nicesize/niceSize.css">
+    <!-- the rest of all <head> elements -->
+    <link rel="stylesheet" href="[local path of niceSize.css]">
+    <!-- or -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/nicesize/nicesize/niceSize.css">
 </head>
 <body>
-<!-- <body> content -->
-<script src="[local path of niceSize.js]"></script>
-<!-- or -->
-<script src="https://cdn.jsdelivr.net/gh/nicesize/nicesize/niceSize.min.js"></script>
+    <!-- <body> content -->
+    <script src="[local path of niceSize.js]"></script>
+    <!-- or -->
+    <script src="https://cdn.jsdelivr.net/gh/nicesize/nicesize/niceSize.min.js"></script>
 </body>
 </html>
 ```
@@ -36,21 +36,21 @@ github.com/niceSize/niceSize
 */
 
 #niceSize{
-	--vwMultiplier: 1;
-	--remMultiplier: 1;
-	height: 100vh;
-	--maxWidthMobileSite: 637px;
-	--mobileSiteScalingRatio: 2.5;
+    --vwMultiplier: 1;
+    --remMultiplier: 1;
+    height: 100vh;
+    --maxWidthMobileSite: 637px;
+    --mobileSiteScalingRatio: 2.5;
 }
 
 ```
 Finally use niceSize in your css to build a website like shown here:
 ```css
 #example{
-width: calc(var(--nSWidth) * 100);
-height: calc(var(--nSHeight) * 100);
-font-size: calc(var(--nSMaxWidth) * 2);
-box-shadow: 0 0 calc(var(--nSHeightMFF) * 2) #000;
+    width: calc(var(--nSWidth) * 100);
+    height: calc(var(--nSHeight) * 100);
+    font-size: calc(var(--nSMaxWidth) * 2);
+    box-shadow: 0 0 calc(var(--nSHeightMFF) * 2) #000;
 }
 ```
 To understand what each feature does please visit the wiki tab.
