@@ -441,6 +441,15 @@ footer{
     bottom: calc(var(--nSMaxWidth) * 0);
     visibility: visible;
   }
+  .landingPageImg.left img{
+    object-fit: contain;
+    object-position: right;
+  }
+
+  .landingPageImg.right img{
+    object-fit: contain;
+    object-position: left;
+  }
   #landingPageContent{
     height: calc(var(--nSMaxWidth) * 35);
   }
