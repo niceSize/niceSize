@@ -11,7 +11,7 @@ function initializeNiceSize() {
 	document.querySelector('body').appendChild(document.createElement('span')).setAttribute('id', 'niceSize');
   document.getElementById('niceSize').style.setProperty('position', 'absolute');
   if(Number.isNaN(parseFloat(window.getComputedStyle(document.getElementById('niceSize')).getPropertyValue('--vwMultiplier')))){
-    document.getElementById('niceSize').style.setProperty('--vwMultiplier', '1');
+    document.getElementById('niceSize').style.setProperty('--vwMultiplier', '1%');
   }
   if(Number.isNaN(parseFloat(window.getComputedStyle(document.getElementById('niceSize')).getPropertyValue('--remMultiplier')))){
     document.getElementById('niceSize').style.setProperty('--remMultiplier', '1');
@@ -23,9 +23,9 @@ function initializeNiceSize() {
     document.getElementById('niceSize').style.setProperty('--maxWidthMobileSite', '637px');
   }
   if(Number.isNaN(parseFloat(window.getComputedStyle(document.getElementById('niceSize')).getPropertyValue('--mobileSiteScalingRatio')))){
-    document.getElementById('niceSize').style.setProperty('--mobileSiteScalingRatio', '2.5');
+    document.getElementById('niceSize').style.setProperty('--mobileSiteScalingRatio', '2');
   }
-	if(parseFloat(window.getComputedStyle(document.getElementById('niceSize')).getPropertyValue('height')) > window.innerHeight && typeof window.orientation !== "undefined" && document.documentElement.clientWidth == window.innerWidth){
+	if(parseFloat(window.getComputedStyle(document.getElementById('niceSize')).getPropertyValue('height')) > window.innerHeight && typeof window.orientation !== "undefined" && document.documentElement.clientWidth === window.innerWidth){
 		document.querySelector('body').style.setProperty('--nSHeight', window.innerHeight * 0.01 + 'px');
 		document.querySelector('body').style.setProperty('--nSHeightMFF', '1vh');
 		widthRef = window.innerWidth;
@@ -34,7 +34,7 @@ function initializeNiceSize() {
 	}else{
 		document.querySelector('body').style.setProperty('--nSHeight', '1vh');
 		document.querySelector('body').style.setProperty('--nSHeightMFF', '1vh');
-		if(document.documentElement.clientWidth == window.innerWidth && typeof window.orientation !== "undefined"){
+		if(document.documentElement.clientWidth === window.innerWidth && typeof window.orientation !== "undefined"){
 			document.querySelector('body').style.setProperty('--nSHeight', window.innerHeight * 0.01 + 'px');
 			document.querySelector('body').style.setProperty('--nSHeightMFF', window.innerHeight * 0.01 + 'px');
 			widthRef = window.innerWidth;
@@ -60,19 +60,19 @@ function niceSize(){
 	}
 	document.querySelector('body').style.setProperty('--nSWidth', document.documentElement.clientWidth * 0.01 * parseFloat(window.getComputedStyle(document.getElementById('niceSize')).getPropertyValue('--vwMultiplier')) + 'px');
 	document.getElementById('niceSize').style.setProperty('display', 'flex');
-	if(parseFloat(window.getComputedStyle(document.getElementById('niceSize')).getPropertyValue('height')) > window.innerHeight && typeof window.orientation !== "undefined" && document.documentElement.clientWidth == window.innerWidth && window.innerWidth != widthRef){
+	if(parseFloat(window.getComputedStyle(document.getElementById('niceSize')).getPropertyValue('height')) > window.innerHeight && typeof window.orientation !== "undefined" && document.documentElement.clientWidth === window.innerWidth && window.innerWidth !== widthRef){
 		document.querySelector('body').style.setProperty('--nSHeight', window.innerHeight * 0.01 + 'px');
 		widthRef = window.innerWidth;
-		if(widthRef == widthLoad){document.querySelector('body').style.setProperty('--nSHeight', heightLoad * 0.01 + 'px');}
+		if(widthRef === widthLoad){document.querySelector('body').style.setProperty('--nSHeight', heightLoad * 0.01 + 'px');}
 	}
-	if(parseFloat(window.getComputedStyle(document.getElementById('niceSize')).getPropertyValue('height')) <= window.innerHeight && typeof window.orientation !== "undefined" && document.documentElement.clientWidth == window.innerWidth && window.innerWidth != widthRef){
+	if(parseFloat(window.getComputedStyle(document.getElementById('niceSize')).getPropertyValue('height')) <= window.innerHeight && typeof window.orientation !== "undefined" && document.documentElement.clientWidth === window.innerWidth && window.innerWidth !== widthRef){
 		document.querySelector('body').style.setProperty('--nSHeight', window.innerHeight * 0.01 + 'px');
 		document.querySelector('body').style.setProperty('--nSHeightMFF', window.innerHeight * 0.01 + 'px');
 		widthRef = window.innerWidth;
-		if(widthRef == widthLoad){document.querySelector('body').style.setProperty('--nSHeight', heightLoad * 0.01 + 'px');}
+		if(widthRef === widthLoad){document.querySelector('body').style.setProperty('--nSHeight', heightLoad * 0.01 + 'px');}
 		heightRef = window.innerHeight;
 	}
-	if(document.documentElement.clientWidth == window.innerWidth && typeof window.orientation !== "undefined" && window.innerHeight > heightRef){
+	if(document.documentElement.clientWidth === window.innerWidth && typeof window.orientation !== "undefined" && window.innerHeight > heightRef){
 		document.querySelector('body').style.setProperty('--nSHeightMFF', window.innerHeight * 0.01 + 'px');
 		heightRef = window.innerHeight;
 	}
