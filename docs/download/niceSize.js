@@ -11,7 +11,7 @@ function initializeNiceSize() {
 	document.body.appendChild(document.createElement('span')).setAttribute('id', 'niceSize');
   document.getElementById('niceSize').style.setProperty('position', 'absolute');
   if(Number.isNaN(parseFloat(window.getComputedStyle(document.getElementById('niceSize')).getPropertyValue('--vwMultiplier')))){
-    document.getElementById('niceSize').style.setProperty('--vwMultiplier', '1%');
+    document.getElementById('niceSize').style.setProperty('--vwMultiplier', '1');
   }
   if(Number.isNaN(parseFloat(window.getComputedStyle(document.getElementById('niceSize')).getPropertyValue('--remMultiplier')))){
     document.getElementById('niceSize').style.setProperty('--remMultiplier', '1');
