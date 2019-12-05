@@ -13,6 +13,38 @@ body {
   width: 100%;
 }
 
+#ie{
+  display: none;
+}
+
+#ieText{
+  display: none;
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  body, html{
+    overflow: hidden;
+  }
+  #ie{
+    display: table;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 3;
+  }
+
+  #ieText{
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 2rem;
+    color: #037add;
+  }
+}
+
 #loadingScreen{
 	position: fixed;
   top: 0;
