@@ -248,10 +248,12 @@ nav a{
   width: calc(var(--nSMaxWidth) * 17.5);
   height: calc(var(--nSMaxWidth) * 5);
   margin-top: calc(var(--nSMaxWidth) * 2.5);
+  transition: transform .1s;
 }
 
 #landingPageContent a:hover{
   background-color: #036dc5;
+  transform: scale(.98);
 }
 
 #landingPageScroll{
