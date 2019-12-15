@@ -474,6 +474,9 @@ footer{
     transform: translateY(0);
     visibility: visible;
   }
+  #landingPage{
+    min-height: calc(var(--nSMaxWidth) * 35);
+  }
   .landingPageImg.left img{
     object-fit: contain;
     object-position: right;
