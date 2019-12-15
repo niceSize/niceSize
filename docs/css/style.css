@@ -455,6 +455,12 @@ footer{
 }
 
 @media screen and (max-width: 637px) {
+  #languageChooser a{
+    z-index: 0;
+  }
+  #languageChooserBar{
+    z-index: 0;
+  }
   #headerDownload{
     width: 0;
   }
