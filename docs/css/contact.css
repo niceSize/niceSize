@@ -47,7 +47,7 @@ body {
 	border-radius: 50%;
 	width: calc(var(--nSMaxWidth) * 2.5);
 	height: calc(var(--nSMaxWidth) * 2.5);
-	left: calc(calc(100% - calc(var(--nSMaxWidth) * 2.5)) / 2);
+	left: calc((100% - var(--nSMaxWidth) * 2.5) / 2);
 	animation: spin 1.5s linear infinite;
 }
 
@@ -182,7 +182,7 @@ nav a{
 #pageContentText{
   display: flex;
   width: 50%;
-  height: calc(calc(var(--nSHeight) * 100) - calc(var(--nSMaxWidth) * 22.5));
+  height: calc(var(--nSHeight) * 100 - var(--nSMaxWidth) * 22.5);
   min-height: calc(var(--nSMaxWidth) * 25);
   flex-direction: column;
   justify-content: center;
@@ -193,7 +193,7 @@ nav a{
   font-size: calc(var(--nSMaxWidth) * 4.5);
   line-height: calc(var(--nSMaxWidth) * 4.5);
   width: calc(var(--nSMaxWidth) * 16);
-  margin-left: calc(calc(100% - calc(var(--nSMaxWidth) * 33)) / 2);
+  margin-left: calc((100% - var(--nSMaxWidth) * 33) / 2);
 }
 
 #pageContentTextMain{
@@ -201,7 +201,7 @@ nav a{
   font-size: calc(var(--nSMaxWidth) * 2);
   width: calc(var(--nSMaxWidth) * 33);
   height: calc(var(--nSMaxWidth) * 17.5);
-  margin-left: calc(calc(100% - calc(var(--nSMaxWidth) * 33)) / 2);
+  margin-left: calc((100% - var(--nSMaxWidth) * 33) / 2);
 }
 
 #pageContentTextMain a{
@@ -213,7 +213,7 @@ nav a{
 #pageContentImg{
   display: flex;
   justify-content: center;
-  height: calc(calc(var(--nSHeight) * 100) - calc(var(--nSMaxWidth) * 22.5));
+  height: calc(var(--nSHeight) * 100 - var(--nSMaxWidth) * 22.5);
   min-height: calc(var(--nSMaxWidth) * 25);
   width: 50%;
 }
@@ -348,11 +348,11 @@ footer{
     flex-direction: column;
   }
   #pageContentText{
-    height: calc(calc(calc(var(--nSHeight) * 100) - calc(var(--nSMaxWidth) * 15)) / 2);
+    height: calc((var(--nSHeight) * 100 - var(--nSMaxWidth) * 15) / 2);
     width: 100%;
   }
   #pageContentImg{
-    height: calc(calc(calc(var(--nSHeight) * 100) - calc(var(--nSMaxWidth) * 15)) / 2);
+    height: calc((var(--nSHeight) * 100 - var(--nSMaxWidth) * 15) / 2);
     width: 100%;
   }
   footer{

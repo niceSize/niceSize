@@ -46,7 +46,7 @@ body{
   border-radius: 50%;
   width: calc(var(--nSMaxWidth) * 2.5);
 	height: calc(var(--nSMaxWidth) * 2.5);
-	left: calc(calc(100% - calc(var(--nSMaxWidth) * 2.5)) / 2);
+	left: calc((100% - var(--nSMaxWidth) * 2.5) / 2);
 	animation: spin 1.5s linear infinite;
 }
 
@@ -186,7 +186,7 @@ nav a{
   align-items: center;
   justify-content: space-around;
   width: 100%;
-  height: calc(calc(var(--nSHeight) * 100) - calc(var(--nSMaxWidth) * 5));
+  height: calc(var(--nSHeight) * 100 - var(--nSMaxWidth) * 5);
   overflow: hidden;
 }
 
@@ -259,8 +259,8 @@ nav a{
   position: absolute;
   width: calc(var(--nSMaxWidth) * 5);
   height: calc(var(--nSMaxWidth) * 5);
-  left: calc(calc(calc(var(--nSWidth) * 100) - calc(var(--nSMaxWidth) * 5)) / 2);
-  top: calc(calc(calc(calc(var(--nSHeight) * 100) - calc(var(--nSMaxWidth) * 5)) / 2) + calc(var(--nSMaxWidth) * 25));
+  left: calc((var(--nSWidth) * 100 - var(--nSMaxWidth) * 5) / 2);
+  top: calc(((var(--nSHeight) * 100 - var(--nSMaxWidth) * 5) / 2) + var(--nSMaxWidth) * 25);
 }
 
 #landingPageScroll::before{
@@ -288,7 +288,7 @@ nav a{
 .pageContentText{
   display: flex;
   width: calc(var(--nSMaxWidth) * 50);
-  height: calc(calc(calc(var(--nSHeightMFF) * 100) - calc(var(--nSMaxWidth) * 5)) / 2);
+  height: calc((var(--nSHeightMFF) * 100 - var(--nSMaxWidth) * 5) / 2);
   min-height: calc(var(--nSMaxWidth) * 30);
   flex-direction: column;
   justify-content: center;
@@ -298,7 +298,7 @@ nav a{
 .pageContentTextHeading{
   font-size: calc(var(--nSMaxWidth) * 4.5);
   line-height: calc(var(--nSMaxWidth) * 4.5);
-  margin-left: calc(calc(100% - calc(var(--nSMaxWidth) * 32.5)) / 2);
+  margin-left: calc((100% - var(--nSMaxWidth) * 32.5) / 2);
   width: calc(var(--nSMaxWidth) * 35);
 }
 
@@ -309,13 +309,13 @@ nav a{
   font-size: calc(var(--nSMaxWidth) * 2);
   width: calc(var(--nSMaxWidth) * 32.5);
   height: calc(var(--nSMaxWidth) * 12.5);
-  margin-left: calc(calc(100% - calc(var(--nSMaxWidth) * 32.5)) / 2);
+  margin-left: calc((100% - var(--nSMaxWidth) * 32.5) / 2);
 }
 
 .pageContentImg{
   display: flex;
   justify-content: center;
-  height: calc(calc(calc(var(--nSHeightMFF) * 100) - calc(var(--nSMaxWidth) * 5)) / 2);
+  height: calc((var(--nSHeightMFF) * 100 - var(--nSMaxWidth) * 5) / 2);
   min-height: calc(var(--nSMaxWidth) * 30);
   width: calc(var(--nSMaxWidth) * 50);
 }
