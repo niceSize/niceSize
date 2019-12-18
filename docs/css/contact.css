@@ -321,12 +321,8 @@ footer{
   #loader, noscript{--nSMaxWidth: 1rem;}
 }
 
-@media screen and (max-width: 637px) and (max-aspect-ratio: 1/1){
+@media screen and (max-width: 637px){
   #loader, noscript{--nSMaxWidth: 2.5vw;}
-}
-
-@media screen and (max-width: 637px) and (min-aspect-ratio: 1/1){
-  #loader, noscript{--nSMaxWidth: 2.5vh;}
 }
 
 @media screen and (max-width: 637px) {
