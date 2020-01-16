@@ -1,38 +1,28 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
-  <loc>https://nicesize.github.io/niceSize/</loc>
-  <lastmod>2019-09-14T18:24:13+00:00</lastmod>
-  <priority>1.00</priority>
+<loc>https://nicesize.github.io/niceSize/</loc>
+<lastmod>2020-01-16T20:11:57+00:00</lastmod>
+<priority>0.80</priority>
+<xhtml:link rel="alternate" hreflang="de" href="https://niceSize.github.io/niceSize/de-de">
 </url>
 <url>
-  <loc>https://nicesize.github.io/niceSize/de-de.html</loc>
-  <lastmod>2019-09-14T18:24:13+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://nicesize.github.io/niceSize/de-de</loc>
+<lastmod>2020-01-16T20:11:57+00:00</lastmod>
+<priority>0.64</priority>
+<xhtml:link rel="alternate" hreflang="en" href="https://niceSize.github.io/niceSize/">
 </url>
 <url>
-  <loc>https://nicesize.github.io/niceSize/contact.html</loc>
-  <lastmod>2019-09-14T18:24:13+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://nicesize.github.io/niceSize/contact</loc>
+<lastmod>2020-01-16T20:11:57+00:00</lastmod>
+<priority>0.64</priority>
+<xhtml:link rel="alternate" hreflang="de" href="https://niceSize.github.io/niceSize/de-deContact">
 </url>
 <url>
-  <loc>https://nicesize.github.io/niceSize/index.html</loc>
-  <lastmod>2019-09-14T18:24:13+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>https://nicesize.github.io/niceSize/de-deContact</loc>
+<lastmod>2020-01-16T20:11:57+00:00</lastmod>
+<priority>0.51</priority>
+<xhtml:link rel="alternate" hreflang="en" href="https://niceSize.github.io/niceSize/contact">
 </url>
-<url>
-  <loc>https://nicesize.github.io/niceSize/de-deContact.html</loc>
-  <lastmod>2019-09-14T18:24:13+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-
-
 </urlset>
 
 <!-- Sitemap of the niceSize.github.io/niceSize/ website. -->
