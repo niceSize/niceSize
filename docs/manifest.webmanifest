@@ -1,6 +1,7 @@
 {
     "name": "niceSize",
     "short_name": "niceSize",
+	"description": "niceSize",
     "icons": [
         {
             "src": "/img/android-chrome-192x192.png",
@@ -13,7 +14,5 @@
             "type": "image/png"
         }
     ],
-    "theme_color": "#ffffff",
-    "background_color": "#ffffff",
     "display": "standalone"
 }
