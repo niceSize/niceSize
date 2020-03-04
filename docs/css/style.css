@@ -13,7 +13,7 @@ html, body{
 body{
   font-family: "Roboto", sans-serif;
   position: absolute;
-  top: calc(var(--nSMaxWidth) * 5);
+  top: calc(var(--nSMaxWidth) * 6);
   width: 100%;
 }
 
@@ -89,7 +89,7 @@ header{
   top: 0;
   box-shadow: 0 0 var(--nSMaxWidth) 0 rgba(0,0,0,.1);
   width: 100%;
-  height: calc(var(--nSMaxWidth) * 5);
+  height: calc(var(--nSMaxWidth) * 6);
   background-color: #fff;
   z-index: 1;
 }
@@ -101,21 +101,26 @@ header a{
   text-decoration: none;
   color: #037add;
   font-size: calc(var(--nSMaxWidth) * 1.25);
+  cursor: pointer;
 }
 
 #logo{
-  display: flex;
   float: left;
   height: 100%;
+  cursor: pointer;
+  margin-left: calc(var(--nSMaxWidth) * .5);
 }
 
-#logo img{
+#logo span{
+  display: flex;
+  align-items: center;
   height: 100%;
-  margin: 0 calc(var(--nSMaxWidth) * .5);
+  color: #037add;
+  font-size: calc(var(--nSMaxWidth) * 3);
 }
 
-#logo a{
-  font-size: calc(var(--nSMaxWidth) * 3);
+#logoImg{
+  height: 80%;
 }
 
 nav{
@@ -144,7 +149,7 @@ nav a{
 }
 
 #languageChooserBar{
-  height: calc(var(--nSMaxWidth) * 2);
+  height: calc(var(--nSMaxWidth) * 2.5);
   width: calc(var(--nSMaxWidth) * .15);
   background-color: #037add;
   border-top: calc(var(--nSMaxWidth) * 1.5) solid #fff;
@@ -167,10 +172,11 @@ nav a{
   color: #fff;
   border-radius: calc(var(--nSMaxWidth) * .25);
   width: calc(var(--nSMaxWidth) * 13);
-  height: calc(var(--nSMaxWidth) * 4);
+  height: calc(var(--nSMaxWidth) * 4.5);
   transform: translateX(calc(var(--nSMaxWidth) * 13.5));
   visibility: hidden;
   z-index: 0;
+  transition: transform .15s, opacity .15s;
 }
 
 #headerDownload a.show{
@@ -183,7 +189,12 @@ nav a{
 }
 
 #headerDownload a:hover{
-  background-color: #036dc5;
+  transform: scale(.975);
+}
+
+#headerDownload a:active{
+  transform: scale(.975);
+  opacity: .65;
 }
 
 #landingPage{
@@ -191,7 +202,7 @@ nav a{
   align-items: center;
   justify-content: space-around;
   width: 100%;
-  height: calc(var(--nSHeight) * 100 - var(--nSMaxWidth) * 5);
+  height: calc(var(--nSHeight) * 100 - var(--nSMaxWidth) * 6);
   overflow: hidden;
 }
 
@@ -252,12 +263,16 @@ nav a{
   width: calc(var(--nSMaxWidth) * 17.5);
   height: calc(var(--nSMaxWidth) * 5);
   margin-top: calc(var(--nSMaxWidth) * 2.5);
-  transition: transform .1s;
+  transition: transform .15s, opacity .15s;
 }
 
 #landingPageContent a:hover{
-  background-color: #036dc5;
-  transform: scale(.98);
+  transform: scale(.975);
+}
+
+#landingPageContent a:active{
+  transform: scale(.975);
+  opacity: .65;
 }
 
 #landingPageScroll{
@@ -265,7 +280,7 @@ nav a{
   width: calc(var(--nSMaxWidth) * 5);
   height: calc(var(--nSMaxWidth) * 5);
   left: calc((var(--nSWidth) * 100 - var(--nSMaxWidth) * 5) / 2);
-  top: calc(((var(--nSHeight) * 100 - var(--nSMaxWidth) * 5) / 2) + var(--nSMaxWidth) * 25);
+  top: calc(((var(--nSHeight) * 100 - var(--nSMaxWidth) * 6) / 2) + var(--nSMaxWidth) * 25);
 }
 
 #landingPageScroll::before{
@@ -293,7 +308,7 @@ nav a{
 .pageContentText{
   display: flex;
   width: calc(var(--nSMaxWidth) * 50);
-  height: calc((var(--nSHeightMFF) * 100 - var(--nSMaxWidth) * 5) / 2);
+  height: calc((var(--nSHeightMFF) * 100 - var(--nSMaxWidth) * 6) / 2);
   min-height: calc(var(--nSMaxWidth) * 30);
   flex-direction: column;
   justify-content: center;
@@ -320,7 +335,7 @@ nav a{
 .pageContentImg{
   display: flex;
   justify-content: center;
-  height: calc((var(--nSHeightMFF) * 100 - var(--nSMaxWidth) * 5) / 2);
+  height: calc((var(--nSHeightMFF) * 100 - var(--nSMaxWidth) * 6) / 2);
   min-height: calc(var(--nSMaxWidth) * 30);
   width: calc(var(--nSMaxWidth) * 50);
 }
@@ -371,11 +386,18 @@ footer{
     height: calc(var(--nSMaxWidth) * 4.5);
     margin-top: calc(var(--nSMaxWidth) * 1);
     border: calc(var(--nSMaxWidth) * .175) solid #fff;
+    transition: background-color .15s, color .15s,  opacity .15s;
 }
 
 #footerDownload a:hover{
   background-color: #fff;
   color: #037add;
+}
+
+#footerDownload a:active{
+  background-color: #fff;
+  color: #037add;
+  opacity: .65;
 }
 
 #footerContent{
@@ -409,7 +431,6 @@ footer{
     background-color: #fff;
     z-index: 3;
   }
-
   #ieText{
     display: table-cell;
     text-align: center;
@@ -455,9 +476,16 @@ footer{
   }
 }
 
-@media screen and (max-width: 637px) {
+@media screen and (max-width: 637px){
+  header a{
+    cursor: default;
+  }
+  #logo{
+    cursor: default;
+  }
   #languageChooser a{
     z-index: 0;
+    cursor: default;
   }
   #languageChooserBar{
     z-index: 0;
@@ -476,6 +504,7 @@ footer{
     border-top-right-radius: calc(var(--nSMaxWidth) * .25);
     height: calc(var(--nSMaxWidth) * 5);
     font-size: calc(var(--nSMaxWidth) * 2);
+    cursor: default;
   }
   #headerDownload a.show{
     transform: translateY(0);
@@ -501,6 +530,7 @@ footer{
   }
   #landingPageContent a{
     margin-top: calc(var(--nSMaxWidth) * 1.75);
+    cursor: default;
   }
   .pageContent{
     flex-direction: column;
@@ -519,5 +549,8 @@ footer{
   }
   #footerDownload{
     display: none;
+  }
+  #footerContent a{
+    cursor: default;
   }
 }
