@@ -13,7 +13,7 @@ Include this in your html:
 <!doctype HTML>
 <html>
 <head>
-    <!-- the rest of all <head> elements -->
+    <!-- the rest of <head> elements -->
     <link rel="stylesheet" href="[local path of niceSize.css]">
     <noscript>
         <link rel="stylesheet" href="[local path of niceSizeFallback.css]">
