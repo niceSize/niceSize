@@ -4,7 +4,7 @@ niceSize is a lightweight JavaScript library that allows you to easily build stu
 
 ## Installation
 
-In order to use niceSize you don't have to do any heavy installation. Just download niceSize.js, niceSize.css and for best perfomance niceSize.min.js, include them in your website and you're ready to go. If you want to test niceSize or rely on external sources, you also can include it with jsDelivr. An example niceSize.css configuration file is provided.
+In order to use niceSize you don't have to do any heavy installation. Just download niceSize.js, niceSize.css, niceSizeFallback.css and for best perfomance niceSize.min.js, include them in your website and you're ready to go. If you want to test niceSize or rely on external sources, you also can include it with jsDelivr. An example niceSize.css configuration file is provided.
 
 ## Usage
 
@@ -15,12 +15,18 @@ Include this in your html:
 <head>
     <!-- the rest of all <head> elements -->
     <link rel="stylesheet" href="[local path of niceSize.css]">
+    <noscript>
+        <link rel="stylesheet" href="[local path of niceSizeFallback.css]">
+    </noscript>
     <!-- or -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/nicesize/nicesize/niceSize.css">
+    <noscript>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/nicesize/nicesize/niceSizeFallback.css">
+    </noscript>
 </head>
 <body>
     <!-- <body> content -->
-    <script src="[local path of niceSize.js]"></script>
+    <script src="[local path of niceSize.min.js]"></script>
     <!-- or -->
     <script src="https://cdn.jsdelivr.net/gh/nicesize/nicesize/niceSize.min.js"></script>
 </body>
