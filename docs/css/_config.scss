@@ -1,0 +1,27 @@
+// scss configuration file
+
+// colors
+$accentColor: #037add;
+$accentColorLight: #f3f3f3;
+$baseColor: #fff;
+$textColor: #037add;
+$textColorInverted: #fff;
+
+// dark mode colors
+$accentColorDarkMode: #fff;
+$accentColorLightDarkMode: #797979;
+$baseColorDarkMode: #1e2124;
+$textColorDarkMode: #fff;
+$textColorInvertedDarkMode: #1e2124;
+
+// @media screen breakpoints
+$mobile: 637px;
+
+// niceSize configuration
+#niceSize{
+	--maxWidthMobileSite: #{$mobile};
+	--mobileSiteScalingRatio: 2.5;
+	--remMultiplier: 1;
+	--vwMultiplier: 1;
+	height: 100vh;
+}

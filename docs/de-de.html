@@ -1,125 +1,154 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de-DE">
 <head>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,  maximum-scale=1.0, user-scalable=no">
-  <title>niceSize - eine Javascript Bibliothek</title>
-  <meta name="author" content="QuickWrite and Locxter">
-  <meta name="description" content="niceSize - eine kleine Javascript Bibliothek, die einfaches responsives Webdesign ermöglicht.">
-  <meta name="og:title" content="niceSize - eine Javascript Bibliothek">
-  <meta name="og:description" content="niceSize - eine kleine Javascript Bibliothek, die einfaches responsives Webdesign ermöglicht.">
-  <meta name="google-site-verification" content="6FqcsVts6gm5Lu11uiqUnniL4PBffI4w4y-bUag0mew" />
+  <title>niceSize - eine JavasScript Bibliothek</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="QuickWrite und Locxter">
+  <meta name="description" content="niceSize - eine kleine JavaScript Bibliothek, die einfaches responsives Webdesign ermöglicht.">
+  <meta name="og:description" content="niceSize - eine kleine JavaScript Bibliothek, die einfaches responsives Webdesign ermöglicht.">
+  <meta name="og:image" content="https://repository-images.githubusercontent.com/205200207/15ec3000-20f8-11ea-8599-cc5673596fa6">
+  <meta name="og:site_name" content="niceSize">
+  <meta name="og:title" content="niceSize - eine JavasScript Bibliothek">
+  <meta name="og:type" content="object">
+  <meta name="og:url" content="https://nicesize.github.io/niceSize">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:description" content="niceSize - eine kleine JavaScript Bibliothek, die einfaches responsives Webdesign ermöglicht.">
+  <meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/205200207/15ec3000-20f8-11ea-8599-cc5673596fa6">
+  <meta name="twitter:title" content="niceSize - eine JavasScript Bibliothek">
+  <link rel="alternate" hreflang="en" href="https://nicesize.github.io/niceSize">
+  <link rel="alternate" hreflang="de" href="https://nicesize.github.io/niceSize/de-de">
+  <meta name="google-site-verification" content="6FqcsVts6gm5Lu11uiqUnniL4PBffI4w4y-bUag0mew">
+  <!-- progressive web -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="niceSize">
   <meta name="theme-color" content="#fff">
   <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-title" content="niceSize">
   <meta name="application-name" content="niceSize">
   <link rel="manifest" href="manifest.webmanifest">
   <!-- favicons -->
   <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+  <link rel="fluid-icon" href="img/logo.svg" title="niceSize">
   <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
   <link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#3f5ef8">
   <link rel="shortcut icon" href="favicon.ico">
   <!-- CSS/fonts -->
   <link rel="stylesheet" href="fonts/roboto.css">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/niceSize.css">
-  <link rel="stylesheet" href="fonts/ns.css">
   <link rel="stylesheet" href="css/de-de.css">
+  <noscript>
+    <link rel="stylesheet" href="css/niceSizeFallback.css">
+  </noscript>
 </head>
 <body>
-  <div id="ie">
-    <span id="ieText">Internet Explorer isn't supported, please upgrade to a modern browser...</span>
-  </div>
-  <div id="loadingScreen">
-    <span id="loader"></span>
-    <noscript>Javascript wird blockiert, Webseite kann nicht geladen werden...
-    <a href="download/niceSize.zip">niceSize herunterladen</a>
-  </noscript>
-  </div>
+  <section id="notSupported">
+    <span>Dein Browser wird nicht unterstützt, bitte aktualisiere deinen Browser...</span>
+  </section>
+  <section id="loadingScreen"></section>
   <header>
     <div id="logo">
-      <span><img id="logoImg" src="img/favicon.svg" alt="Logo">niceSize</span>
+      <a>
+        <img loading="lazy" src="img/logo.svg" alt="logo">
+        <img data-color-scheme="dark" loading="lazy" src="img/logoDarkMode.svg" alt="logoDarkMode">
+        niceSize
+      </a>
     </div>
     <nav>
       <a href="https://github.com/niceSize/niceSize/wiki">Dokumentation</a>
     </nav>
     <div id="languageChooser">
-      <a href="/niceSize/">EN</a>
-      <span id="languageChooserBar"></span>
-      <a href="#">DE</a>
+      <a>EN</a>
+      <span></span>
+      <a href="de-de">DE</a>
     </div>
     <div id="headerDownload">
-      <a href="download/niceSize.zip">niceSize herunterladen</a>
+      <a href="download/download.zip" download="niceSize.zip">niceSize herunterladen</a>
     </div>
   </header>
   <main>
-    <div id="landingPage">
+    <section id="landingPage">
       <div class="landingPageImg left">
-        <img src="img/landingPage.svg" alt="Logo">
+        <img loading="lazy" src="img/webDevices.svg" alt="webDevices">
+        <img data-color-scheme="dark" loading="lazy" src="img/webDevicesDarkMode.svg" alt="webDevicesDarkMode">
       </div>
       <div id="landingPageContent">
-        <img src="img/favicon.svg" alt="Logo">
-        <span id="landingPageContentHeading">niceSize</span>
-        <span id="landingPageContentMain">niceSize ist eine kleine JavaScript Bibliothek, die das Erstellen von atemberaubenden, responsiven Webseiten einfach macht. Lade sie gleich herunter und erfahre ihre Superkräfte.</span>
-        <a href="download/niceSize.zip">niceSize herunterladen</a>
+        <img loading="lazy" src="img/logo.svg" alt="logo">
+        <img data-color-scheme="dark" loading="lazy" src="img/logoDarkMode.svg" alt="logoDarkMode">
+        <h1>niceSize</h1>
+        <span>niceSize ist eine kleine JavaScript Bibliothek, die das Erstellen von atemberaubenden, responsiven Webseiten einfach macht. Lade sie gleich herunter!</span>
+        <a href="download/download.zip" download="niceSize.zip">niceSize herunterladen</a>
       </div>
-      <span id="landingPageScroll" onclick="landingPageScroll()"></span>
+      <a id="landingPageScroll" href="#pageContent"></a>
       <div class="landingPageImg right">
-        <img src="img/landingPage.svg" alt="Logo">
+        <img loading="lazy" src="img/webDevices.svg" alt="webDevices">
+        <img data-color-scheme="dark" loading="lazy" src="img/webDevicesDarkMode.svg" alt="webDevicesDarkMode">
       </div>
-    </div>
-    <div class="pageContent">
+    </section>
+    <article class="pageContent" id="pageContent">
       <div class="pageContentText">
-        <span class="pageContentTextHeading">Mega schnell</span>
-        <span class="pageContentTextMain">niceSize wurde mit Augenmerk auf Geschwindigkeit und Reaktionszeit entwickelt. Sie beeinflusst deine Seite also nicht - abgesehen von den Verbesserungen.</span>
+        <h1>Mega schnell</h1>
+        <span>niceSize wurde mit Augenmerk auf Geschwindigkeit und Reaktionszeit entwickelt. Sie beeinflusst deine Seite also nicht - abgesehen von den Verbesserungen.</span>
       </div>
       <div class="pageContentImg">
-        <img src="img/ultraFast.svg" alt="Logo">
+        <img loading="lazy" src="img/fastLoading.svg" alt="fastLoading">
+        <img data-color-scheme="dark" loading="lazy" src="img/fastLoadingDarkMode.svg" alt="fastLoadingDarkMode">
       </div>
-    </div>
-    <div class="pageContent reverse">
+    </article>
+    <article class="pageContent reverse">
       <div class="pageContentImg">
-        <img src="img/easy.svg" alt="Logo">
+        <img loading="lazy" src="img/goodTeam.svg" alt="goodTeam">
+        <img data-color-scheme="dark" loading="lazy" src="img/goodTeamDarkMode.svg" alt="goodTeamDarkMode">
       </div>
       <div class="pageContentText">
-        <span class="pageContentTextHeading">Super einfach</span>
-        <span class="pageContentTextMain">Die meisten Bibliotheken sind so voller Funktionen, dass man eine lange Eingewöhnungsphase braucht. niceSize ist dagegen schnell und einfach zu erlernen.</span>
+        <h1>Super einfach</h1>
+        <span>Die meisten Bibliotheken sind so überladen, dass man eine lange Eingewöhnungsphase braucht. niceSize dagegen ist schnell und einfach zu erlernen.</span>
       </div>
-    </div>
-    <div class="pageContent">
+    </article>
+    <article class="pageContent">
       <div class="pageContentText">
-        <span class="pageContentTextHeading">Kompatibel</span>
-        <span class="pageContentTextMain">niceSize ist abgesehen von dem veralteten Internet Explorer mit jedem Browser kompatibel und wird geupdatet, sobald neue Funktionen möglich sind. Einfach Klasse!</span>
+        <h1>Kompatibel</h1>
+        <span>niceSize ist abgesehen von dem veralteten Internet Explorer mit jedem Browser kompatibel und wird geupdatet, sobald neue Funktionen möglich sind. Einfach Klasse!</span>
       </div>
       <div class="pageContentImg">
-        <img src="img/browsers.svg" alt="Logo">
+        <img loading="lazy" src="img/mobileBrowsers.svg" alt="mobileBrowsers">
+        <img data-color-scheme="dark" loading="lazy" src="img/mobileBrowsersDarkMode.svg" alt="mobileBrowsersDarkMode">
       </div>
-    </div>
-    <div class="pageContent reverse">
+    </article>
+    <article class="pageContent reverse">
       <div class="pageContentImg">
-        <img src="img/openSource.svg" alt="Logo">
+        <img loading="lazy" src="img/openSource.svg" alt="openSource">
+        <img data-color-scheme="dark" loading="lazy" src="img/openSourceDarkMode.svg" alt="openSourceDarkMode">
       </div>
       <div class="pageContentText">
-        <span class="pageContentTextHeading">Open Source</span>
-        <span class="pageContentTextMain">Open-Source-Programme sind für viele Leute und gerade Entwickler wichtig. Wir sehen das genauso und daher ist niceSize selbstverständlich komplett Open Source.</span>
+        <h1>Open Source</h1>
+        <span>Open-Source-Programme sind für viele Leute und gerade Entwickler wichtig. Wir sehen das genauso und daher ist niceSize selbstverständlich komplett Open Source.</span>
       </div>
-    </div>
+    </article>
   </main>
   <footer>
     <div id="footerDownload">
-      <span id="footerDownloadHeading">Lade niceSize gleich herunter</span>
-      <a href="download/niceSize.zip">niceSize herunterladen</a>
+      <h1>Lade niceSize jetzt herunter!</h1>
+      <a href="download/download.zip" download="niceSize.zip">niceSize herunterladen</a>
     </div>
     <div id="footerContent">
-      <a href="https://github.com/niceSize/niceSize" target="_blank" title="GitHub"><i class="ns-github"></i></a>
-      <a href="de-deContact" title="Kontakt"><i class="ns-phone"></i></a>
-      <a href="https://discord.gg/p4rpVdZ" title="Discord"><i class="ns-discord"></i></a>
+      <a href="https://github.com/niceSize/niceSize" target="_blank" title="GitHub">
+        <img loading="lazy" src="img/github.svg" alt="github">
+        <img data-color-scheme="dark" loading="lazy" src="img/githubDarkMode.svg" alt="githubDarkMode">
+      </a>
+      <a href="de-deContact" title="Kontakt">
+        <img loading="lazy" src="img/contact.svg" alt="contact">
+        <img data-color-scheme="dark" loading="lazy" src="img/contactDarkMode.svg" alt="contactDarkMode">
+      </a>
+      <a href="https://discord.gg/p4rpVdZ" target="_blank" title="Discord">
+        <img loading="lazy" src="img/discord.svg" alt="discord">
+        <img data-color-scheme="dark" loading="lazy" src="img/discordDarkMode.svg" alt="discordDarkMode">
+      </a>
     </div>
   </footer>
-  <script src="js/niceSize.js"></script>
-  <script src="js/index.js"></script>
+  <script src="js/niceSize.min.js"></script>
+  <script src="js/index.min.js"></script>
 </body>
 </html>

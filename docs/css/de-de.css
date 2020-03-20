@@ -1,14 +1,2 @@
-@media screen and (min-width: 638px){
-  #headerDownload a{
-    width: calc(var(--nSMaxWidth) * 15);
-    transform: translateX(calc(var(--nSMaxWidth) * 15.5));
-  }
-}
-
-#landingPageContent a{
-  width: calc(var(--nSMaxWidth) * 20);
-}
-
-#footerDownload a{
-  width: calc(var(--nSMaxWidth) * 20);
-}
+#niceSize{--maxWidthMobileSite:637px;--mobileSiteScalingRatio:2.5;--remMultiplier:1;--vwMultiplier:1;height:100vh}#headerDownload a{transform:translateX(calc(var(--nSMaxWidth) * 15.5));width:calc(var(--nSMaxWidth) * 15)}#landingPageContent a{width:calc(var(--nSMaxWidth) * 20)}#footerDownload a{width:calc(var(--nSMaxWidth) * 20)}@media screen and (max-width:637px){#headerDownload a{border-radius:calc(var(--nSMaxWidth) * .25) calc(var(--nSMaxWidth) * .25) 0 0;bottom:0;font-size:calc(var(--nSMaxWidth) * 2);height:calc(var(--nSMaxWidth) * 5);left:0;position:fixed;transform:translateY(calc(var(--nSMaxWidth) * 7.5));width:100%}}
+/*# sourceMappingURL=de-de.css.map */

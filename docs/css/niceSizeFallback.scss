@@ -1,0 +1,25 @@
+@use "_config.scss";
+
+body{
+  --nSHeight: 1vh;
+  --nSHeightMFF: 1vh;
+  --nSWidth: 1vw;
+}
+
+@media (max-width: 100rem) and (min-width: (config.$mobile + 1)) {
+  body {
+    --nSMaxWidth: 1vw;
+  }
+}
+
+@media (min-width: 100rem) and (min-width: (config.$mobile + 1)) {
+  body {
+    --nSMaxWidth: 1rem;
+  }
+}
+
+@media (max-width: config.$mobile) {
+  body {
+    --nSMaxWidth: 2.5vw;
+  }
+}

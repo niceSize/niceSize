@@ -1,82 +1,108 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,  maximum-scale=1.0, user-scalable=no">
   <title>Contact | niceSize</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="QuickWrite and Locxter">
   <meta name="description" content="niceSize - a lightweight JavaScript library that allows for simple responsive webdesign.">
-  <meta name="og:title" content="Contact | niceSize">
   <meta name="og:description" content="niceSize - a lightweight JavaScript library that allows for simple responsive webdesign.">
-  <meta name="google-site-verification" content="6FqcsVts6gm5Lu11uiqUnniL4PBffI4w4y-bUag0mew" />
+  <meta name="og:image" content="https://repository-images.githubusercontent.com/205200207/15ec3000-20f8-11ea-8599-cc5673596fa6">
+  <meta name="og:site_name" content="niceSize">
+  <meta name="og:title" content="Contact | niceSize">
+  <meta name="og:type" content="object">
+  <meta name="og:url" content="https://nicesize.github.io/niceSize/contact">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:description" content="niceSize - a lightweight JavaScript library that allows for simple responsive webdesign.">
+  <meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/205200207/15ec3000-20f8-11ea-8599-cc5673596fa6">
+  <meta name="twitter:title" content="Contact | niceSize">
+  <link rel="alternate" hreflang="en" href="https://nicesize.github.io/niceSize/contact">
+  <link rel="alternate" hreflang="de" href="https://nicesize.github.io/niceSize/de-deContact">
+  <meta name="google-site-verification" content="6FqcsVts6gm5Lu11uiqUnniL4PBffI4w4y-bUag0mew">
+  <!-- progressive web -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="niceSize">
   <meta name="theme-color" content="#fff">
   <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-title" content="niceSize">
   <meta name="application-name" content="niceSize">
   <link rel="manifest" href="manifest.webmanifest">
   <!-- favicons -->
   <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+  <link rel="fluid-icon" href="img/logo.svg" title="niceSize">
   <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
   <link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#3f5ef8">
   <link rel="shortcut icon" href="favicon.ico">
   <!-- CSS/fonts -->
   <link rel="stylesheet" href="fonts/roboto.css">
   <link rel="stylesheet" href="css/contact.css">
-  <link rel="stylesheet" href="css/niceSize.css">
-  <link rel="stylesheet" href="fonts/ns.css">
+  <noscript>
+    <link rel="stylesheet" href="css/niceSizeFallback.css">
+  </noscript>
 </head>
 <body>
-  <div id="ie">
-    <span id="ieText">Internet Explorer isn't supported, please upgrade to a modern browser...</span>
-  </div>
-  <div id="loadingScreen">
-    <span id="loader"></span>
-    <noscript>Javascript is blocked, site won't work correctly...
-    <a href="download/niceSize.zip">Download niceSize</a>
-  </noscript>
-  </div>
+  <section id="notSupported">
+    <span>Your browser isn't supported, please update or switch to a more modern one...</span>
+  </section>
+  <section id="loadingScreen"></section>
   <header>
     <div id="logo">
-      <a href="/niceSize/"><img id="logoImg" src="img/favicon.svg" alt="Logo">niceSize</a>
+      <a>
+        <img loading="lazy" src="img/logo.svg" alt="logo">
+        <img data-color-scheme="dark" loading="lazy" src="img/logoDarkMode.svg" alt="logoDarkMode">
+        niceSize
+      </a>
     </div>
     <nav>
       <a href="https://github.com/niceSize/niceSize/wiki">Documentation</a>
     </nav>
     <div id="languageChooser">
-      <a href="#">EN</a>
-      <span id="languageChooserBar"></span>
+      <a>EN</a>
+      <span></span>
       <a href="de-deContact">DE</a>
     </div>
     <div id="headerDownload">
-      <a href="download/niceSize.zip">Download niceSize</a>
+      <a href="download/download.zip" download="niceSize.zip">Download niceSize</a>
     </div>
   </header>
   <main>
-    <div id="pageContent">
-      <div id="pageContentText">
-        <span id="pageContentTextHeading">Contact</span>
-        <span id="pageContentTextMain">Email: <a href="mailto:nicesizegithub@gmail.com">nicesizegithub&#64;gmail.com</a><br>Discord: <a href="https://discord.gg/p4rpVdZ">discord.gg/MMXJqF</a><br>GitHub: <a href="https://github.com/niceSize" title="Discord">github.com/niceSize</a><br><br>Please don't spam at the mail address, helpful stuff is of course always welcome.</span>
+    <article class="pageContent">
+      <div class="pageContentText">
+        <h1>Contact</h1>
+        <span>
+          <p>Email: <a href="mailto:nicesizegithub@gmail.com">nicesizegithub@gmail.com</a><br>Discord: <a href="https://discord.gg/p4rpVdZ">discord.gg/MMXJqF</a><br>GitHub: <a href="https://github.com/niceSize" title="Discord">github.com/niceSize</a></p>
+          <p>Please don't spam at the mail address, helpful stuff is of course always welcome.</p>
+        </span>
       </div>
-      <div id="pageContentImg">
-        <img src="img/contact.svg">
+      <div class="pageContentImg">
+        <img loading="lazy" src="img/fastLoading.svg" alt="fastLoading">
+        <img data-color-scheme="dark" loading="lazy" src="img/fastLoadingDarkMode.svg" alt="fastLoadingDarkMode">
       </div>
-    </div>
+    </article>
   </main>
   <footer>
     <div id="footerDownload">
-      <span id="footerDownloadHeading">Download niceSize today</span>
-      <a href="download/niceSize.zip">Download niceSize</a>
+      <h1>Download niceSize today!</h1>
+      <a href="download/download.zip" download="niceSize.zip">Download niceSize</a>
     </div>
     <div id="footerContent">
-      <a href="https://github.com/niceSize/niceSize" target="_blank" title="GitHub"><i class="ns-github"></i></a>
-      <a href="#" title="Contact"><i class="ns-phone"></i></a>
-      <a href="https://discord.gg/p4rpVdZ" title="Discord"><i class="ns-discord"></i></a>
+      <a href="https://github.com/niceSize/niceSize" target="_blank" title="GitHub">
+        <img loading="lazy" src="img/github.svg" alt="github">
+        <img data-color-scheme="dark" loading="lazy" src="img/githubDarkMode.svg" alt="githubDarkMode">
+      </a>
+      <a href="contact" title="Contact">
+        <img loading="lazy" src="img/contact.svg" alt="contact">
+        <img data-color-scheme="dark" loading="lazy" src="img/contactDarkMode.svg" alt="contactDarkMode">
+      </a>
+      <a href="https://discord.gg/p4rpVdZ" target="_blank" title="Discord">
+        <img loading="lazy" src="img/discord.svg" alt="discord">
+        <img data-color-scheme="dark" loading="lazy" src="img/discordDarkMode.svg" alt="discordDarkMode">
+      </a>
     </div>
   </footer>
-  <script src="js/niceSize.js"></script>
-  <script src="js/index.js"></script>
+  <script src="js/niceSize.min.js"></script>
+  <script src="js/index.min.js"></script>
 </body>
 </html>

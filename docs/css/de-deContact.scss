@@ -1,0 +1,25 @@
+@use '_config.scss';
+
+#headerDownload a{
+  width: calc(var(--nSMaxWidth) * 15);
+}
+
+#landingPageContent a{
+  width: calc(var(--nSMaxWidth) * 20);
+}
+
+#footerDownload a{
+  width: calc(var(--nSMaxWidth) * 20);
+}
+
+@media screen and (max-width: config.$mobile){
+  #headerDownload a {
+    border-radius: calc(var(--nSMaxWidth) * .25) calc(var(--nSMaxWidth) * .25) 0 0;
+    bottom: 0;
+    font-size: calc(var(--nSMaxWidth) * 2);
+    height: calc(var(--nSMaxWidth) * 5);
+    left: 0;
+    position: fixed;
+    width: 100%;
+  }
+}

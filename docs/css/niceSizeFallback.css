@@ -1,0 +1,2 @@
+#niceSize{--maxWidthMobileSite:637px;--mobileSiteScalingRatio:2.5;--remMultiplier:1;--vwMultiplier:1;height:100vh}body{--nSHeight:1vh;--nSHeightMFF:1vh;--nSWidth:1vw}@media (max-width:100rem) and (min-width:638px){body{--nSMaxWidth:1vw}}@media (min-width:100rem) and (min-width:638px){body{--nSMaxWidth:1rem}}@media (max-width:637px){body{--nSMaxWidth:2.5vw}}
+/*# sourceMappingURL=niceSizeFallback.css.map */

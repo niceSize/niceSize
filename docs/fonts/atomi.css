@@ -1,8 +1,0 @@
-@font-face {
-        font-family: 'atomi';
-        src: url('atomi.eot');
-        src: url('atomi.eot?#iefix') format('embedded-opentype'),
-           url('atomi.woff') format('woff'),
-           url('atomi.ttf') format('truetype'),
-           url('atomi.svg#atomi') format('svg');
-}
