@@ -1,6 +1,6 @@
 # niceSize
 
-niceSize is a lightweight JavaScript library that allows you to easily build stunning fully responsive websites.
+niceSize is a lightweight JavaScript library that allows you to easily build stunning fully responsive websites. Now even with fallbacks to allow your site to still run whenever JavaScript is disabled.
 
 ## Installation
 
