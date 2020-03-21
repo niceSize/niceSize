@@ -45,7 +45,7 @@ self.addEventListener('install', function(event) {
   );
 });
 
-//Handle request from cache and store new request in the cache
+//Handle request from cache and store new requests in the cache
 self.addEventListener('fetch', function(event) {
   event.respondWith(
     caches.match(event.request)
