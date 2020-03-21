@@ -55,6 +55,9 @@ window.addEventListener('load', function() {
     window.history.pushState(null, '',
     window.location.href.replace(window.location.hash, ''));
   });
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('serviceWorker.js');
+  }
   setTimeout(function() {
     scrollAnimations();
     window.addEventListener('scroll', function(){

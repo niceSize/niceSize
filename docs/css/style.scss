@@ -314,12 +314,19 @@ nav a:hover {
 @keyframes landingPageScrollMovement{
   0%{
     transform: translate(0, 0);
-    --other: property change, because Chrome needs it;
   }
   20%{
-    transform: translate(0, calc(var(--nSHeight) * .5));
+    transform: translate(0, 10%);
+    /*
+    transform: translate(0, calc(var(--nSMaxWidth) * .5));
+    This didn't work in Chrome and Safari for no appearing reason.
+    Change when it works for clearer code.
+    */
   }
   40%{
+    transform: translate(0, 0);
+  }
+  100%{
     transform: translate(0, 0);
   }
 }
