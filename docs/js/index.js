@@ -1,3 +1,4 @@
+//animate the header download
 function scrollAnimations() {
   let element =
   document.getElementById('headerDownload').getElementsByTagName('a')[0];
@@ -19,7 +20,9 @@ function scrollAnimations() {
     }
   }
 }
+
 window.addEventListener('load', function() {
+  //delete the hash and scrolls to the specified element
   if (window.location.hash) {
     let element =
     document.getElementById(window.location.hash.replace('#', ''));
@@ -30,7 +33,7 @@ window.addEventListener('load', function() {
     window.history.pushState(null, '',
     window.location.href.replace(window.location.hash, ''));
   }
-
+  //replace default scroll of links to internal anchors with an own one
   for (let i = 0; i < document.getElementsByTagName('a').length; i++) {
     let element = document.getElementsByTagName('a')[i];
     if (element.getAttribute('href') &&
@@ -51,14 +54,17 @@ window.addEventListener('load', function() {
       });
     }
   }
+  //prevent the user of entering any hashes after the loading
   window.addEventListener('hashchange', function() {
     window.history.pushState(null, '',
     window.location.href.replace(window.location.hash, ''));
   });
+  //register the worker for the progressive web app
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('serviceWorker.js');
   }
   setTimeout(function() {
+    //define the cases when the scroll animations are rolling
     scrollAnimations();
     window.addEventListener('scroll', function(){
       scrollAnimations();

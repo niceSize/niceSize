@@ -35,7 +35,7 @@ var urlsToCache = [
   'img/webDevicesDarkMode.svg',
 ];
 
-//Install the worker
+//install the worker
 self.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open(chacheName)
@@ -45,7 +45,7 @@ self.addEventListener('install', function(event) {
   );
 });
 
-//Handle request from cache and store new requests in the cache
+//handle requests from the cache or fetch new requests and store them
 self.addEventListener('fetch', function(event) {
   event.respondWith(
     caches.match(event.request)
