@@ -332,14 +332,16 @@ nav a:hover {
 }
 
 #landingPageScroll::before {
+  background: var(--baseColor);
   border-radius: calc(var(--nSMaxWidth) * .3);
+  border: calc(var(--nSMaxWidth) * .1) solid var(--baseColor);
   border-right: calc(var(--nSMaxWidth) * .35) solid var(--accentColor);
   border-top: calc(var(--nSMaxWidth) * .35) solid var(--accentColor);
   content: '';
   height: calc(var(--nSMaxWidth) * 2);
   left: calc(var(--nSMaxWidth) * 1.3);
   position: absolute;
-  top: calc(var(--nSMaxWidth) * 1);
+  top: calc(var(--nSMaxWidth) * 1.2);
   transform: rotate(135deg);
   width: calc(var(--nSMaxWidth) * 2);
 }

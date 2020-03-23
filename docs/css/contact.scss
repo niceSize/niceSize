@@ -241,9 +241,25 @@ nav a:hover {
   margin: 1em 0 0 0;
 }
 
-.pageContentText span p a{
+.pageContentText span a{
   color: var(--textColor);
+  position: relative;
   text-decoration: none;
+}
+
+.pageContentText span a:after {
+  background: var(--textColor);
+  bottom: 0;
+  content: '';
+  height: calc(var(--nSMaxWidth) * .125);
+  left: 0;
+  position: absolute;
+  transition: width .15s;
+  width: 0;
+}
+
+.pageContentText span a:hover:after {
+  width: 100%;
 }
 
 .pageContentImg {
