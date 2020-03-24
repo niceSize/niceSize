@@ -2,7 +2,7 @@
 function scrollAnimations() {
   let element =
   document.getElementById('headerDownload').getElementsByTagName('a')[0];
-  if(window.pageYOffset > (window.innerHeight * 0.7)){
+  if(window.scrollY > (window.innerHeight * 0.7)){
     if(!element.classList.contains('show')){
       element.classList.add('animate');
       element.classList.add('show');
@@ -27,8 +27,7 @@ window.addEventListener('load', function() {
     let element =
     document.getElementById(window.location.hash.replace('#', ''));
     if (element) {
-      document.body.scrollTop = element.offsetTop;
-      document.documentElement.scrollTop = element.offsetTop;
+      window.scrollTo(0, element.offsetTop);
     }
     window.history.pushState(null, '',
     window.location.href.replace(window.location.hash, ''));
@@ -41,14 +40,12 @@ window.addEventListener('load', function() {
       element.addEventListener('click', function(event) {
         if(this.getAttribute('href') === '#top' ||
         this.getAttribute('href') === '#'){
-          document.body.scrollTop = 0;
-          document.documentElement.scrollTop = 0;
+          window.scrollTo(0, 0);
         } else if
         (document.getElementById(this.getAttribute('href').replace('#', ''))) {
           let element =
           document.getElementById(this.getAttribute('href').replace('#', ''));
-          document.body.scrollTop = element.offsetTop;
-          document.documentElement.scrollTop = element.offsetTop;
+          window.scrollTo(0, element.offsetTop);
         }
         event.preventDefault();
       });

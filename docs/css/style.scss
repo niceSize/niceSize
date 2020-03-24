@@ -14,6 +14,8 @@ body {
   scroll-behavior: smooth;
   user-select: none;
   overflow: hidden;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
 }
 
 body {
@@ -230,17 +232,15 @@ nav a:hover {
 .landingPageImg {
   display: flex;
   height: 90%;
+  width: calc((calc(var(--nSWidth) * 100) - calc(var(--nSMaxWidth) * 32.5)) / 2);
+  object-fit: cover;
 }
 
-.landingPageImg.left img {
-  max-height: 100%;
-  object-fit: cover;
+.landingPageImg[data-position='left'] {
   object-position: right;
 }
 
-.landingPageImg.right img {
-  max-height: 100%;
-  object-fit: cover;
+.landingPageImg[data-position='right'] {
   object-position: left;
 }
 
@@ -579,16 +579,6 @@ footer {
 
   #landingPage {
     min-height: calc(var(--nSMaxWidth) * 34);
-  }
-
-  .landingPageImg.left img {
-    object-fit: contain;
-    object-position: right;
-  }
-
-  .landingPageImg.right img {
-    object-fit: contain;
-    object-position: left;
   }
 
   #landingPageContent {

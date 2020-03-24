@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta charset="UTF-8">
   <title>niceSize - a JavaScript library</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="QuickWrite and Locxter">
   <meta name="description" content="niceSize - a lightweight JavaScript library that allows for simple responsive webdesign.">
   <meta name="og:description" content="niceSize - a lightweight JavaScript library that allows for simple responsive webdesign.">
@@ -50,8 +50,8 @@
   <header>
     <div id="logo">
       <a>
-        <img loading="lazy" src="img/logo.svg" alt="logo">
-        <img data-color-scheme="dark" loading="lazy" src="img/logoDarkMode.svg" alt="logoDarkMode">
+        <img loading="eager" src="img/logo.svg" alt="logo">
+        <img loading="eager" data-color-scheme="dark" src="img/logoDarkMode.svg" alt="logoDarkMode">
         niceSize
       </a>
     </div>
@@ -69,22 +69,18 @@
   </header>
   <main>
     <section id="landingPage">
-      <div class="landingPageImg left">
-        <img loading="lazy" src="img/webDevices.svg" alt="webDevices">
-        <img data-color-scheme="dark" loading="lazy" src="img/webDevicesDarkMode.svg" alt="webDevicesDarkMode">
-      </div>
+      <img loading="eager" class="landingPageImg" data-position="left" src="img/webDevices.svg" alt="webDevices">
+      <img loading="eager" class="landingPageImg" data-position="left" data-color-scheme="dark" src="img/webDevicesDarkMode.svg" alt="webDevicesDarkMode">
       <div id="landingPageContent">
-        <img loading="lazy" src="img/logo.svg" alt="logo">
-        <img data-color-scheme="dark" loading="lazy" src="img/logoDarkMode.svg" alt="logoDarkMode">
+        <img loading="eager" src="img/logo.svg" alt="logo">
+        <img loading="eager" data-color-scheme="dark" src="img/logoDarkMode.svg" alt="logoDarkMode">
         <h1>niceSize</h1>
         <span>niceSize is a lightweight JavaScript library, that allows you to easily build stunning, fully responsive websites. Download it today and get to know its superpowers.</span>
         <a href="download/download.zip" download="niceSize.zip">Download niceSize</a>
       </div>
       <a id="landingPageScroll" href="#pageContent"></a>
-      <div class="landingPageImg right">
-        <img loading="lazy" src="img/webDevices.svg" alt="webDevices">
-        <img data-color-scheme="dark" loading="lazy" src="img/webDevicesDarkMode.svg" alt="webDevicesDarkMode">
-      </div>
+      <img loading="eager" class="landingPageImg" data-position="right" src="img/webDevices.svg" alt="webDevices">
+      <img loading="eager" class="landingPageImg" data-position="right" data-color-scheme="dark" src="img/webDevicesDarkMode.svg" alt="webDevicesDarkMode">
     </section>
     <article class="pageContent" id="pageContent">
       <div class="pageContentText">
