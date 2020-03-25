@@ -1,19 +1,19 @@
 @use '_config.scss';
 
-#headerDownload a{
+#headerDownload a {
   transform: translateX(calc(var(--nSMaxWidth) * 15.5));
   width: calc(var(--nSMaxWidth) * 15);
 }
 
-#landingPageContent a{
+#landingPageContent a {
   width: calc(var(--nSMaxWidth) * 20);
 }
 
-#footerDownload a{
+#footerDownload a {
   width: calc(var(--nSMaxWidth) * 20);
 }
 
-@media screen and (max-width: config.$mobile){
+@media screen and (max-width: config.$mobile) {
   #headerDownload a {
     border-radius: calc(var(--nSMaxWidth) * .25) calc(var(--nSMaxWidth) * .25) 0 0;
     bottom: 0;

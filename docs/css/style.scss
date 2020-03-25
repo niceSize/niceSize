@@ -220,7 +220,7 @@ nav a:hover {
   width: calc(var(--nSMaxWidth) * 5);
 }
 
-@keyframes landingPageScrollMovement{
+@keyframes landingPageScrollMovement {
   0%{
     transform: translate(0, 0);
   }
@@ -387,7 +387,7 @@ footer {
     background: var(--baseColor) url('../img/footerDownloadDarkMode.svg') center /contain no-repeat;
   }
 
-  #footerDownload h1{
+  #footerDownload h1 {
     color: var(--accentColor);
   }
 
@@ -409,19 +409,19 @@ footer {
   }
 }
 
-@media screen and (min-width: (config.$mobile + 1)) and (min-height: 61rem){
-  #landingPageScroll{
+@media screen and (min-width: (config.$mobile + 1)) and (min-height: 61rem) {
+  #landingPageScroll {
     visibility: visible;
   }
 }
 
-@media screen and (min-width: (config.$mobile + 1)) and (min-height: 61vw){
-  #landingPageScroll{
+@media screen and (min-width: (config.$mobile + 1)) and (min-height: 61vw) {
+  #landingPageScroll {
     visibility: visible;
   }
 }
 
-@media (max-width: config.$mobile){
+@media (max-width: config.$mobile) {
   #languageChooser a {
     z-index: 0;
   }
@@ -508,8 +508,8 @@ footer {
   }
 }
 
-@media screen and (max-width: config.$mobile) and (max-aspect-ratio: 5/7){
-  #landingPageScroll{
+@media screen and (max-width: config.$mobile) and (max-aspect-ratio: 5/7) {
+  #landingPageScroll {
     visibility: visible;
   }
 }

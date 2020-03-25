@@ -146,15 +146,15 @@ nav a:hover {
   width: calc(var(--nSMaxWidth) * 35);
 }
 
-.pageContentText span p:first-of-type{
+.pageContentText span p:first-of-type {
   margin: 0 0 1em 0;
 }
 
-.pageContentText span p:last-of-type{
+.pageContentText span p:last-of-type {
   margin: 1em 0 0 0;
 }
 
-.pageContentText span a{
+.pageContentText span a {
   color: var(--textColor);
   position: relative;
   text-decoration: none;
@@ -279,7 +279,7 @@ footer {
   #footerDownload {
     background: var(--baseColor) url('../img/footerDownloadDarkMode.svg') center /contain no-repeat;
   }
-  
+
   #footerDownload h1{
     color: var(--accentColor);
   }
@@ -303,13 +303,13 @@ footer {
 }
 
 @media screen and (min-width: (config.$mobile + 1)) and (min-height: 61rem){
-  #landingPageScroll{
+  #landingPageScroll {
     visibility: visible;
   }
 }
 
 @media screen and (min-width: (config.$mobile + 1)) and (min-height: 61vw){
-  #landingPageScroll{
+  #landingPageScroll {
     visibility: visible;
   }
 }
@@ -380,7 +380,7 @@ footer {
 }
 
 @media screen and (max-width: config.$mobile) and (max-aspect-ratio: 5/7){
-  #landingPageScroll{
+  #landingPageScroll {
     visibility: visible;
   }
 }
