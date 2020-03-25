@@ -51,8 +51,8 @@
   <header>
     <div id="logo">
       <a>
-        <img loading="lazy" src="img/logo.svg" alt="logo">
-        <img data-color-scheme="dark" loading="lazy" src="img/logoDarkMode.svg" alt="logoDarkMode">
+        <img loading="eager" src="img/logo.svg" alt="logo">
+        <img data-color-scheme="dark" loading="eager" src="img/logoDarkMode.svg" alt="logoDarkMode">
         niceSize
       </a>
     </div>
@@ -70,22 +70,18 @@
   </header>
   <main>
     <section id="landingPage">
-      <div class="landingPageImg left">
-        <img loading="lazy" src="img/webDevices.svg" alt="webDevices">
-        <img data-color-scheme="dark" loading="lazy" src="img/webDevicesDarkMode.svg" alt="webDevicesDarkMode">
-      </div>
+      <img class="landingPageImg" data-position="left" loading="eager" src="img/webDevices.svg" alt="webDevices">
+      <img class="landingPageImg" data-position="left" loading="eager" data-color-scheme="dark" src="img/webDevicesDarkMode.svg" alt="webDevicesDarkMode">
       <div id="landingPageContent">
-        <img loading="lazy" src="img/logo.svg" alt="logo">
-        <img data-color-scheme="dark" loading="lazy" src="img/logoDarkMode.svg" alt="logoDarkMode">
+        <img loading="eager" src="img/logo.svg" alt="logo">
+        <img data-color-scheme="dark" loading="eager" src="img/logoDarkMode.svg" alt="logoDarkMode">
         <h1>niceSize</h1>
         <span>niceSize ist eine kleine JavaScript-Bibliothek, die das Erstellen von atemberaubenden, responsiven Webseiten einfach macht. Lade sie gleich herunter!</span>
         <a href="download/download.zip" download="niceSize.zip">niceSize herunterladen</a>
       </div>
       <a id="landingPageScroll" href="#pageContent"></a>
-      <div class="landingPageImg right">
-        <img loading="lazy" src="img/webDevices.svg" alt="webDevices">
-        <img data-color-scheme="dark" loading="lazy" src="img/webDevicesDarkMode.svg" alt="webDevicesDarkMode">
-      </div>
+      <img class="landingPageImg" data-position="right" loading="eager" src="img/webDevices.svg" alt="webDevices">
+      <img class="landingPageImg" data-position="right" loading="eager" data-color-scheme="dark" src="img/webDevicesDarkMode.svg" alt="webDevicesDarkMode">
     </section>
     <article class="pageContent" id="pageContent">
       <div class="pageContentText">
