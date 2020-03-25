@@ -1,99 +1,10 @@
 @use '_config.scss';
 
-html,
-body {
-  --accentColor: #{config.$accentColor};
-  --accentColorLight: #{config.$accentColorLight};
-  --baseColor: #{config.$baseColor};
-  --textColor: #{config.$textColor};
-  --textColorInverted: #{config.$textColorInverted};
-  background: var(--baseColor);
-  cursor: default;
-  margin: 0;
-  padding: 0;
-  scroll-behavior: smooth;
-  user-select: none;
-  overflow: hidden;
-  -webkit-text-size-adjust: none;
-  text-size-adjust: none;
-}
-
 body {
   font-family: 'Roboto', sans-serif;
   position: absolute;
   top: calc(var(--nSMaxWidth) * 6);
   width: 100%;
-}
-
-
-#notSupported {
-  -ms-user-select: none;
-  background: config.$baseColor;
-  display: table;
-  height: 100%;
-  left: 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 3;
-}
-
-#notSupported span {
-  color: config.$textColor;
-  display: table-cell;
-  font-size: 2rem;
-  text-align: center;
-  vertical-align: middle;
-}
-
-img[data-color-scheme='dark']{
-  display: none;
-}
-
-#loadingScreen {
-  align-items: center;
-  animation: .25s linear .5s forwards loadingScreenHide;
-  background: var(--baseColor);
-  display: flex;
-  height: 100%;
-  justify-content: center;
-  left: 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 2;
-}
-
-@keyframes loadingScreenHide{
-  0% {
-    opacity: 1;
-    visibility: visible;
-  }
-  100% {
-    opacity: 0;
-    visibility: hidden;
-  }
-}
-
-#loadingScreen::before {
-  animation: 1.5s linear infinite loadingScreenBeforeSpin;
-  border-radius: 50%;
-  border: calc(var(--nSMaxWidth) * .25) solid var(--accentColorLight);
-  border-top: calc(var(--nSMaxWidth) * .25) solid var(--accentColor);
-  content: '';
-  height: calc(var(--nSMaxWidth) * 2.5);
-  left: calc((100% - (var(--nSMaxWidth) * 2.5)) / 2);
-  position: fixed;
-  width: calc(var(--nSMaxWidth) * 2.5);
-}
-
-@keyframes loadingScreenBeforeSpin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
 }
 
 header {
@@ -254,7 +165,6 @@ nav a:hover {
   justify-content: center;
 }
 
-
 #landingPageContent img {
   height: calc(var(--nSMaxWidth) * 10);
   width: calc(var(--nSMaxWidth) * 10);
@@ -264,7 +174,6 @@ nav a:hover {
   font-size: calc(var(--nSMaxWidth) * 5);
   font-weight: normal;
   line-height: calc(var(--nSMaxWidth) * 5);
-  margin: 0;
 }
 
 #landingPageContent span {
@@ -338,12 +247,12 @@ nav a:hover {
   border-right: calc(var(--nSMaxWidth) * .35) solid var(--accentColor);
   border-top: calc(var(--nSMaxWidth) * .35) solid var(--accentColor);
   content: '';
-  height: calc(var(--nSMaxWidth) * 2);
-  left: calc(var(--nSMaxWidth) * 1.3);
+  height: calc(var(--nSMaxWidth) * 2.5);
+  left: calc(var(--nSMaxWidth) * 1.25);
   position: absolute;
-  top: calc(var(--nSMaxWidth) * 1.2);
+  top: calc(var(--nSMaxWidth) * 1.25);
   transform: rotate(135deg);
-  width: calc(var(--nSMaxWidth) * 2);
+  width: calc(var(--nSMaxWidth) * 2.5);
 }
 
 .pageContent {
@@ -411,7 +320,6 @@ footer {
   color: var(--textColorInverted);
   font-size: calc(var(--nSMaxWidth) * 2.5);
   font-weight: normal;
-  margin: 0;
 }
 
 #footerDownload a {
@@ -474,39 +382,7 @@ footer {
   object-fit: contain;
 }
 
-@supports (display: flex) and (--css: variable) {
-  body,
-  html {
-    overflow: initial;
-  }
-
-  #notSupported {
-    display: none;
-  }
-
-  #notSupported span {
-    display: none;
-  }
-}
-
 @media screen and (prefers-color-scheme: dark) {
-  html,
-  body {
-    --accentColor: #{config.$accentColorDarkMode};
-    --accentColorLight: #{config.$accentColorLightDarkMode};
-    --baseColor: #{config.$baseColorDarkMode};
-    --textColor: #{config.$textColorDarkMode};
-    --textColorInverted: #{config.$textColorInvertedDarkMode};
-  }
-
-  img:not([data-color-scheme='dark']) {
-    display: none;
-  }
-
-  img[data-color-scheme='dark'] {
-    display: initial;
-  }
-
   #footerDownload {
     background: var(--baseColor) url('../img/footerDownloadDarkMode.svg') center /contain no-repeat;
   }
@@ -542,10 +418,6 @@ footer {
 }
 
 @media (max-width: config.$mobile){
-  * {
-    cursor: default !important;
-  }
-
   #languageChooser a {
     z-index: 0;
   }

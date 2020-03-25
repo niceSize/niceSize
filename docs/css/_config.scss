@@ -18,10 +18,144 @@ $textColorInvertedDarkMode: #1e2124;
 $mobile: 637px;
 
 // niceSize configuration
-#niceSize{
+#niceSize {
 	--maxWidthMobileSite: #{$mobile};
 	--mobileSiteScalingRatio: 2.5;
 	--remMultiplier: 1;
 	--vwMultiplier: 1;
 	height: 100vh;
+}
+
+// other default stylings
+html,
+body {
+	--accentColor: #{$accentColor};
+  --accentColorLight: #{$accentColorLight};
+  --baseColor: #{$baseColor};
+  --textColor: #{$textColor};
+  --textColorInverted: #{$textColorInverted};
+	background: var(--baseColor);
+	overflow: hidden;
+	scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	cursor: default;
+	margin: 0;
+	padding: 0;
+	user-select: none;
+  box-sizing: inherit;
+}
+
+img[data-color-scheme='dark']{
+  display: none;
+}
+
+#notSupported {
+  -ms-user-select: none;
+  background: $baseColor;
+  display: table;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 3;
+}
+
+#notSupported span {
+  color: $textColor;
+  display: table-cell;
+  font-size: 2rem;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#loadingScreen {
+  align-items: center;
+  animation: .25s linear .5s forwards loadingScreenHide;
+  background: var(--baseColor);
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+@keyframes loadingScreenHide{
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+#loadingScreen::before {
+  animation: 1.5s linear infinite loadingScreenBeforeSpin;
+  border-radius: 50%;
+  border: calc(var(--nSMaxWidth) * .25) solid var(--accentColorLight);
+  border-top: calc(var(--nSMaxWidth) * .25) solid var(--accentColor);
+  content: '';
+  height: calc(var(--nSMaxWidth) * 2.5);
+  left: calc((100% - (var(--nSMaxWidth) * 2.5)) / 2);
+  position: fixed;
+  width: calc(var(--nSMaxWidth) * 2.5);
+}
+
+@keyframes loadingScreenBeforeSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@supports (display: flex) and (--css: variable) {
+  body,
+  html {
+    overflow: initial;
+  }
+
+  #notSupported {
+    display: none;
+  }
+
+  #notSupported span {
+    display: none;
+  }
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  html,
+  body {
+    --accentColor: #{$accentColorDarkMode};
+    --accentColorLight: #{$accentColorLightDarkMode};
+    --baseColor: #{$baseColorDarkMode};
+    --textColor: #{$textColorDarkMode};
+    --textColorInverted: #{$textColorInvertedDarkMode};
+  }
+
+  img:not([data-color-scheme='dark']) {
+    display: none;
+  }
+
+  img[data-color-scheme='dark'] {
+    display: initial;
+  }
+}
+
+@media (max-width: $mobile){
+  * {
+    cursor: default !important;
+  }
 }

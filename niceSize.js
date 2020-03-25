@@ -4,80 +4,145 @@
 github.com/niceSize/niceSize
 ============================
 */
+
 function initializeNiceSize() {
-	document.body.appendChild(document.createElement('span')).setAttribute('id', 'niceSize');
-	let element = document.getElementById('niceSize');
-  element.style.setProperty('position', 'absolute');
-  if(Number.isNaN(parseFloat(window.getComputedStyle(element).getPropertyValue('--vwMultiplier')))){
-    element.style.setProperty('--vwMultiplier', '1');
+	document.body.appendChild(document.createElement('span')).setAttribute('id',
+	'niceSize');
+	let niceSizeElement = document.getElementById('niceSize');
+  niceSizeElement.style.setProperty('position', 'absolute');
+	let windowElement = window;
+  if(Number.isNaN(parseFloat(windowElement.getComputedStyle(niceSizeElement).
+	getPropertyValue('--vwMultiplier')))){
+    niceSizeElement.style.setProperty('--vwMultiplier', '1');
   }
-  if(Number.isNaN(parseFloat(window.getComputedStyle(element).getPropertyValue('--remMultiplier')))){
-    element.style.setProperty('--remMultiplier', '1');
+  if(Number.isNaN(parseFloat(windowElement.getComputedStyle(niceSizeElement).
+	getPropertyValue('--remMultiplier')))){
+    niceSizeElement.style.setProperty('--remMultiplier', '1');
   }
-  if(Number.isNaN(parseFloat(window.getComputedStyle(element).getPropertyValue('height')))){
-    element.style.setProperty('height', '100vh');
+  if(Number.isNaN(parseFloat(windowElement.getComputedStyle(niceSizeElement).
+	getPropertyValue('height')))){
+    niceSizeElement.style.setProperty('height', '100vh');
   }
-  if(Number.isNaN(parseInt(window.getComputedStyle(element).getPropertyValue('--maxWidthMobileSite')))){
-    element.style.setProperty('--maxWidthMobileSite', '637px');
+  if(Number.isNaN(parseInt(windowElement.getComputedStyle(niceSizeElement).
+	getPropertyValue('--maxWidthMobileSite')))){
+    niceSizeElement.style.setProperty('--maxWidthMobileSite', '637px');
   }
-  if(Number.isNaN(parseFloat(window.getComputedStyle(element).getPropertyValue('--mobileSiteScalingRatio')))){
-    element.style.setProperty('--mobileSiteScalingRatio', '2');
+  if(Number.isNaN(parseFloat(windowElement.getComputedStyle(niceSizeElement).
+	getPropertyValue('--mobileSiteScalingRatio')))){
+    niceniceSizeElementSize.style.setProperty('--mobileSiteScalingRatio', '2');
   }
-	if(parseFloat(window.getComputedStyle(element).getPropertyValue('height')) > window.innerHeight && typeof window.orientation !== "undefined" && document.documentElement.clientWidth === window.innerWidth){
-		let element = document.body;
-		element.style.setProperty('--nSHeight', window.innerHeight * 0.01 + 'px');
-		element.style.setProperty('--nSHeightMFF', '1vh');
-		widthRef = window.innerWidth;
-		widthLoad = window.innerWidth;
-		heightLoad = window.innerHeight;
+	widthRef = windowElement.innerWidth;
+	widthLoad = windowElement.innerWidth;
+	heightLoad = windowElement.innerHeight;
+	let bodyElement = document.body;
+	if(parseFloat(windowElement.getComputedStyle(niceSizeElement).
+	getPropertyValue('height')) > windowElement.innerHeight &&
+	typeof windowElement.orientation !== 'undefined' &&
+	document.documentElement.clientWidth === windowElement.innerWidth){
+		bodyElement.style.setProperty('--nSHeight',
+		(windowElement.innerHeight * 0.01) + 'px');
+		bodyElement.style.setProperty('--nSHeightMFF', '1vh');
 	}else{
-		let element = document.body;
-		element.style.setProperty('--nSHeight', '1vh');
-		element.style.setProperty('--nSHeightMFF', '1vh');
-		if(document.documentElement.clientWidth === window.innerWidth && typeof window.orientation !== "undefined"){
-			element.style.setProperty('--nSHeight', window.innerHeight * 0.01 + 'px');
-			element.style.setProperty('--nSHeightMFF', window.innerHeight * 0.01 + 'px');
-			widthRef = window.innerWidth;
-			widthLoad = window.innerWidth;
-			heightRef = window.innerHeight;
-			heightLoad = window.innerHeight;
+		bodyElement.style.setProperty('--nSHeight', '1vh');
+		bodyElement.style.setProperty('--nSHeightMFF', '1vh');
+		if(document.documentElement.clientWidth === windowElement.innerWidth &&
+			typeof windowElement.orientation !== 'undefined'){
+			bodyElement.style.setProperty('--nSHeight',
+			(windowElement.innerHeight * 0.01) + 'px');
+			bodyElement.style.setProperty('--nSHeightMFF',
+			(windowElement.innerHeight * 0.01) + 'px');
+			heightRef = windowElement.innerHeight;
 		}
 	}
-	element.style.setProperty('display', 'none');
+	niceSizeElement.style.setProperty('display', 'none');
+	if (navigator.platform.match(/iPhone|iPod|iPad|MacIntel/) &&
+	document.documentElement.clientWidth === windowElement.innerWidth) {
+		appleDevice = true;
+	} else {
+		appleDevice = false;
+	}
 }
 
 function niceSize(){
-	// #niceSize, document.documentElement and document.body
-	let element = document.documentElement;
-	let element1 = document.body;
-	let element2 = document.getElementById('niceSize');
-	if(element.clientWidth * 0.01 * parseFloat(window.getComputedStyle(element2).getPropertyValue('--vwMultiplier')) > parseFloat(getComputedStyle(element).fontSize) * parseFloat(window.getComputedStyle(element2).getPropertyValue('--remMultiplier'))){
-		element1.style.setProperty('--nSMaxWidth', parseFloat(getComputedStyle(element).fontSize) * parseFloat(window.getComputedStyle(element2).getPropertyValue('--remMultiplier')) + 'px');
+	let documentElementElement = document.documentElement;
+	let bodyElement = document.body;
+	let windowElement = window;
+	let niceSizeElement = document.getElementById('niceSize');
+	if(((documentElementElement.clientWidth * 0.01) *
+	parseFloat(windowElement.getComputedStyle(niceSizeElement).
+	getPropertyValue('--vwMultiplier'))) >
+	(parseFloat(getComputedStyle(documentElementElement).fontSize) *
+	parseFloat(windowElement.getComputedStyle(niceSizeElement).
+	getPropertyValue('--remMultiplier')))){
+		bodyElement.style.setProperty('--nSMaxWidth',
+		(parseFloat(getComputedStyle(documentElementElement).fontSize) *
+		parseFloat(windowElement.getComputedStyle(niceSizeElement).
+		getPropertyValue('--remMultiplier'))) + 'px');
 	}else{
-		element1.style.setProperty('--nSMaxWidth', element.clientWidth * 0.01 * parseFloat(window.getComputedStyle(element2).getPropertyValue('--vwMultiplier')) + 'px');
+		bodyElement.style.setProperty('--nSMaxWidth',
+		((documentElementElement.clientWidth * 0.01) *
+		parseFloat(windowElement.getComputedStyle(niceSizeElement).
+		getPropertyValue('--vwMultiplier'))) + 'px');
 	}
-	if(window.innerWidth <= parseInt(window.getComputedStyle(element2).getPropertyValue('--maxWidthMobileSite'))){
-		element1.style.setProperty('--nSMaxWidth', element.clientWidth * 0.01 * parseFloat(window.getComputedStyle(element2).getPropertyValue('--vwMultiplier')) * parseFloat(window.getComputedStyle(element2).getPropertyValue('--mobileSiteScalingRatio')) + 'px');
+	if(appleDevice === true && document.documentElement.clientWidth <=
+		parseInt(windowElement.getComputedStyle(niceSizeElement).
+		getPropertyValue('--maxWidthMobileSite'))){
+		bodyElement.style.setProperty('--nSMaxWidth',
+		(((documentElementElement.clientWidth * 0.01) *
+		parseFloat(windowElement.getComputedStyle(niceSizeElement).
+		getPropertyValue('--vwMultiplier'))) *
+		parseFloat(windowElement.getComputedStyle(niceSizeElement).
+		getPropertyValue('--mobileSiteScalingRatio'))) + 'px');
+	}else if(appleDevice === false && windowElement.innerWidth <=
+		parseInt(windowElement.getComputedStyle(niceSizeElement).
+		getPropertyValue('--maxWidthMobileSite'))){
+		bodyElement.style.setProperty('--nSMaxWidth',
+		(((documentElementElement.clientWidth * 0.01) *
+		parseFloat(windowElement.getComputedStyle(niceSizeElement).
+		getPropertyValue('--vwMultiplier'))) *
+		parseFloat(windowElement.getComputedStyle(niceSizeElement).
+		getPropertyValue('--mobileSiteScalingRatio'))) + 'px');
 	}
-	element1.style.setProperty('--nSWidth', element.clientWidth * 0.01 * parseFloat(window.getComputedStyle(element2).getPropertyValue('--vwMultiplier')) + 'px');
-	element2.style.setProperty('display', 'flex');
-	if(parseFloat(window.getComputedStyle(element2).getPropertyValue('height')) > window.innerHeight && typeof window.orientation !== "undefined" && element.clientWidth === window.innerWidth && window.innerWidth !== widthRef){
-		element1.style.setProperty('--nSHeight', window.innerHeight * 0.01 + 'px');
-		widthRef = window.innerWidth;
-		if(widthRef === widthLoad){element1.style.setProperty('--nSHeight', heightLoad * 0.01 + 'px');}
+	bodyElement.style.setProperty('--nSWidth',
+	((documentElementElement.clientWidth * 0.01) *
+	parseFloat(windowElement.getComputedStyle(niceSizeElement).
+	getPropertyValue('--vwMultiplier'))) + 'px');
+	niceSizeElement.style.setProperty('display', 'flex');
+	if(parseFloat(windowElement.getComputedStyle(niceSizeElement).
+	getPropertyValue('height')) >
+	windowElement.innerHeight &&
+	typeof windowElement.orientation !== 'undefined' &&
+	documentElementElement.clientWidth === windowElement.innerWidth &&
+	windowElement.innerWidth !== widthRef){
+		bodyElement.style.setProperty('--nSHeight',
+		(windowElement.innerHeight * 0.01) + 'px');
+		widthRef = windowElement.innerWidth;
+		if(widthRef === widthLoad){bodyElement.style.setProperty('--nSHeight',
+		(heightLoad * 0.01) + 'px');}
+	}else if(parseFloat(windowElement.getComputedStyle(niceSizeElement).
+	getPropertyValue('height')) <=
+	windowElement.innerHeight &&
+	typeof windowElement.orientation !== 'undefined' &&
+	documentElementElement.clientWidth === windowElement.innerWidth &&
+	windowElement.innerWidth !== widthRef){
+		bodyElement.style.setProperty('--nSHeight',
+		(windowElement.innerHeight * 0.01) + 'px');
+		bodyElement.style.setProperty('--nSHeightMFF',
+		(windowElement.innerHeight * 0.01) + 'px');
+		widthRef = windowElement.innerWidth;
+		if(widthRef === widthLoad){
+			bodyElement.style.setProperty('--nSHeight', (heightLoad * 0.01) + 'px');
+		}
+		heightRef = windowElement.innerHeight;
 	}
-	if(parseFloat(window.getComputedStyle(element2).getPropertyValue('height')) <= window.innerHeight && typeof window.orientation !== "undefined" && element.clientWidth === window.innerWidth && window.innerWidth !== widthRef){
-		element1.style.setProperty('--nSHeight', window.innerHeight * 0.01 + 'px');
-		element1.style.setProperty('--nSHeightMFF', window.innerHeight * 0.01 + 'px');
-		widthRef = window.innerWidth;
-		if(widthRef === widthLoad){element1.style.setProperty('--nSHeight', heightLoad * 0.01 + 'px');}
-		heightRef = window.innerHeight;
+	if(documentElementElement.clientWidth === windowElement.innerWidth &&
+		typeof windowElement.orientation !== 'undefined' &&
+		windowElement.innerHeight > heightRef){
+		bodyElement.style.setProperty('--nSHeightMFF',
+		(windowElement.innerHeight * 0.01) + 'px');
+		heightRef = windowElement.innerHeight;
 	}
-	if(element.clientWidth === window.innerWidth && typeof window.orientation !== "undefined" && window.innerHeight > heightRef){
-		element1.style.setProperty('--nSHeightMFF', window.innerHeight * 0.01 + 'px');
-		heightRef = window.innerHeight;
-	}
-	element2.style.setProperty('display', 'none');
+	niceSizeElement.style.setProperty('display', 'none');
 }
 
 window.addEventListener('load', function() {

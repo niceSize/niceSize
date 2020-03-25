@@ -5,7 +5,7 @@ github.com/niceSize/niceSize
 ============================
 */
 
-#niceSize{
+#niceSize {
 	--maxWidthMobileSite: 637px;
 	--mobileSiteScalingRatio: 2.5;
 	--remMultiplier: 1;
