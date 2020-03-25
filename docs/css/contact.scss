@@ -279,6 +279,10 @@ footer {
   #footerDownload {
     background: var(--baseColor) url('../img/footerDownloadDarkMode.svg') center /contain no-repeat;
   }
+  
+  #footerDownload h1{
+    color: var(--accentColor);
+  }
 
   #footerDownload a {
     background: var(--textColorInverted);
