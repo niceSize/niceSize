@@ -35,18 +35,20 @@ body {
   --textColor: #{$textColor};
   --textColorInverted: #{$textColorInverted};
 	background: var(--baseColor);
+	cursor: default;
 	overflow: hidden;
 	scroll-behavior: smooth;
+	user-select: none;
   box-sizing: border-box;
 }
 
 *,
 *:before,
 *:after {
-	cursor: default;
+	cursor: inherit;
 	margin: 0;
 	padding: 0;
-	user-select: none;
+	user-select: inherit;
   box-sizing: inherit;
 }
 
@@ -75,7 +77,7 @@ img[data-color-scheme='dark']{
 }
 
 #loadingScreen {
-  align-items: center;
+	align-items: center;
   animation: .25s linear .5s forwards loadingScreenHide;
   background: var(--baseColor);
   display: flex;
@@ -102,13 +104,11 @@ img[data-color-scheme='dark']{
 #loadingScreen::before {
   animation: 1.5s linear infinite loadingScreenBeforeSpin;
   border-radius: 50%;
-  border: calc(var(--nSMaxWidth) * .25) solid var(--accentColorLight);
+	border: calc(var(--nSMaxWidth) * .25) solid var(--accentColorLight);
   border-top: calc(var(--nSMaxWidth) * .25) solid var(--accentColor);
   content: '';
-  height: calc(var(--nSMaxWidth) * 2.5);
-  left: calc((100% - (var(--nSMaxWidth) * 2.5)) / 2);
-  position: fixed;
-  width: calc(var(--nSMaxWidth) * 2.5);
+  height: calc(var(--nSMaxWidth) * 3);
+  width: calc(var(--nSMaxWidth) * 3);
 }
 
 @keyframes loadingScreenBeforeSpin {
